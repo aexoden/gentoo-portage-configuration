@@ -1,0 +1,14 @@
+# Gentoo Portage Configuration
+# USE Flags
+
+# Enable 32-bit API
+
+*/*	ABI_X86: 32
+
+# Global Flags
+
+# Package Flags
+
+sys-libs/glibc							audit caps gd
+
+# Temporary Fixes (for broken packages)
