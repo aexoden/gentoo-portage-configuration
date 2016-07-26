@@ -7,6 +7,8 @@
 
 # Global Flags
 
+*/*								python
+
 # Package Flags
 
 sys-libs/glibc							audit caps gd
