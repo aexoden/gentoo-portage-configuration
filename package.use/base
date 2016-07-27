@@ -7,7 +7,7 @@
 
 # Global Flags
 
-*/*								python
+*/*								python vim-syntax
 
 # Package Flags
 
