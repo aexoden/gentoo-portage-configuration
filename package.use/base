@@ -18,6 +18,8 @@ app-crypt/gnupg							tofu tools
 app-crypt/pinentry						-qt4
 dev-db/sqlite							tools
 dev-libs/libpcre						pcre16 pcre32
+dev-libs/libverto						glib libevent tevent
+dev-libs/openssl						rfc3779 sctp
 media-libs/alsa-lib						alisp
 media-libs/tiff							jbig
 sys-apps/tcp-wrappers						netgroups
