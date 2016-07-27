@@ -11,6 +11,7 @@
 
 # Package Flags
 
+app-arch/libarchive						lz4 lzo
 sys-libs/glibc							audit caps gd
 x11-libs/libdrm							libkms
 
