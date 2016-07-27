@@ -15,7 +15,7 @@ app-arch/libarchive						lz4 lzo
 app-arch/unzip							natspec
 app-arch/zip							natspec
 app-crypt/gnupg							tofu tools
-app-crypt/libsecret						vala
+app-crypt/pinentry						-qt4
 sys-libs/glibc							audit caps gd
 x11-libs/libdrm							libkms
 
