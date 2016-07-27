@@ -7,7 +7,7 @@
 
 # Global Flags
 
-*/*								caps python vala vim-syntax
+*/*								caps python qt5 vala vim-syntax
 
 # Package Flags
 
