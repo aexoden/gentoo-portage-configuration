@@ -18,6 +18,7 @@ app-crypt/gnupg							tofu tools
 app-crypt/pinentry						-qt4
 dev-db/sqlite							tools
 dev-libs/libpcre						pcre16 pcre32
+media-libs/alsa-lib						alisp
 sys-apps/tcp-wrappers						netgroups
 sys-libs/glibc							audit caps gd
 x11-libs/libdrm							libkms
