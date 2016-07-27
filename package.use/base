@@ -12,5 +12,6 @@
 # Package Flags
 
 sys-libs/glibc							audit caps gd
+x11-libs/libdrm							libkms
 
 # Temporary Fixes (for broken packages)
