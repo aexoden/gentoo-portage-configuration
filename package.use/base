@@ -7,7 +7,7 @@
 
 # Global Flags
 
-*/*								caps icu python qt5 tcl vala vim-syntax
+*/*								caps icu java python qt5 tcl vala vim-syntax
 
 # Package Flags
 
