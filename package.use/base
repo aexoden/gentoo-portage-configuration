@@ -44,6 +44,7 @@ media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/libsdl						xinerama
 media-libs/tiff							jbig
+net-nds/openldap						cxx kinit odbc samba sasl slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
 net-proxy/dante							upnp
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
