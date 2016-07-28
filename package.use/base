@@ -26,6 +26,7 @@ app-text/texlive-core						tk xetex
 app-text/xmlto							latex
 dev-db/sqlite							tools
 dev-java/icedtea-bin						nsplugin
+dev-java/icedtea-web						javascript nsplugin tagsoup
 dev-lang/ruby							socks5 tk
 dev-lang/tk							xscreensaver
 dev-libs/boost							context tools
