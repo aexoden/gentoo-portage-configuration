@@ -9,7 +9,7 @@
 # Global Flags
 
 */*								audit caps cjk curl gmp icu idn java kerberos lzma
-*/*								perl python qt5 ruby tcl tk vala vim-syntax zeroconf
+*/*								perl python qt5 ruby sasl tcl tk vala vim-syntax zeroconf
 
 # Package Flags
 
@@ -38,14 +38,14 @@ dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/openssl						rfc3779 sctp
 dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
-dev-vcs/subversion						ctypes-python -dso extras sasl
+dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/libsdl						xinerama
 media-libs/tiff							jbig
-net-nds/openldap						cxx kinit odbc samba sasl slp smbkrb5passwd
+net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
 net-proxy/dante							upnp
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
