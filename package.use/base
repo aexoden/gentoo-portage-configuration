@@ -1,9 +1,10 @@
 # Gentoo Portage Configuration
 # USE Flags
 
-# Enable 32-bit API
+# USE_EXPAND Flags
 
 */*	ABI_X86: 32
+*/*	RUBY_TARGETS: ruby23
 
 # Global Flags
 
@@ -18,7 +19,10 @@ app-crypt/gnupg							tofu tools
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-editors/nano						justify
+app-editors/vim							cscope lua perl racket ruby vim-pager
 dev-db/sqlite							tools
+dev-lang/ruby							socks5 tk
+dev-lang/tk							xscreensaver
 dev-libs/boost							context tools
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
@@ -27,6 +31,7 @@ gnome-base/librsvg						tools
 media-libs/alsa-lib						alisp
 media-libs/tiff							jbig
 net-libs/libmicrohttpd						epoll messages
+net-proxy/dante							upnp
 sys-apps/systemd						apparmor cryptsetup curl elfutils gnuefi http idn importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
@@ -35,3 +40,5 @@ sys-libs/glibc							caps gd
 x11-libs/libdrm							libkms
 
 # Temporary Fixes (for broken packages)
+
+=net-proxy/dante-1.4.1						-upnp
