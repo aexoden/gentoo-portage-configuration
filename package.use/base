@@ -8,7 +8,8 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl gmp icu idn java kerberos lzma perl python qt5 ruby tcl tk vala vim-syntax
+*/*								audit caps cjk curl gmp icu idn java kerberos lzma
+*/*								perl python qt5 ruby tcl tk vala vim-syntax zeroconf
 
 # Package Flags
 
