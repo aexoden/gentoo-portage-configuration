@@ -30,10 +30,13 @@ dev-java/icedtea-web						javascript nsplugin tagsoup
 dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
+dev-libs/apr-util						nss openssl sqlite
 dev-libs/boost							context tools
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/openssl						rfc3779 sctp
+dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
+dev-vcs/subversion						ctypes-python -dso extras perl sasl
 gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
