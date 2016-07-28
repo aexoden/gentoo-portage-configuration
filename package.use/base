@@ -8,7 +8,7 @@
 
 # Global Flags
 
-*/*								audit caps gmp icu idn java kerberos lzma python qt5 ruby tcl vala vim-syntax
+*/*								audit caps cjk gmp icu idn java kerberos lzma python qt5 ruby tcl vala vim-syntax
 
 # Package Flags
 
