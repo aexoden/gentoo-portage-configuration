@@ -8,7 +8,7 @@
 
 # Global Flags
 
-*/*								audit caps cjk gmp icu idn java kerberos lzma python qt5 ruby tcl vala vim-syntax
+*/*								audit caps cjk curl gmp icu idn java kerberos lzma python qt5 ruby tcl vala vim-syntax
 
 # Package Flags
 
@@ -33,7 +33,7 @@ media-libs/alsa-lib						alisp
 media-libs/tiff							jbig
 net-libs/libmicrohttpd						epoll messages
 net-proxy/dante							upnp
-sys-apps/systemd						apparmor cryptsetup curl elfutils gnuefi http importd nat qrcode sysv-utils xkb
+sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
