@@ -20,6 +20,7 @@ app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-editors/nano						justify
 app-editors/vim							cscope lua perl racket vim-pager
+app-text/ghostscript-gpl					djvu
 dev-db/sqlite							tools
 dev-lang/ruby							socks5 tk
 dev-lang/tk							xscreensaver
