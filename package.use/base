@@ -8,7 +8,7 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl gmp icu idn java kerberos lzma python qt5 ruby tcl tk vala vim-syntax
+*/*								audit caps cjk curl gmp icu idn java kerberos lzma perl python qt5 ruby tcl tk vala vim-syntax
 
 # Package Flags
 
@@ -19,7 +19,7 @@ app-crypt/gnupg							tofu tools
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-editors/nano						justify
-app-editors/vim							cscope lua perl racket vim-pager
+app-editors/vim							cscope lua racket vim-pager
 app-text/ghostscript-gpl					djvu
 app-text/poppler						nss
 app-text/texlive-core						xetex
@@ -37,7 +37,7 @@ dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/openssl						rfc3779 sctp
 dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
-dev-vcs/subversion						ctypes-python -dso extras perl sasl
+dev-vcs/subversion						ctypes-python -dso extras sasl
 gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
