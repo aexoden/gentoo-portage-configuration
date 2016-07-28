@@ -31,6 +31,7 @@ dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
 dev-libs/apr-util						nss openssl sqlite
+dev-libs/boehm-gc						threads
 dev-libs/boost							context tools
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
