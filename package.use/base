@@ -17,6 +17,7 @@ app-arch/zip							natspec
 app-crypt/gnupg							tofu tools
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
+app-editors/nano						justify
 dev-db/sqlite							tools
 dev-libs/boost							context tools
 dev-libs/libpcre						pcre16 pcre32
