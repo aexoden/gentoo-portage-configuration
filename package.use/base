@@ -7,7 +7,7 @@
 
 # Global Flags
 
-*/*								caps gmp icu java kerberos lzma python qt5 tcl vala vim-syntax
+*/*								audit caps gmp icu java kerberos lzma python qt5 tcl vala vim-syntax
 
 # Package Flags
 
@@ -15,16 +15,22 @@ app-arch/libarchive						lz4 lzo
 app-arch/unzip							natspec
 app-arch/zip							natspec
 app-crypt/gnupg							tofu tools
+app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 dev-db/sqlite							tools
+dev-libs/boost							context tools
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/openssl						rfc3779 sctp
 gnome-base/librsvg						tools
 media-libs/alsa-lib						alisp
 media-libs/tiff							jbig
+net-libs/libmicrohttpd						epoll messages
+sys-apps/systemd						apparmor cryptsetup curl elfutils gnuefi http idn importd nat qrcode sysv-utils xkb
+sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
-sys-libs/glibc							audit caps gd
+sys-apps/util-linux						tty-helpers
+sys-libs/glibc							caps gd
 x11-libs/libdrm							libkms
 
 # Temporary Fixes (for broken packages)
