@@ -45,6 +45,7 @@ media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/libsdl						xinerama
 media-libs/tiff							jbig
+net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
 net-proxy/dante							upnp
