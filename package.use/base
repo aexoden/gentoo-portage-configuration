@@ -49,7 +49,8 @@ dev-python/pygobject:2						libffi
 dev-python/twisted-web						soap
 dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							accessibility egl evdev gles2 gtkstyle ibus libinput tslib tuio
-dev-qt/qtopengl							gles2
+dev-qt/qtopengl:4						egl
+dev-qt/qtopengl:5						gles2
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
 dev-util/ctags							ada
@@ -60,14 +61,16 @@ gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
+media-libs/gd							webp xpm
 media-libs/libaacplus						fftw
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
+media-libs/libgphoto2						gd CAMERAS: -*
 media-libs/libmp4v2						utils
 media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
 media-libs/mesa							d3d9 opencl openmax osmesa vaapi xa xvmc
-media-libs/opencv						contrib cuda ffmpeg gdal gphoto2 ieee1394 jpeg2k opencl openexr -qt4 threads vaapi vtk webp xine
+media-libs/opencv						contrib ffmpeg gdal gphoto2 ieee1394 jpeg2k opencl openexr -qt4 threads vaapi vtk webp xine
 media-libs/tiff							jbig
 media-libs/x264							opencl
 media-libs/zvbi							dvb
@@ -81,12 +84,16 @@ net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh threads
 net-proxy/dante							upnp
 sci-libs/fftw							quad threads
+sci-libs/hdf							szip
+sci-libs/hdf5							fortran2003 szip
+sci-libs/netcdf							hdf szip tools
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-devel/llvm							clang gold lldb ocaml
 sys-libs/glibc							gd
+sys-libs/zlib							minizip
 sys-process/lsof						rpc
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
