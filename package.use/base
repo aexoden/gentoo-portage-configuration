@@ -61,6 +61,7 @@ media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/harfbuzz						fontconfig
 media-libs/libsdl						tslib
+media-libs/mesa							d3d9 opencl openmax osmesa vaapi vdpau xa xvmc
 media-libs/tiff							jbig
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
@@ -70,9 +71,11 @@ sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcod
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
+sys-devel/llvm							clang gold lldb ocaml
 sys-libs/glibc							gd
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
+x11-libs/libva							egl vdpau
 
 # Temporary Fixes (for broken packages)
 
