@@ -35,6 +35,7 @@ dev-libs/apr-util						nss openssl sqlite
 dev-libs/boehm-gc						threads
 dev-libs/boost							context tools
 dev-libs/glib							utils
+dev-libs/gmp							pgo
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/openssl						rfc3779 sctp
