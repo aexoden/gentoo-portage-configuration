@@ -8,8 +8,8 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl gmp icu idn java kerberos latex lzma
-*/*								perl python qt5 ruby sasl sqlite tcl tk vala vdpau vim-syntax xinerama zeroconf
+*/*								audit caps cjk curl fontconfig gmp icu idn jack java kerberos latex lzma
+*/*								perl python qt5 ruby samba sasl sndfile speex sqlite tcl tk v4l vala vdpau vim-syntax xinerama zeroconf
 
 # Package Flags
 
@@ -33,10 +33,12 @@ dev-lang/tk							xscreensaver
 dev-libs/apr-util						nss openssl
 dev-libs/boehm-gc						threads
 dev-libs/boost							context tools
+dev-libs/check							subunit
 dev-libs/cyrus-sasl						ldapdb openldap srp
 dev-libs/glib							utils
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
+dev-libs/libcdio						cddb
 dev-libs/libgpg-error						common-lisp
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
@@ -57,21 +59,29 @@ gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
-media-libs/harfbuzz						fontconfig
+media-libs/libaacplus						fftw
+media-libs/libmp4v2						utils
+media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
 media-libs/mesa							d3d9 opencl openmax osmesa vaapi xa xvmc
+media-libs/opencv						-qt4
 media-libs/tiff							jbig
-media-plugins/alsa-plugins					ffmpeg jack libsamplerate speex
+media-libs/x264							opencl
+media-libs/zvbi							dvb
+media-plugins/alsa-plugins					ffmpeg libsamplerate
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls gsm iec61883 ieee1394 jpeg2k ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi shroedinger snappy ssh theora twolame wavpack webp x265 zvbi
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
-net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
+net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
 net-proxy/dante							upnp
+sci-libs/fftw							quad threads
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-devel/llvm							clang gold lldb ocaml
 sys-libs/glibc							gd
+sys-process/lsof						rpc
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
