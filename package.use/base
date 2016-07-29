@@ -69,6 +69,7 @@ sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-libs/glibc							gd
+x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 
 # Temporary Fixes (for broken packages)
