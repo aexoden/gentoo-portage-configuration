@@ -28,6 +28,7 @@ app-text/xmlto							latex
 dev-db/sqlite							tools
 dev-java/icedtea-bin						nsplugin
 dev-java/icedtea-web						javascript nsplugin tagsoup
+dev-lang/ocaml							latex
 dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
