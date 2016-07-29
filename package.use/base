@@ -92,6 +92,7 @@ sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-devel/llvm							clang gold lldb ocaml
+sys-kernel/gentoo-sources					experimental
 sys-libs/glibc							gd
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
