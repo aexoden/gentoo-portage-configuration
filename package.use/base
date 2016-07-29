@@ -9,7 +9,7 @@
 # Global Flags
 
 */*								audit caps cjk curl gmp icu idn java kerberos lzma
-*/*								perl python qt5 ruby sasl tcl tk vala vim-syntax zeroconf
+*/*								perl python qt5 ruby sasl sqlite tcl tk vala vim-syntax zeroconf
 
 # Package Flags
 
@@ -31,7 +31,7 @@ dev-java/icedtea-web						javascript nsplugin tagsoup
 dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
-dev-libs/apr-util						nss openssl sqlite
+dev-libs/apr-util						nss openssl
 dev-libs/boehm-gc						threads
 dev-libs/boost							context tools
 dev-libs/glib							utils
