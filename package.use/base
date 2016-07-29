@@ -42,6 +42,7 @@ dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
 dev-libs/openssl						rfc3779 sctp
+dev-python/numpy						lapack
 dev-python/twisted-web						soap
 dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
 dev-vcs/subversion						ctypes-python -dso extras
