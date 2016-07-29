@@ -9,7 +9,7 @@
 # Global Flags
 
 */*								audit caps cjk curl gmp icu idn java kerberos lzma
-*/*								perl python qt5 ruby sasl sqlite tcl tk vala vim-syntax zeroconf
+*/*								perl python qt5 ruby sasl sqlite tcl tk vala vim-syntax xinerama zeroconf
 
 # Package Flags
 
@@ -45,7 +45,7 @@ dev-libs/openssl						rfc3779 sctp
 dev-python/numpy						lapack
 dev-python/pygobject:2						libffi
 dev-python/twisted-web						soap
-dev-qt/qtgui:4							egl gtkstyle xinerama
+dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							accessibility egl evdev gles2 gtkstyle ibus libinput tslib tuio
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
@@ -58,7 +58,6 @@ media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/harfbuzz						fontconfig
-media-libs/libsdl						xinerama
 media-libs/tiff							jbig
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
