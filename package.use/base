@@ -59,6 +59,7 @@ media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/harfbuzz						fontconfig
+media-libs/libsdl						tslib
 media-libs/tiff							jbig
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
