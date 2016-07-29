@@ -8,7 +8,7 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl gmp icu idn java kerberos lzma
+*/*								audit caps cjk curl gmp icu idn java kerberos latex lzma
 */*								perl python qt5 ruby sasl sqlite tcl tk vala vdpau vim-syntax xinerama zeroconf
 
 # Package Flags
@@ -24,11 +24,9 @@ app-editors/vim							cscope lua racket vim-pager
 app-text/ghostscript-gpl					djvu
 app-text/poppler						nss
 app-text/texlive-core						xetex
-app-text/xmlto							latex
 dev-db/sqlite							tools
 dev-java/icedtea-bin						nsplugin
 dev-java/icedtea-web						javascript nsplugin tagsoup
-dev-lang/ocaml							latex
 dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
