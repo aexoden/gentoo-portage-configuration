@@ -37,6 +37,7 @@ dev-libs/boost							context tools
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/openssl						rfc3779 sctp
+dev-python/twisted-web						soap
 dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
 dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/librsvg						tools
