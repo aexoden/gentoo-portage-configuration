@@ -63,6 +63,7 @@ media-libs/harfbuzz						fontconfig
 media-libs/libsdl						tslib
 media-libs/mesa							d3d9 opencl openmax osmesa vaapi vdpau xa xvmc
 media-libs/tiff							jbig
+media-plugins/alsa-plugins					ffmpeg jack libsamplerate speex
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc samba slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
