@@ -9,7 +9,7 @@
 # Global Flags
 
 */*								audit caps cjk curl gmp icu idn java kerberos lzma
-*/*								perl python qt5 ruby sasl sqlite tcl tk vala vim-syntax xinerama zeroconf
+*/*								perl python qt5 ruby sasl sqlite tcl tk vala vdpau vim-syntax xinerama zeroconf
 
 # Package Flags
 
@@ -61,7 +61,7 @@ media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/harfbuzz						fontconfig
 media-libs/libsdl						tslib
-media-libs/mesa							d3d9 opencl openmax osmesa vaapi vdpau xa xvmc
+media-libs/mesa							d3d9 opencl openmax osmesa vaapi xa xvmc
 media-libs/tiff							jbig
 media-plugins/alsa-plugins					ffmpeg jack libsamplerate speex
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
@@ -76,7 +76,7 @@ sys-devel/llvm							clang gold lldb ocaml
 sys-libs/glibc							gd
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
-x11-libs/libva							egl vdpau
+x11-libs/libva							egl
 
 # Temporary Fixes (for broken packages)
 
