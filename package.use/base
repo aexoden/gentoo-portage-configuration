@@ -46,6 +46,7 @@ dev-python/numpy						lapack
 dev-python/pygobject:2						libffi
 dev-python/twisted-web						soap
 dev-scheme/guile						networking
+dev-util/ctags							ada
 dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
 dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/libglade						tools
