@@ -75,7 +75,7 @@ media-libs/tiff							jbig
 media-libs/x264							opencl
 media-libs/zvbi							dvb
 media-plugins/alsa-plugins					ffmpeg libsamplerate
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls gsm iec61883 ieee1394 jpeg2k ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi shroedinger snappy ssh theora twolame wavpack webp x265 zvbi
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls gsm iec61883 ieee1394 jpeg2k ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh theora twolame wavpack webp x265 zvbi
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
