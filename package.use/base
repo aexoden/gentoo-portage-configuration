@@ -96,6 +96,7 @@ sys-devel/llvm							clang gold lldb ocaml
 sys-kernel/gentoo-sources					experimental
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
+virtual/ffmpeg							gsm opus theora
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
