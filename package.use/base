@@ -83,6 +83,7 @@ media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite 
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
+net-libs/libproxy						networkmanager spidermonkey webkit
 net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh
