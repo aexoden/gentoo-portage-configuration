@@ -8,9 +8,9 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl ffmpeg fontconfig gd gmp icu idn ieee1394 jack java jpeg2k kerberos latex lzma
+*/*								audit caps cjk curl ffmpeg fontconfig gd gmp gsm icu idn ieee1394 jack java jpeg2k kerberos latex lzma
 */*								perl python qt5 ruby samba sasl sndfile speex sqlite szip
-*/*								tcl threads tk v4l vaapi vala vdpau vim-syntax webp xinerama zeroconf
+*/*								tcl theora threads tk v4l vaapi vala vdpau vim-syntax webp xinerama zeroconf
 
 # Package Flags
 
@@ -76,7 +76,7 @@ media-libs/tiff							jbig
 media-libs/x264							opencl
 media-libs/zvbi							dvb
 media-plugins/alsa-plugins					libsamplerate
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls gsm iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh theora twolame vpx wavpack x265 zvbi
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh twolame vpx wavpack x265 zvbi
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
@@ -96,7 +96,7 @@ sys-devel/llvm							clang gold lldb ocaml
 sys-kernel/gentoo-sources					experimental
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
-virtual/ffmpeg							gsm opus theora
+virtual/ffmpeg							opus
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
