@@ -69,13 +69,14 @@ media-libs/libgphoto2						CAMERAS: -*
 media-libs/libmp4v2						utils
 media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
+media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/opencv						contrib gdal gphoto2 opencl openexr -qt4 vtk xine
 media-libs/tiff							jbig
 media-libs/x264							opencl
 media-libs/zvbi							dvb
 media-plugins/alsa-plugins					libsamplerate
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls gsm iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh theora twolame wavpack x265 zvbi
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls gsm iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh theora twolame vpx wavpack x265 zvbi
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
