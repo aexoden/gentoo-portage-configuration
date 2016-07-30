@@ -22,6 +22,7 @@ app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-editors/nano						justify
 app-editors/vim							cscope lua racket vim-pager
+app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-text/ghostscript-gpl					djvu
 app-text/poppler						nss
 app-text/texlive-core						xetex
@@ -76,6 +77,7 @@ media-libs/tiff							jbig
 media-libs/x264							opencl
 media-libs/zvbi							dvb
 media-plugins/alsa-plugins					libsamplerate
+media-sound/pulseaudio						equalizer lirc native-headset ofono-headset sox
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh twolame vpx wavpack x265 zvbi
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat mono utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
@@ -83,6 +85,7 @@ net-libs/libmicrohttpd						epoll messages
 net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh
+net-misc/ofono							dundee tools
 net-proxy/dante							upnp
 sci-libs/fftw							quad
 sci-libs/hdf5							fortran2003 -threads
