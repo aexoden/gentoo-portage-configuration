@@ -85,7 +85,7 @@ net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh
 net-proxy/dante							upnp
 sci-libs/fftw							quad
-sci-libs/hdf5							fortran2003
+sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
