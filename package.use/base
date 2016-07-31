@@ -81,6 +81,7 @@ media-libs/zvbi							dvb
 media-plugins/alsa-plugins					libsamplerate
 media-sound/pulseaudio						equalizer lirc native-headset ofono-headset sox
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh twolame vpx wavpack x265 zvbi
+net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
