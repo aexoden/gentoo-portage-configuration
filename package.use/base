@@ -85,12 +85,14 @@ net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/libmicrohttpd						epoll messages
+net-libs/libpcap						bluetooth canusb netlink
 net-libs/libproxy						networkmanager spidermonkey webkit
 net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh
 net-misc/ofono							dundee tools
 net-proxy/dante							upnp
+net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
 sci-libs/fftw							quad
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
