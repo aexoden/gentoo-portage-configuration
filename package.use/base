@@ -42,6 +42,7 @@ dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
 dev-libs/libcdio						cddb
 dev-libs/libgpg-error						common-lisp
+dev-libs/libnl							utils
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
