@@ -65,6 +65,7 @@ media-gfx/fontforge						truetype-debugger
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/gd							xpm
+media-libs/gst-plugins-bad					egl vcd vnc
 media-libs/libaacplus						fftw
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
