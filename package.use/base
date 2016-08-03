@@ -28,7 +28,7 @@ app-text/ghostscript-gpl					djvu
 app-text/poppler						nss
 app-text/texlive-core						xetex
 dev-db/sqlite							tools
-dev-java/icedtea-bin						nsplugin
+dev-java/icedtea-bin						multilib nsplugin
 dev-java/icedtea-web						javascript nsplugin tagsoup
 dev-lang/python							wininst
 dev-lang/ruby							socks5
