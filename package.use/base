@@ -37,6 +37,7 @@ dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
 dev-libs/check							subunit
 dev-libs/cyrus-sasl						ldapdb openldap srp
+dev-libs/fstrm							utils
 dev-libs/glib							utils
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
@@ -85,8 +86,10 @@ media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite 
 net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
 net-dns/dnsmasq							conntrack dhcp-tools dnssec script tftp
+net-dns/unbound							dnstap gost
 net-firewall/iptables						conntrack netlink nftables pcap
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
+net-libs/gnutls							dane guile pkcs11
 net-libs/ldns							dane gost
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
