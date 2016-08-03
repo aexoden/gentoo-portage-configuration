@@ -9,7 +9,7 @@
 # Global Flags
 
 */*								audit caps cjk curl ffmpeg fontconfig gd gmp gsm
-*/*								icu idn ieee1394 jack java jpeg2k kerberos latex lzma mono
+*/*								icu idn ieee1394 jack java jpeg2k kerberos latex lua lzma mono
 */*								perl python qt5 ruby samba sasl sndfile speex sqlite szip
 */*								tcl theora threads tk v4l vaapi vala vdpau vim-syntax webp xinerama zeroconf
 
@@ -22,7 +22,7 @@ app-crypt/gnupg							tofu tools
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-editors/nano						justify
-app-editors/vim							cscope lua racket vim-pager
+app-editors/vim							cscope racket vim-pager
 app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-text/ghostscript-gpl					djvu
 app-text/poppler						nss
@@ -84,7 +84,7 @@ media-sound/pulseaudio						equalizer lirc native-headset ofono-headset sox
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa libass librtmp libsoxr libv4l modplug openal openssl opus quvi schroedinger snappy ssh twolame vpx wavpack x265 zvbi
 net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
-net-dns/dnsmasq							conntrack dhcp-tools dnssec lua script tftp
+net-dns/dnsmasq							conntrack dhcp-tools dnssec script tftp
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/ldns							dane gost
 net-libs/libmicrohttpd						epoll messages
