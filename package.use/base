@@ -122,6 +122,7 @@ sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
 sys-boot/grub							device-mapper GRUB_PLATFORMS: efi-64
 sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc
+sys-devel/gettext						git
 sys-devel/llvm							clang gold lldb ocaml
 sys-kernel/gentoo-sources					experimental
 sys-libs/zlib							minizip
