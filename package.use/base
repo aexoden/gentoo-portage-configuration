@@ -91,6 +91,7 @@ net-libs/libproxy						networkmanager spidermonkey webkit
 net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh
+net-misc/modemmanager						mbim
 net-misc/ofono							dundee tools
 net-proxy/dante							upnp
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
