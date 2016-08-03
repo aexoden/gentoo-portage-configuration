@@ -85,6 +85,7 @@ media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite 
 net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
+net-libs/ldns							dane gost
 net-libs/libmicrohttpd						epoll messages
 net-libs/libpcap						bluetooth canusb netlink
 net-libs/libproxy						networkmanager spidermonkey webkit
@@ -93,6 +94,7 @@ net-libs/nghttp2						hpack-tools utils
 net-misc/curl							http2 metalink rtmp ssh
 net-misc/modemmanager						mbim
 net-misc/ofono							dundee tools
+net-misc/openssh						ldns sctp skey
 net-proxy/dante							upnp
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
 sci-libs/fftw							quad
