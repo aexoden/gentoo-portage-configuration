@@ -24,6 +24,7 @@ app-crypt/pinentry						-qt4
 app-editors/nano						justify
 app-editors/vim							cscope racket vim-pager
 app-misc/lirc							audio ftdi iguanair inputlirc irman
+app-text/asciidoc						graphviz highlight
 app-text/ghostscript-gpl					djvu
 app-text/poppler						nss
 app-text/texlive-core						xetex
@@ -63,6 +64,7 @@ dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/libglade						tools
 gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
+media-gfx/graphviz						gdk-pixbuf gts guile lasi postscript
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/gd							xpm
