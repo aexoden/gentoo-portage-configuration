@@ -120,6 +120,7 @@ sys-apps/pciutils						dns
 sys-apps/shadow							skey
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
+sys-auth/polkit							jit
 sys-boot/grub							device-mapper GRUB_PLATFORMS: efi-64
 sys-devel/llvm							clang gold lldb ocaml
 sys-kernel/gentoo-sources					experimental
