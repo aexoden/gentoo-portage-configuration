@@ -132,4 +132,5 @@ x11-libs/libva							egl
 
 # Temporary Fixes (for broken packages)
 
+=media-gfx/graphviz-2.38.0-r1					-postscript
 =net-proxy/dante-1.4.1						-upnp
