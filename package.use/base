@@ -111,6 +111,7 @@ net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
 sci-libs/fftw							quad
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
+sys-apps/busybox						math pam syslog
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
