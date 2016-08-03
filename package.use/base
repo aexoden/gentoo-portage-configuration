@@ -114,9 +114,10 @@ sci-libs/fftw							quad
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
 sys-apps/busybox						math pam syslog
- sys-apps/gawk							mpfr
+sys-apps/gawk							mpfr
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
+sys-apps/shadow							skey
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-boot/grub							device-mapper GRUB_PLATFORMS: efi-64
