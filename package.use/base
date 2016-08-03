@@ -99,6 +99,7 @@ net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-libs/zeromq							pgm
 net-misc/curl							http2 metalink rtmp ssh
+net-misc/iputils						arping clockdiff tracepath traceroute
 net-misc/libteam						zmq
 net-misc/modemmanager						mbim
 net-misc/networkmanager						connection-sharing teamd
