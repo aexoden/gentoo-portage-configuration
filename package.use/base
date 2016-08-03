@@ -131,6 +131,7 @@ sys-libs/gdbm							exporter
 sys-libs/ncurses						ada
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
+sys-process/procps						modern-top
 sys-libs/readline						utils
 virtual/ffmpeg							opus
 x11-libs/gtk+:3							cloudprint
