@@ -8,9 +8,9 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl ffmpeg fontconfig gd gmp gsm
+*/*								audit caps cjk curl ffmpeg fontconfig gd gmp gsm guile
 */*								icu idn ieee1394 jack java jpeg2k kerberos latex lua lzma mono
-*/*								perl python qt5 ruby samba sasl sndfile speex sqlite szip
+*/*								perl python qt5 ruby samba sasl skey sndfile speex sqlite szip
 */*								tcl theora threads tk v4l vaapi vala vdpau vim-syntax webp xinerama zeroconf
 
 # Package Flags
@@ -64,7 +64,7 @@ dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/libglade						tools
 gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
-media-gfx/graphviz						gdk-pixbuf gts guile lasi postscript
+media-gfx/graphviz						gdk-pixbuf gts lasi postscript
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/gd							xpm
@@ -91,7 +91,7 @@ net-dns/dnsmasq							conntrack dhcp-tools dnssec script tftp
 net-dns/unbound							dnstap gost
 net-firewall/iptables						conntrack netlink nftables pcap
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
-net-libs/gnutls							dane guile pkcs11
+net-libs/gnutls							dane pkcs11
 net-libs/ldns							dane gost
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
@@ -106,7 +106,7 @@ net-misc/libteam						zmq
 net-misc/modemmanager						mbim
 net-misc/networkmanager						connection-sharing teamd
 net-misc/ofono							dundee tools
-net-misc/openssh						ldns sctp skey
+net-misc/openssh						ldns sctp
 net-misc/wget							ntlm uuid
 net-proxy/dante							upnp
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
@@ -117,7 +117,6 @@ sys-apps/busybox						math pam syslog
 sys-apps/gawk							mpfr
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
-sys-apps/shadow							skey
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
