@@ -127,10 +127,11 @@ sys-devel/llvm							clang gold lldb ocaml
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
 sys-kernel/gentoo-sources					experimental
+sys-libs/gdbm							exporter
+sys-libs/ncurses						ada
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
 virtual/ffmpeg							opus
-sys-libs/gdbm							exporter
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
