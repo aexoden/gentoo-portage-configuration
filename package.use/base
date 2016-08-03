@@ -130,6 +130,7 @@ sys-kernel/gentoo-sources					experimental
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
 virtual/ffmpeg							opus
+sys-libs/gdbm							exporter
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
