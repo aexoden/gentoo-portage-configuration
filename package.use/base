@@ -55,6 +55,7 @@ dev-python/twisted-web						soap
 dev-ruby/rrdtool-bindings					graph
 dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							accessibility egl evdev gles2 gtkstyle ibus libinput tslib tuio
+dev-qt/qtnetwork						libproxy networkmanager
 dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
 dev-qt/qtwidgets						gles2 gtkstyle
