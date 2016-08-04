@@ -86,6 +86,7 @@ media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
+media-libs/openal						portaudio
 media-libs/opencv						contrib gdal gphoto2 opencl openexr -qt4 vtk xine
 media-libs/tiff							jbig
 media-libs/x264							opencl
