@@ -54,11 +54,15 @@ dev-python/numpy						lapack
 dev-python/pygobject:2						libffi
 dev-python/twisted-web						soap
 dev-ruby/rrdtool-bindings					graph
+dev-qt/designer							declarative phonon webkit
+dev-qt/qtdeclarative:4						webkit
+dev-qt/qtdeclarative:5						gles2 localstorage
 dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							accessibility egl evdev gles2 gtkstyle ibus libinput tslib tuio
 dev-qt/qtnetwork						libproxy networkmanager
 dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
+dev-qt/qtprintsupport						gles2
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
 dev-util/ctags							ada
