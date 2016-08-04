@@ -125,7 +125,9 @@ net-misc/openssh						ldns sctp
 net-misc/wget							ntlm uuid
 net-proxy/dante							upnp
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
+sci-libs/armadillo						arpack blas hdf5 lapack superlu tbb
 sci-libs/fftw							quad
+sci-libs/gdal							armadillo fits geos gml hdf5 netcdf odbc ogdi opencl spatialite xls
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
 sys-apps/busybox						math pam syslog
@@ -154,6 +156,7 @@ www-client/w3m							imlib nntp xface
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
+x11-misc/colord							argyllcms extra-print-profiles scanner
 
 # Temporary Fixes (for broken packages)
 
