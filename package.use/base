@@ -52,6 +52,7 @@ dev-libs/nss							cacert utils
 dev-libs/openssl						rfc3779 sctp
 dev-python/numpy						lapack
 dev-python/pygobject:2						libffi
+dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib webkit xmlpatterns
 dev-python/twisted-web						soap
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon webkit
@@ -98,9 +99,12 @@ net-analyzer/net-snmp						elf lm_sensors netlink pci
 net-analyzer/rrdtool						dbi graph rrdcgi
 net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
+net-dns/bind-tools						gost gssapi
 net-dns/dnsmasq							conntrack dhcp-tools dnssec script tftp
 net-dns/unbound							dnstap gost
 net-firewall/iptables						conntrack netlink nftables pcap
+net-fs/cifs-utils						creds
+net-fs/samba							addns ads aio avahi client gnutls iprint quota syslog winbind
 net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
 net-libs/gnutls							dane pkcs11
 net-libs/ldns							dane gost
