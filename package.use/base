@@ -33,6 +33,7 @@ dev-db/sqlite							tools
 dev-java/icedtea-bin						multilib nsplugin
 dev-java/icedtea-web						javascript nsplugin tagsoup
 dev-lang/python							wininst
+dev-lang/R							lapack
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
 dev-libs/apr-util						nss openssl
@@ -130,6 +131,7 @@ sci-libs/fftw							quad
 sci-libs/gdal							armadillo fits geos gml hdf5 netcdf odbc ogdi opencl spatialite xls
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
+sci-libs/vtk							R all-modules boost cg gdal imaging java json odbc rendering smp tbb views web xdmf2
 sys-apps/busybox						math pam syslog
 sys-apps/gawk							mpfr
 sys-apps/lm_sensors						sensord
@@ -152,7 +154,9 @@ sys-process/lsof						rpc
 sys-process/procps						modern-top
 sys-libs/readline						utils
 virtual/ffmpeg							opus
+virtual/linux-sources						firmware
 www-client/w3m							imlib nntp xface
+x11-base/xorg-server						tslib unwind xephyr
 x11-libs/gtk+:3							cloudprint
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
