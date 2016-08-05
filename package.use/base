@@ -8,10 +8,10 @@
 
 # Global Flags
 
-*/*								audit caps cjk curl ffmpeg fontconfig gd gmp gsm guile
-*/*								icu idn ieee1394 jack java jpeg2k kerberos latex lua lzma mono
-*/*								perl python qt5 ruby samba sasl skey sndfile speex sqlite szip
-*/*								tcl theora threads tk v4l vaapi vala vdpau vim-syntax webp xinerama zeroconf
+*/*								audit avahi caps cjk curl ffmpeg fontconfig gd gmp gphoto2 gsm guile
+*/*								hdf5 icu idn ieee1394 jack java jpeg2k kerberos lapack latex lua lzma mono
+*/*								networkmanager odbc perl python qt5 ruby samba sasl skey sndfile speex sqlite syslog szip
+*/*								tcl theora threads tk v4l vaapi vala vdpau vim-syntax webkit webp xinerama zeroconf
 
 # Package Flags
 
@@ -33,7 +33,6 @@ dev-db/sqlite							tools
 dev-java/icedtea-bin						multilib nsplugin
 dev-java/icedtea-web						javascript nsplugin tagsoup
 dev-lang/python							wininst
-dev-lang/R							lapack
 dev-lang/ruby							socks5
 dev-lang/tk							xscreensaver
 dev-libs/apr-util						nss openssl
@@ -51,17 +50,15 @@ dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
 dev-libs/openssl						rfc3779 sctp
-dev-python/numpy						lapack
 dev-python/pygobject:2						libffi
-dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib webkit xmlpatterns
+dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/twisted-web						soap
 dev-ruby/rrdtool-bindings					graph
-dev-qt/designer							declarative phonon webkit
-dev-qt/qtdeclarative:4						webkit
+dev-qt/designer							declarative phonon
 dev-qt/qtdeclarative:5						gles2 localstorage
 dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							accessibility egl evdev gles2 gtkstyle ibus libinput tslib tuio
-dev-qt/qtnetwork						libproxy networkmanager
+dev-qt/qtnetwork						libproxy
 dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
 dev-qt/qtprintsupport						gles2
@@ -74,7 +71,7 @@ gnome-base/libglade						tools
 gnome-base/librsvg						tools
 media-gfx/fontforge						truetype-debugger
 media-gfx/graphviz						gdk-pixbuf gts lasi postscript
-media-gfx/sane-backends						avahi gphoto2 snmp
+media-gfx/sane-backends						snmp
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/gd							xpm
@@ -89,7 +86,7 @@ media-libs/libsdl						tslib
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
-media-libs/opencv						contrib gdal gphoto2 opencl openexr -qt4 vtk xine
+media-libs/opencv						contrib gdal opencl openexr -qt4 vtk xine
 media-libs/tiff							jbig
 media-libs/x264							opencl
 media-libs/zvbi							dvb
@@ -105,14 +102,14 @@ net-dns/dnsmasq							conntrack dhcp-tools dnssec script tftp
 net-dns/unbound							dnstap gost
 net-firewall/iptables						conntrack netlink nftables pcap
 net-fs/cifs-utils						creds
-net-fs/samba							addns ads aio avahi client gnutls iprint quota syslog winbind
-net-nds/openldap						cxx kinit odbc slp smbkrb5passwd
+net-fs/samba							addns ads aio client gnutls iprint quota winbind
+net-nds/openldap						cxx kinit slp smbkrb5passwd
 net-libs/gnutls							dane pkcs11
 net-libs/ldns							dane gost
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
 net-libs/libpcap						bluetooth canusb netlink
-net-libs/libproxy						networkmanager spidermonkey webkit
+net-libs/libproxy						spidermonkey
 net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-libs/zeromq							pgm
@@ -126,13 +123,13 @@ net-misc/openssh						ldns sctp
 net-misc/wget							ntlm uuid
 net-proxy/dante							upnp
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
-sci-libs/armadillo						arpack blas hdf5 lapack superlu tbb
+sci-libs/armadillo						arpack blas superlu tbb
 sci-libs/fftw							quad
-sci-libs/gdal							armadillo fits geos gml hdf5 netcdf odbc ogdi opencl spatialite xls
+sci-libs/gdal							armadillo fits geos gml netcdf ogdi opencl spatialite xls
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
-sci-libs/vtk							R all-modules boost cg gdal imaging java json odbc rendering smp tbb views web xdmf2
-sys-apps/busybox						math pam syslog
+sci-libs/vtk							R all-modules boost cg gdal imaging json rendering smp tbb views web xdmf2
+sys-apps/busybox						math pam
 sys-apps/gawk							mpfr
 sys-apps/lm_sensors						sensord
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
