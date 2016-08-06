@@ -8,10 +8,10 @@
 
 # Global Flags
 
-*/*								audit avahi caps cjk curl djvu dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
-*/*								hdf5 icu idn ieee1394 jack java jbig jpeg2k kerberos lapack latex lua lzma modplug mono
-*/*								networkmanager odbc openexr perl postscript python qt5 ruby samba sasl skey sndfile speex sqlite syslog szip
-*/*								tcl theora threads tk v4l vaapi vala vcd vdpau vim-syntax wavpack webkit webp xinerama zeroconf
+*/*								audit avahi caps cjk curl cvs djvu dv dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
+*/*								hdf5 icu idn ieee1394 ios jack java jbig jpeg2k kerberos lame lapack latex libass lua lzma modplug mono musepack
+*/*								networkmanager odbc openexr perl postscript python qt5 raw ruby samba sasl skey smp sndfile speex sqlite subversion syslog szip
+*/*								tcl theora threads tk v4l vaapi vala vcd vdpau vim-syntax wavpack webkit webp wmf xinerama xpm zeroconf
 
 # Package Flags
 
@@ -27,7 +27,9 @@ app-editors/nano						justify
 app-editors/vim							cscope racket vim-pager
 app-i18n/ibus							gconf
 app-misc/lirc							audio ftdi iguanair inputlirc irman
+app-portage/layman						gpg mercurial squashfs sync-plugin-portage
 app-text/asciidoc						highlight
+app-text/docbook-sgml-utils					jadetex
 app-text/poppler						nss
 app-text/texlive-core						xetex
 dev-db/sqlite							tools
@@ -47,11 +49,13 @@ dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
 dev-libs/libcdio						cddb
 dev-libs/libgpg-error						common-lisp
+dev-libs/libgweather						glade
 dev-libs/libnl							utils
 dev-libs/libpcre						pcre16 pcre32
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
 dev-libs/openssl						rfc3779 sctp
+dev-libs/totem-pl-parser					archive
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/twisted-web						soap
@@ -67,35 +71,46 @@ dev-qt/qtprintsupport						gles2
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
 dev-util/ctags							ada
-dev-vcs/git							cvs highlight mediawiki mediawiki-experimental subversion
+dev-util/nvidia-cuda-toolkit					profiler
+dev-vcs/git							highlight mediawiki mediawiki-experimental
+dev-vcs/mercurial						gpg
 dev-vcs/subversion						ctypes-python -dso extras
+gnome-base/gvfs							afp archive bluray fuse google mtp nfs
 gnome-base/libglade						tools
 gnome-base/librsvg						tools
 media-gfx/exiv2							webready xmp
 media-gfx/fontforge						truetype-debugger
 media-gfx/graphviz						gdk-pixbuf gts lasi
-media-gfx/imagemagick						autotrace corefonts fpx hdri lqr opencl q32 q64 q8 raw wmf
+media-gfx/imagemagick						autotrace corefonts fpx hdri lqr opencl q32 q64 q8
 media-gfx/sane-backends						snmp
 media-gfx/ufraw							contrast fits gimp timezone
 media-libs/alsa-lib						alisp
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
-media-libs/gd							xpm
+media-libs/gegl							lensfun umfpack
 media-libs/gst-plugins-bad					egl vnc
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
+media-libs/libcanberra						tdb
 media-libs/libgphoto2						CAMERAS: -*
 media-libs/libmp4v2						utils
+media-libs/libmypaint						gegl
+media-libs/libraw						demosaic
+media-libs/libquicktime						schroedinger
 media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
 media-libs/opencv						contrib gdal opencl -qt4 vtk xine
+media-libs/taglib						boost
 media-libs/x264							opencl
-media-libs/xine-lib						bluray dxr3 imagemagick musepack vdr vpx xvmc
+media-libs/xine-lib						bluray dxr3 imagemagick vdr vpx xvmc
 media-plugins/alsa-plugins					libsamplerate
+media-plugins/gst-plugins-meta:0.10				http libvisual mms opus taglib vpx
+media-plugins/libvisual-plugins					mplayer
 media-sound/pulseaudio						equalizer lirc native-headset ofono-headset sox
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa libass librtmp libsoxr libv4l openal openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa librtmp libsoxr libv4l openal openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
+media-video/mjpegtools						quicktime sdlgfx
 net-analyzer/net-snmp						elf lm_sensors netlink pci
 net-analyzer/rrdtool						dbi graph rrdcgi
 net-dialup/ppp							activefilter atm dhcp eap-tls radius
@@ -113,6 +128,7 @@ net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
 net-libs/libpcap						bluetooth canusb netlink
 net-libs/libproxy						spidermonkey
+net-libs/libsoup						gssapi
 net-libs/libssh							gssapi pcap server
 net-libs/nghttp2						hpack-tools utils
 net-libs/zeromq							pgm
@@ -127,11 +143,12 @@ net-misc/wget							ntlm uuid
 net-proxy/dante							upnp
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
 sci-libs/armadillo						arpack blas superlu tbb
+sci-libs/cholmod						cuda metis
 sci-libs/fftw							quad
 sci-libs/gdal							armadillo fits geos gml netcdf ogdi opencl spatialite xls
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/netcdf							hdf tools
-sci-libs/vtk							R boost cg gdal imaging json rendering smp tbb views web xdmf2
+sci-libs/vtk							R boost cg gdal imaging json rendering tbb views web xdmf2
 sys-apps/busybox						math pam
 sys-apps/gawk							mpfr
 sys-apps/lm_sensors						sensord
@@ -140,12 +157,14 @@ sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
+sys-block/parted						device-mapper
 sys-boot/grub							device-mapper GRUB_PLATFORMS: efi-64
 sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc
 sys-devel/gettext						git
 sys-devel/llvm							clang gold lldb ocaml
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
+sys-fs/udisks							cryptsetup
 sys-kernel/gentoo-sources					experimental
 sys-libs/gdbm							exporter
 sys-libs/ncurses						ada
