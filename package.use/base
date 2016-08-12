@@ -8,54 +8,70 @@
 
 # Global Flags
 
-*/*								audit avahi caps cjk curl cvs djvu dv dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
-*/*								hdf5 icu idn ieee1394 ios jack java jbig jpeg2k kerberos lame lapack latex libass lua lzma modplug mono musepack
-*/*								networkmanager odbc openexr perl postscript python qt5 raw ruby samba sasl skey smp sndfile speex sqlite subversion syslog szip
-*/*								tcl theora threads tk v4l vaapi vala vcd vdpau vim-syntax wavpack webkit webp wmf xinerama xpm zeroconf
+*/*								accessibility audit avahi blas caps cddb cjk curl cvs djvu dv dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
+*/*								hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lirc lua lzma modplug mono mtp multilib musepack
+*/*								networkmanager ocaml odbc openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile speex sqlite subversion syslog szip
+*/*								taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf
 
 # Package Flags
 
+app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
 app-arch/libarchive						lz4 lzo
 app-arch/unzip							natspec
 app-arch/zip							natspec
+app-cdr/brasero							playlist
 app-crypt/gnupg							tofu tools
 app-crypt/gpgme							common-lisp
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
+app-doc/doxygen							clang dot doxysearch
 app-editors/nano						justify
 app-editors/vim							cscope racket vim-pager
 app-i18n/ibus							gconf
 app-misc/lirc							audio ftdi iguanair inputlirc irman
+app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
+app-office/libreoffice						coinmp collada gltf google odk vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/layman						gpg mercurial squashfs sync-plugin-portage
 app-text/asciidoc						highlight
 app-text/docbook-sgml-utils					jadetex
+app-text/evince							dvi t1lib xps
 app-text/poppler						nss
+app-text/texlive						context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music omega pdfannotextractor pstricks publishers science tex4ht texi2html xetex xindy
 app-text/texlive-core						xetex
+dev-cpp/libcmis							man
 dev-db/sqlite							tools
-dev-java/icedtea-bin						multilib nsplugin
-dev-java/icedtea-web						javascript nsplugin tagsoup
+dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
+dev-java/icedtea-bin:8						nsplugin
+dev-java/icedtea-web						nsplugin tagsoup
+dev-java/log4j							javamail jms
+dev-lang/ocaml							flambda
 dev-lang/python							wininst
 dev-lang/ruby							socks5
+dev-lang/spidermonkey:24					jit
 dev-lang/tk							xscreensaver
 dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
 dev-libs/check							subunit
 dev-libs/cyrus-sasl						ldapdb openldap srp
+dev-libs/folks							utils zeitgeist
 dev-libs/fstrm							utils
 dev-libs/glib							utils
 dev-libs/gmime							smime
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
-dev-libs/libcdio						cddb
+dev-libs/libburn						cdio
 dev-libs/libgpg-error						common-lisp
 dev-libs/libgweather						glade
 dev-libs/libnl							utils
+dev-libs/liborcus						tools
 dev-libs/libpcre						pcre16 pcre32
+dev-libs/libpeas						glade
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
-dev-libs/openssl						rfc3779 sctp
+dev-libs/openssl						rfc3779
 dev-libs/totem-pl-parser					archive
+dev-lisp/clisp							pari
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/twisted-web						soap
@@ -63,55 +79,78 @@ dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon
 dev-qt/qtdeclarative:5						gles2 localstorage
 dev-qt/qtgui:4							egl gtkstyle
-dev-qt/qtgui:5							accessibility egl evdev gles2 gtkstyle ibus libinput tslib tuio
+dev-qt/qtgui:5							egl evdev gles2 gtkstyle ibus libinput tslib tuio
 dev-qt/qtnetwork						libproxy
 dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
 dev-qt/qtprintsupport						gles2
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
+dev-tex/dot2texi						pgf pstricks
 dev-util/ctags							ada
+dev-util/geany							gtk3
+dev-util/gtk-doc						highlight vim
 dev-util/nvidia-cuda-toolkit					profiler
 dev-vcs/git							highlight mediawiki mediawiki-experimental
 dev-vcs/mercurial						gpg
 dev-vcs/subversion						ctypes-python -dso extras
-gnome-base/gvfs							afp archive bluray fuse google mtp nfs
+gnome-base/gdm							fprint plymouth
+gnome-base/gvfs							afp archive bluray fuse google nfs
 gnome-base/libglade						tools
+gnome-base/libgnomecanvas					glade
 gnome-base/librsvg						tools
-media-gfx/exiv2							webready xmp
+gnome-base/nautilus						sendto
+gnome-extra/evolution-data-server				google
+gnome-extra/sushi						office
+gnome-extra/zeitgeist						downloads-monitor plugins telepathy
+gnome-extra/zeitgeist-datasources				chromium geany telepathy vim
+mail-client/evolution						highlight map
+media-gfx/exiv2							webready
 media-gfx/fontforge						truetype-debugger
 media-gfx/graphviz						gdk-pixbuf gts lasi
 media-gfx/imagemagick						autotrace corefonts fpx hdri lqr opencl q32 q64 q8
+media-gfx/pstoedit						emf flash plotutils pptx
 media-gfx/sane-backends						snmp
 media-gfx/ufraw							contrast fits gimp timezone
 media-libs/alsa-lib						alisp
+media-libs/chromaprint						tools
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/gegl							lensfun umfpack
-media-libs/gst-plugins-bad					egl vnc
+media-libs/gst-plugins-bad					egl
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
 media-libs/libcanberra						tdb
 media-libs/libgphoto2						CAMERAS: -*
+media-libs/libmediaart						-qt4 -qt5
 media-libs/libmp4v2						utils
 media-libs/libmypaint						gegl
+media-libs/libpagemaker						tools
 media-libs/libraw						demosaic
 media-libs/libquicktime						schroedinger
 media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
+media-libs/libvisio						tools
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
-media-libs/opencv						contrib gdal opencl -qt4 vtk xine
+media-libs/opencv						contrib cuda gdal opencl -qt4 vtk xine
+media-libs/raptor						json
 media-libs/taglib						boost
 media-libs/x264							opencl
-media-libs/xine-lib						bluray dxr3 imagemagick vdr vpx xvmc
+media-libs/xine-lib						bluray dxr3 vdr vpx xvmc
 media-plugins/alsa-plugins					libsamplerate
-media-plugins/gst-plugins-meta:0.10				http libvisual mms opus taglib vpx
+media-plugins/grilo-plugins					chromaprint daap flickr freebox subtitles thetvdb vimeo
+media-plugins/gst-plugins-meta					http libvisual mms opus vpx
+media-plugins/gst-plugins-vaapi:1.0				egl
 media-plugins/libvisual-plugins					mplayer
-media-sound/pulseaudio						equalizer lirc native-headset ofono-headset sox
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 ladspa librtmp libsoxr libv4l openal openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
+media-sound/pulseaudio						equalizer native-headset ofono-headset sox
+media-sound/sox							amr id3tag opus twolame
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openal openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
 media-video/mjpegtools						quicktime sdlgfx
+media-video/totem						zeitgeist
+media-video/vlc							bidi bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
 net-analyzer/net-snmp						elf lm_sensors netlink pci
+net-analyzer/nmap						ncat ndiff nmap-update nping zenmap
 net-analyzer/rrdtool						dbi graph rrdcgi
 net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
@@ -121,36 +160,52 @@ net-dns/unbound							dnstap gost
 net-firewall/iptables						conntrack netlink nftables pcap
 net-fs/cifs-utils						creds
 net-fs/samba							addns ads aio client gnutls iprint quota winbind
+net-im/pidgin							gadu groupwise meanwhile mxit prediction silc zephyr
+net-im/telepathy-connection-managers				gadu icq meanwhile msn sip sipe steam yahoo
 net-nds/openldap						cxx kinit slp smbkrb5passwd
 net-libs/gnutls							dane pkcs11
 net-libs/ldns							dane gost
+net-libs/libgadu						gnutls
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
 net-libs/libpcap						bluetooth canusb netlink
 net-libs/libproxy						spidermonkey
 net-libs/libsoup						gssapi
 net-libs/libssh							gssapi pcap server
+net-libs/neon							libproxy pkcs11
 net-libs/nghttp2						hpack-tools utils
+net-libs/phodav							spice
 net-libs/zeromq							pgm
 net-misc/curl							http2 metalink rtmp ssh
+net-misc/gnome-online-miners					flickr
 net-misc/iputils						arping clockdiff tracepath traceroute
 net-misc/libteam						zmq
 net-misc/modemmanager						mbim
 net-misc/networkmanager						connection-sharing teamd
 net-misc/ofono							dundee tools
-net-misc/openssh						ldns sctp
+net-misc/openssh						ldns
+net-misc/spice-gtk						lz4 mjpeg usbredir webdav
+net-misc/vinagre						rdp spice
 net-misc/wget							ntlm uuid
-net-proxy/dante							upnp
+net-voip/telepathy-gabble					plugins
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
-sci-libs/armadillo						arpack blas superlu tbb
+sci-libs/armadillo						arpack superlu tbb
 sci-libs/cholmod						cuda metis
+sci-libs/coinor-clp						glpk metis mumps sparse
+sci-libs/coinor-osi						glpk
+sci-libs/coinor-utils						glpk
 sci-libs/fftw							quad
 sci-libs/gdal							armadillo fits geos gml netcdf ogdi opencl spatialite xls
+sci-libs/geos 							php
 sci-libs/hdf5							fortran2003 -threads
+sci-libs/mumps							metis
 sci-libs/netcdf							hdf tools
+sci-libs/scotch							int64 tools
 sci-libs/vtk							R boost cg gdal imaging json rendering tbb views web xdmf2
+sci-mathematics/pari						data
 sys-apps/busybox						math pam
 sys-apps/gawk							mpfr
+sys-apps/gnome-disk-utility					fat
 sys-apps/lm_sensors						sensord
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
@@ -159,9 +214,10 @@ sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
 sys-block/parted						device-mapper
 sys-boot/grub							device-mapper GRUB_PLATFORMS: efi-64
+sys-boot/plymouth						gdm
 sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc
 sys-devel/gettext						git
-sys-devel/llvm							clang gold lldb ocaml
+sys-devel/llvm							clang gold lldb
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
 sys-fs/udisks							cryptsetup
@@ -174,14 +230,28 @@ sys-process/procps						modern-top
 sys-libs/readline						utils
 virtual/ffmpeg							opus
 virtual/linux-sources						firmware
+www-client/firefox						wifi
 www-client/w3m							imlib nntp xface
+www-servers/apache						suexec
+www-servers/xsp							net35 net40 net45
+x11-apps/mesa-progs						egl gles2
 x11-base/xorg-server						tslib unwind xephyr
 x11-libs/gtk+:3							cloudprint
+x11-libs/gtksourceview:3.0					glade
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
+x11-libs/libwnck						tools
+x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
+x11-plugins/pidgin-sipe						telepathy voice
+x11-terms/xterm							toolbar
 
 # Temporary Fixes (for broken packages)
 
 =media-gfx/graphviz-2.38.0-r1					-postscript
+=media-plugins/grilo-plugins-0.3.2				-chromaprint
 =net-proxy/dante-1.4.1						-upnp
+=sci-libs/armadillo-6.200.3					-superlu
+=sci-libs/coinor-osi-0.106.6					-glpk
+=sci-libs/geos-3.5.0-r2						-php
+=sci-libs/vtk-6.1.0-r2						-xdmf2
