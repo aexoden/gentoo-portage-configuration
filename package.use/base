@@ -8,10 +8,10 @@
 
 # Global Flags
 
-*/*								accessibility audit avahi blas caps cddb cjk curl cvs djvu dv dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
-*/*								hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lirc lua lzma modplug mono mtp multilib musepack
-*/*								networkmanager ocaml odbc openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile speex sqlite subversion syslog szip
-*/*								taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf
+*/*	accessibility audit avahi blas caps cddb cjk curl cvs djvu dv dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
+*/*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lirc lua lzma modplug mono mtp multilib musepack
+*/*	networkmanager ocaml odbc openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile snmp soap speex sqlite subversion syslog szip
+*/*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf zsh-completion
 
 # Package Flags
 
@@ -48,6 +48,7 @@ dev-java/icedtea-web						nsplugin tagsoup
 dev-java/log4j							javamail jms
 dev-lang/luajit							lua52compat
 dev-lang/ocaml							flambda
+dev-lang/php							bcmath calendar enchant flatfile ftp imap inifile intl ldap-sasl mhash pcntl pdo phpdbg sockets sysvipc tidy wddx xmlreader xmlrpc xmlwriter xslt zip
 dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/spidermonkey:24					jit
@@ -76,7 +77,6 @@ dev-libs/totem-pl-parser					archive
 dev-lisp/clisp							pari
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
-dev-python/twisted-web						soap
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon
 dev-qt/qtdeclarative:5						gles2 localstorage
@@ -112,7 +112,6 @@ media-gfx/fontforge						truetype-debugger
 media-gfx/graphviz						gdk-pixbuf gts lasi
 media-gfx/imagemagick						autotrace corefonts fpx hdri lqr opencl q32 q64 q8
 media-gfx/pstoedit						emf flash plotutils pptx
-media-gfx/sane-backends						snmp
 media-gfx/ufraw							contrast fits gimp timezone
 media-libs/alsa-lib						alisp
 media-libs/chromaprint						tools
@@ -148,9 +147,9 @@ media-plugins/libvisual-plugins					mplayer
 media-sound/alsa-utils						bat
 media-sound/pulseaudio						equalizer native-headset ofono-headset sox
 media-sound/sox							amr id3tag opus twolame
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openal openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
 media-video/mjpegtools						quicktime sdlgfx
-media-video/mpv							archive bluray libguess openal rubberband uchardet vf-dlopen zsh-completion
+media-video/mpv							archive bluray libguess rubberband uchardet vf-dlopen
 media-video/totem						zeitgeist
 media-video/vlc							bidi bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
 net-analyzer/net-snmp						elf lm_sensors netlink pci
@@ -231,7 +230,7 @@ sys-libs/ncurses						ada
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
 sys-process/procps						modern-top
-sys-process/systemd-cron					cron-boot minutely yearly PYTHON_SINGLE_TARGET: python3_4
+sys-process/systemd-cron					cron-boot minutely setgid yearly PYTHON_SINGLE_TARGET: python3_4
 sys-libs/readline						utils
 virtual/ffmpeg							opus
 virtual/linux-sources						firmware
