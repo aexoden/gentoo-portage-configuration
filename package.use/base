@@ -33,6 +33,7 @@ app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
 app-office/libreoffice						coinmp collada gltf google odk vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/layman						gpg mercurial squashfs sync-plugin-portage
+app-shells/zsh							maildir
 app-text/asciidoc						highlight
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
@@ -45,6 +46,7 @@ dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
 dev-java/icedtea-bin:8						nsplugin
 dev-java/icedtea-web						nsplugin tagsoup
 dev-java/log4j							javamail jms
+dev-lang/luajit							lua52compat
 dev-lang/ocaml							flambda
 dev-lang/python							wininst
 dev-lang/ruby							socks5
@@ -143,10 +145,12 @@ media-plugins/grilo-plugins					chromaprint daap flickr freebox subtitles thetvd
 media-plugins/gst-plugins-meta					http libvisual mms opus vpx
 media-plugins/gst-plugins-vaapi:1.0				egl
 media-plugins/libvisual-plugins					mplayer
+media-sound/alsa-utils						bat
 media-sound/pulseaudio						equalizer native-headset ofono-headset sox
 media-sound/sox							amr id3tag opus twolame
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openal openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
 media-video/mjpegtools						quicktime sdlgfx
+media-video/mpv							archive bluray libguess openal rubberband uchardet vf-dlopen zsh-completion
 media-video/totem						zeitgeist
 media-video/vlc							bidi bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
 net-analyzer/net-snmp						elf lm_sensors netlink pci
@@ -184,7 +188,7 @@ net-misc/modemmanager						mbim
 net-misc/networkmanager						connection-sharing teamd
 net-misc/ofono							dundee tools
 net-misc/openssh						ldns
-net-misc/spice-gtk						lz4 mjpeg usbredir webdav
+net-misc/spice-gtk						gstvideo lz4 mjpeg usbredir webdav
 net-misc/vinagre						rdp spice
 net-misc/wget							ntlm uuid
 net-voip/telepathy-gabble					plugins
@@ -227,6 +231,7 @@ sys-libs/ncurses						ada
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
 sys-process/procps						modern-top
+sys-process/systemd-cron					cron-boot minutely yearly PYTHON_SINGLE_TARGET: python3_4
 sys-libs/readline						utils
 virtual/ffmpeg							opus
 virtual/linux-sources						firmware
@@ -243,6 +248,7 @@ x11-libs/libva							egl
 x11-libs/libwnck						tools
 x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
+x11-misc/redshift						geoclue
 x11-plugins/pidgin-sipe						telepathy voice
 x11-terms/xterm							toolbar
 
