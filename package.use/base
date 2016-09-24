@@ -5,6 +5,7 @@
 
 */*	ABI_X86: 32
 */*	RUBY_TARGETS: ruby23
+*/*	PYTHON_TARGETS: python3_5
 
 # Global Flags
 
@@ -26,6 +27,7 @@ app-crypt/gpgme							common-lisp
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-doc/doxygen							clang dot doxysearch
+app-editors/gvim						cscope racket
 app-editors/nano						justify
 app-editors/vim							cscope racket vim-pager
 app-i18n/ibus							gconf
@@ -135,6 +137,7 @@ media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
 media-libs/opencv						contrib cuda gdal opencl -qt4 vtk xine
+media-libs/opus							ambisonics
 media-libs/raptor						json
 media-libs/taglib						boost
 media-libs/x264							opencl
@@ -203,9 +206,12 @@ sci-libs/geos 							php
 sci-libs/hdf5							fortran2003 -threads
 sci-libs/mumps							metis
 sci-libs/netcdf							hdf tools
+sci-libs/scipy							sparse
 sci-libs/scotch							int64 tools
 sci-libs/vtk							R boost cg gdal imaging json rendering tbb views web xdmf2
+sci-mathematics/octave						gnuplot gui
 sci-mathematics/pari						data
+sci-visualization/gnuplot					bitmap libcerf
 sys-apps/busybox						math pam
 sys-apps/gawk							mpfr
 sys-apps/gnome-disk-utility					fat
@@ -230,7 +236,7 @@ sys-libs/ncurses						ada
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
 sys-process/procps						modern-top
-sys-process/systemd-cron					cron-boot minutely setgid yearly PYTHON_SINGLE_TARGET: python3_4
+sys-process/systemd-cron					cron-boot minutely setgid yearly
 sys-libs/readline						utils
 virtual/ffmpeg							opus
 virtual/linux-sources						firmware
@@ -240,16 +246,30 @@ www-servers/apache						suexec
 www-servers/xsp							net35 net40 net45
 x11-apps/mesa-progs						egl gles2
 x11-base/xorg-server						tslib unwind xephyr
+x11-libs/fltk							games
 x11-libs/gtk+:3							cloudprint
 x11-libs/gtksourceview:3.0					glade
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
 x11-libs/libwnck						tools
+x11-libs/qscintilla						designer
 x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
 x11-misc/redshift						geoclue
 x11-plugins/pidgin-sipe						telepathy voice
 x11-terms/xterm							toolbar
+
+# Python Adjustments
+
+app-editors/gedit						PYTHON_TARGETS: -python3_4
+app-editors/gvim						PYTHON_TARGETS: -python3_4
+app-editors/vim							PYTHON_TARGETS: -python3_4
+dev-libs/libixion						PYTHON_SINGLE_TARGET: python3_5
+dev-libs/liborcus						PYTHON_SINGLE_TARGET: python3_5
+dev-libs/libpeas						PYTHON_TARGETS: -python3_4
+media-video/totem						PYTHON_TARGETS: -python3_4
+net-irc/weechat							PYTHON_SINGLE_TARGET: -python2_7 python3_5
+sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
 # Temporary Fixes (for broken packages)
 
@@ -259,4 +279,11 @@ x11-terms/xterm							toolbar
 =sci-libs/armadillo-6.200.3					-superlu
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/geos-3.5.0-r2						-php
-=sci-libs/vtk-6.1.0-r2						-xdmf2
+=sci-libs/vtk-6.1.0-r3						-xdmf2
+
+# Future Flags
+
+# */*	mysql smartcard
+
+# dev-vcs/mercurial						bugzilla
+# media-libs/ming						php
