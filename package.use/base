@@ -27,13 +27,14 @@ app-crypt/gpgme							common-lisp
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
 app-doc/doxygen							clang dot doxysearch
-app-editors/gvim						cscope racket
+app-editors/gvim						cscope gtk3 racket
 app-editors/nano						justify
 app-editors/vim							cscope racket vim-pager
 app-i18n/ibus							gconf
+app-misc/ca-certificates					cacert
 app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
-app-office/libreoffice						coinmp collada gltf google odk vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
+app-office/libreoffice						coinmp collada gltf google odk pdfimport vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/layman						gpg mercurial squashfs sync-plugin-portage
 app-shells/zsh							maildir
 app-text/asciidoc						highlight
@@ -55,6 +56,7 @@ dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/spidermonkey:24					jit
 dev-lang/tk							xscreensaver
+dev-libs/appstream-glib						stemmer
 dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
 dev-libs/check							subunit
@@ -66,6 +68,7 @@ dev-libs/gmime							smime
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
 dev-libs/libburn						cdio
+dev-libs/libgit2						gssapi ssh
 dev-libs/libgpg-error						common-lisp
 dev-libs/libgweather						glade
 dev-libs/libnl							utils
@@ -79,6 +82,7 @@ dev-libs/totem-pl-parser					archive
 dev-lisp/clisp							pari
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
+dev-python/pyside						declarative designer help multimedia phonon script scripttools sql xmlpatterns
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon
 dev-qt/qtdeclarative:5						gles2 localstorage
@@ -91,7 +95,9 @@ dev-qt/qtprintsupport						gles2
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
 dev-tex/dot2texi						pgf pstricks
-dev-util/ctags							ada
+dev-util/cppcheck						htmlreport
+dev-util/ctags							ada json yaml
+dev-util/electron						hidpi
 dev-util/geany							gtk3
 dev-util/gtk-doc						highlight vim
 dev-util/nvidia-cuda-toolkit					profiler
@@ -105,6 +111,7 @@ gnome-base/libgnomecanvas					glade
 gnome-base/librsvg						tools
 gnome-base/nautilus						sendto
 gnome-extra/evolution-data-server				google
+gnome-extra/nm-applet						modemmanager teamd
 gnome-extra/sushi						office
 gnome-extra/zeitgeist						downloads-monitor plugins telepathy
 gnome-extra/zeitgeist-datasources				chromium geany telepathy vim
@@ -187,7 +194,7 @@ net-misc/gnome-online-miners					flickr
 net-misc/iputils						arping clockdiff tracepath traceroute
 net-misc/libteam						zmq
 net-misc/modemmanager						mbim
-net-misc/networkmanager						connection-sharing teamd
+net-misc/networkmanager						connection-sharing json ofono teamd
 net-misc/ofono							dundee tools
 net-misc/openssh						ldns
 net-misc/spice-gtk						gstvideo lz4 mjpeg usbredir webdav
@@ -212,9 +219,10 @@ sci-libs/vtk							R boost cg gdal imaging json rendering tbb views web xdmf2
 sci-mathematics/octave						gnuplot gui
 sci-mathematics/pari						data
 sci-visualization/gnuplot					bitmap libcerf
-sys-apps/busybox						math pam
+sys-apps/busybox						math pam -static
 sys-apps/gawk							mpfr
 sys-apps/gnome-disk-utility					fat
+sys-apps/hwloc							cuda gl plugins
 sys-apps/lm_sensors						sensord
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
@@ -232,6 +240,7 @@ sys-fs/e2fsprogs						fuse
 sys-fs/udisks							cryptsetup
 sys-kernel/gentoo-sources					experimental
 sys-libs/gdbm							exporter
+sys-libs/libomp							hwloc ompt
 sys-libs/ncurses						ada
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
@@ -264,8 +273,9 @@ x11-terms/xterm							toolbar
 app-editors/gedit						PYTHON_TARGETS: -python3_4
 app-editors/gvim						PYTHON_TARGETS: -python3_4
 app-editors/vim							PYTHON_TARGETS: -python3_4
-dev-libs/libixion						PYTHON_SINGLE_TARGET: python3_5
-dev-libs/liborcus						PYTHON_SINGLE_TARGET: python3_5
+dev-libs/gobject-introspection					PYTHON_SINGLE_TARGET: -python2_7 python3_5
+dev-libs/libixion						PYTHON_SINGLE_TARGET: -python3_4 python3_5
+dev-libs/liborcus						PYTHON_SINGLE_TARGET: -python3_4 python3_5
 dev-libs/libpeas						PYTHON_TARGETS: -python3_4
 media-video/totem						PYTHON_TARGETS: -python3_4
 net-irc/weechat							PYTHON_SINGLE_TARGET: -python2_7 python3_5
@@ -273,6 +283,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
 # Temporary Fixes (for broken packages)
 
+=dev-util/electron-0.37.8					-lto
 =media-gfx/graphviz-2.38.0-r1					-postscript
 =media-plugins/grilo-plugins-0.3.2				-chromaprint
 =net-proxy/dante-1.4.1						-upnp
@@ -280,6 +291,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/geos-3.5.0-r2						-php
 =sci-libs/vtk-6.1.0-r3						-xdmf2
+=sys-apps/hwloc-1.11.2						-cuda
 
 # Future Flags
 
