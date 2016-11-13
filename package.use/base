@@ -32,6 +32,7 @@ app-editors/nano						justify
 app-editors/vim							cscope racket vim-pager
 app-i18n/ibus							gconf
 app-misc/ca-certificates					cacert
+app-misc/geoclue:0						geonames gps gsmloc hostip manual nominatim plazes skyhook yahoo-geo
 app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
 app-office/libreoffice						coinmp collada gltf google odk pdfimport vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
@@ -74,6 +75,7 @@ dev-libs/libgweather						glade
 dev-libs/libnl							utils
 dev-libs/liborcus						tools
 dev-libs/libpcre						pcre16 pcre32
+dev-libs/libpcre2						pcre16 pcre32
 dev-libs/libpeas						glade
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
@@ -91,7 +93,11 @@ dev-qt/qtgui:5							egl evdev gles2 gtkstyle ibus libinput tslib tuio
 dev-qt/qtnetwork						libproxy
 dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
+dev-qt/qtpositioning						geoclue qml
 dev-qt/qtprintsupport						gles2
+dev-qt/qtsensors						qml
+dev-qt/qtwebchannel						qml
+dev-qt/qtwebkit							geolocation orientation printsupport qml webchannel
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
 dev-tex/dot2texi						pgf pstricks
@@ -181,6 +187,7 @@ net-libs/ldns							dane gost
 net-libs/libgadu						gnutls
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
+net-libs/liboauth						-nss
 net-libs/libpcap						bluetooth canusb netlink
 net-libs/libproxy						spidermonkey
 net-libs/libsoup						gssapi
@@ -202,6 +209,7 @@ net-misc/vinagre						rdp spice
 net-misc/wget							ntlm uuid
 net-voip/telepathy-gabble					plugins
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
+sci-geosciences/gpsd						latency_timing
 sci-libs/armadillo						arpack superlu tbb
 sci-libs/cholmod						cuda metis
 sci-libs/coinor-clp						glpk metis mumps sparse
