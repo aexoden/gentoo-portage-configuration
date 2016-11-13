@@ -10,7 +10,7 @@
 # Global Flags
 
 */*	accessibility audit avahi blas caps cddb cjk curl cvs djvu dv dvb ffmpeg fftw fontconfig gd gmp gphoto2 graphviz gsm guile
-*/*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lirc lua lzma modplug mono mtp multilib musepack
+*/*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lua lzma modplug mono mtp multilib musepack
 */*	networkmanager ocaml odbc openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile snmp soap speex sqlite subversion syslog szip
 */*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf zsh-completion
 
@@ -44,6 +44,7 @@ app-text/evince							dvi t1lib xps
 app-text/poppler						nss
 app-text/texlive						context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music omega pdfannotextractor pstricks publishers science tex4ht texi2html xetex xindy
 app-text/texlive-core						xetex
+dev-cpp/glog							gflags unwind
 dev-cpp/libcmis							man
 dev-db/sqlite							tools
 dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
@@ -84,12 +85,14 @@ dev-libs/totem-pl-parser					archive
 dev-lisp/clisp							pari
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
+dev-python/PyQt5						declarative designer gles2 help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
 dev-python/pyside						declarative designer help multimedia phonon script scripttools sql xmlpatterns
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon
 dev-qt/qtdeclarative:5						gles2 localstorage
 dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							egl evdev gles2 gtkstyle ibus libinput tslib tuio
+dev-qt/qtmultimedia						gles2 qml widgets
 dev-qt/qtnetwork						libproxy
 dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
@@ -98,6 +101,7 @@ dev-qt/qtprintsupport						gles2
 dev-qt/qtsensors						qml
 dev-qt/qtwebchannel						qml
 dev-qt/qtwebkit							geolocation orientation printsupport qml webchannel
+dev-qt/qtwebsockets						qml
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-scheme/guile						networking
 dev-tex/dot2texi						pgf pstricks
@@ -149,7 +153,7 @@ media-libs/libvisio						tools
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
-media-libs/opencv						contrib cuda gdal opencl -qt4 vtk xine
+media-libs/opencv						contrib contrib_cvv contrib_hdf contrib_sfm cuda gflags gdal glog opencl tesseract vtk xine
 media-libs/opus							ambisonics
 media-libs/raptor						json
 media-libs/taglib						boost
@@ -191,6 +195,7 @@ net-libs/liboauth						-nss
 net-libs/libpcap						bluetooth canusb netlink
 net-libs/libproxy						spidermonkey
 net-libs/libsoup						gssapi
+net-libs/libsrtp						aesicm openssl
 net-libs/libssh							gssapi pcap server
 net-libs/neon							libproxy pkcs11
 net-libs/nghttp2						hpack-tools utils
