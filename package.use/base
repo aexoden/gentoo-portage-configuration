@@ -89,6 +89,7 @@ dev-python/PyQt5						declarative designer gles2 help location multimedia positi
 dev-python/pyside						declarative designer help multimedia phonon script scripttools sql xmlpatterns
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon
+dev-qt/qtbluetooth						qml
 dev-qt/qtdeclarative:5						gles2 localstorage
 dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							egl evdev gles2 gtkstyle ibus libinput tslib tuio
@@ -100,6 +101,7 @@ dev-qt/qtpositioning						geoclue qml
 dev-qt/qtprintsupport						gles2
 dev-qt/qtsensors						qml
 dev-qt/qtwebchannel						qml
+dev-qt/qtwebengine						geolocation widgets
 dev-qt/qtwebkit							geolocation orientation printsupport qml webchannel
 dev-qt/qtwebsockets						qml
 dev-qt/qtwidgets						gles2 gtkstyle
@@ -137,6 +139,7 @@ media-libs/chromaprint						tools
 media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
 media-libs/gegl							lensfun umfpack
 media-libs/gst-plugins-bad					egl
+media-libs/leptonica						utils
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
 media-libs/libcanberra						tdb
@@ -280,6 +283,7 @@ x11-misc/colord							argyllcms extra-print-profiles scanner
 x11-misc/redshift						geoclue
 x11-plugins/pidgin-sipe						telepathy voice
 x11-terms/xterm							toolbar
+x11-wm/mutter							gles2
 
 # Python Adjustments
 
