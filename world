@@ -24,7 +24,6 @@ media-sound/alsa-utils
 media-sound/picard
 media-video/mpv
 net-analyzer/iftop
-net-irc/qweechat
 net-irc/weechat
 net-misc/dhcpcd
 net-nntp/pan
