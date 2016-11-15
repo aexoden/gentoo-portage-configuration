@@ -173,6 +173,7 @@ media-plugins/libvisual-plugins					mplayer
 media-sound/alsa-utils						bat
 media-sound/pulseaudio						equalizer native-headset ofono-headset sox
 media-sound/sox							amr id3tag opus twolame
+media-sound/vorbis-tools					kate
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
 media-video/mjpegtools						quicktime sdlgfx
 media-video/mpv							archive bluray libguess rubberband uchardet vf-dlopen

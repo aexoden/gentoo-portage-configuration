@@ -22,6 +22,7 @@ mail-client/thunderbird
 media-libs/libao
 media-sound/alsa-utils
 media-sound/picard
+media-sound/vorbis-tools
 media-video/mpv
 net-analyzer/iftop
 net-irc/weechat
