@@ -35,13 +35,14 @@ app-misc/ca-certificates					cacert
 app-misc/geoclue:0						geonames gsmloc hostip manual nominatim plazes yahoo-geo
 app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
-app-office/libreoffice						coinmp collada gltf google odk pdfimport vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
+app-office/libreoffice						coinmp collada gltf googledrive odk pdfimport vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/layman						gpg mercurial squashfs sync-plugin-portage
 app-shells/zsh							maildir
 app-text/asciidoc						highlight
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
 app-text/poppler						nss
+app-text/tesseract						math osd opencl training
 app-text/texlive						context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music omega pdfannotextractor pstricks publishers science tex4ht texi2html xetex xindy
 app-text/texlive-core						xetex
 dev-cpp/glog							gflags unwind
