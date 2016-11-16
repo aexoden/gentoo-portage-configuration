@@ -311,6 +311,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 =net-proxy/dante-1.4.1						-upnp
 =sci-libs/armadillo-6.200.3					-superlu
 =sci-libs/coinor-osi-0.106.6					-glpk
+=sci-libs/gdal-2.0.2-r2						-jpeg2k
 =sci-libs/geos-3.5.0-r2						-php
 =sci-libs/vtk-6.1.0-r4						-xdmf2
 =sys-apps/hwloc-1.11.2						-cuda
