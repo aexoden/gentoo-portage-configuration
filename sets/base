@@ -17,6 +17,7 @@ dev-util/android-studio
 dev-util/android-tools
 dev-util/cppcheck
 dev-util/meld
+dev-util/strace
 dev-util/uncrustify
 dev-vcs/git
 gnome-base/gnome
@@ -27,14 +28,19 @@ media-sound/picard
 media-sound/vorbis-tools
 media-video/mpv
 net-analyzer/iftop
-net-irc/weechat
+net-irc/quassel
 net-misc/dhcpcd
+net-misc/youtube-dl
 net-nntp/pan
 sci-libs/scipy
 sci-mathematics/octave
+sys-apps/hdparm
+sys-apps/hwinfo
 sys-apps/mlocate
 sys-apps/pv
-sys-boot/grub
+sys-apps/smartmontools
+sys-apps/usbutils
+sys-fs/dosfstools
 sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
@@ -42,5 +48,7 @@ sys-process/iotop
 sys-process/systemd-cron
 www-client/vivaldi
 www-plugins/adobe-flash
+www-plugins/chrome-binary-plugins
+x11-base/xorg-server
 x11-misc/redshift
 x11-misc/synergy
