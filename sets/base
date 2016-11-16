@@ -5,6 +5,7 @@ app-i18n/ibus-anthy
 app-misc/uptimed
 app-portage/cpuid2cpuflags
 app-portage/elogviewer
+app-portage/genlop
 app-portage/gentoolkit
 app-portage/layman
 app-shells/zsh
