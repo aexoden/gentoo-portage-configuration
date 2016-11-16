@@ -11,6 +11,7 @@ app-portage/layman
 app-shells/zsh
 dev-lang/php
 dev-python/httplib2
+dev-python/pep8
 dev-python/pytz
 dev-util/android-studio
 dev-util/android-tools
