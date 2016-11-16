@@ -294,6 +294,7 @@ x11-wm/mutter							gles2
 app-editors/gedit						PYTHON_TARGETS: -python3_4
 app-editors/gvim						PYTHON_TARGETS: -python3_4
 app-editors/vim							PYTHON_TARGETS: -python3_4
+app-office/unoconv						PYTHON_SINGLE_TARGET: -python2_7 python3_5
 dev-libs/gobject-introspection					PYTHON_SINGLE_TARGET: -python2_7 python3_5
 dev-libs/libixion						PYTHON_SINGLE_TARGET: -python3_4 python3_5
 dev-libs/liborcus						PYTHON_SINGLE_TARGET: -python3_4 python3_5
