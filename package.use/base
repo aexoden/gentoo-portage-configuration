@@ -33,7 +33,6 @@ app-editors/vim							racket vim-pager
 app-i18n/ibus							gconf
 app-misc/ca-certificates					cacert
 app-misc/geoclue:0						geonames gsmloc hostip manual nominatim plazes yahoo-geo
-app-misc/lirc							audio ftdi iguanair inputlirc irman
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
 app-office/libreoffice						coinmp collada gltf googledrive odk pdfimport vlc LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/layman						gpg mercurial squashfs sync-plugin-portage
@@ -71,7 +70,6 @@ dev-libs/gmime							smime
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
 dev-libs/libburn						cdio
-dev-libs/libgit2						gssapi ssh
 dev-libs/libgpg-error						common-lisp
 dev-libs/libgweather						glade
 dev-libs/libnl							utils
@@ -87,7 +85,6 @@ dev-lisp/clisp							pari
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/PyQt5						declarative designer gles2 help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
-dev-python/pyside						declarative designer help multimedia phonon script scripttools sql xmlpatterns
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative phonon
 dev-qt/qtbluetooth						qml
@@ -106,11 +103,9 @@ dev-qt/qtwebengine						widgets
 dev-qt/qtwebkit							orientation printsupport qml webchannel
 dev-qt/qtwebsockets						qml
 dev-qt/qtwidgets						gles2 gtkstyle
-dev-scheme/guile						networking
 dev-tex/dot2texi						pgf pstricks
 dev-util/cppcheck						htmlreport
-dev-util/ctags							ada json yaml
-dev-util/electron						hidpi
+dev-util/ctags							json yaml
 dev-util/geany							gtk3
 dev-util/gtk-doc						highlight vim
 dev-util/nvidia-cuda-toolkit					profiler
@@ -129,7 +124,7 @@ gnome-extra/nm-applet						modemmanager teamd
 gnome-extra/sushi						office
 gnome-extra/zeitgeist						downloads-monitor plugins telepathy
 gnome-extra/zeitgeist-datasources				chromium geany telepathy vim
-mail-client/evolution						highlight map
+mail-client/evolution						highlight
 media-gfx/exiv2							webready
 media-gfx/fontforge						truetype-debugger
 media-gfx/gimp							vector-icons
@@ -139,7 +134,7 @@ media-gfx/pstoedit						emf flash plotutils pptx
 media-gfx/ufraw							contrast fits gimp timezone
 media-libs/alsa-lib						alisp
 media-libs/chromaprint						tools
-media-libs/freetype						cleartype_hinting fontforge harfbuzz utils
+media-libs/freetype						fontforge harfbuzz utils
 media-libs/gegl							lensfun umfpack
 media-libs/gst-plugins-bad					egl
 media-libs/leptonica						utils
@@ -147,7 +142,7 @@ media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
 media-libs/libcanberra						tdb
 media-libs/libgphoto2						CAMERAS: -*
-media-libs/libmediaart						-qt4 -qt5
+media-libs/libmediaart						-qt5
 media-libs/libmp4v2						utils
 media-libs/libmypaint						gegl
 media-libs/libpagemaker						tools
@@ -176,7 +171,7 @@ media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
 media-video/mjpegtools						quicktime sdlgfx
-media-video/mpv							archive bluray libguess rubberband uchardet vf-dlopen
+media-video/mpv							archive bluray libguess rubberband vf-dlopen
 media-video/totem						zeitgeist
 media-video/vlc							bidi bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
 net-analyzer/net-snmp						elf lm_sensors netlink pci
@@ -199,7 +194,7 @@ net-libs/libgadu						gnutls
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
 net-libs/liboauth						-nss
-net-libs/libpcap						bluetooth canusb netlink
+net-libs/libpcap						bluetooth netlink
 net-libs/libproxy						spidermonkey
 net-libs/libsoup						gssapi
 net-libs/libsrtp						aesicm openssl
@@ -221,7 +216,6 @@ net-misc/vinagre						rdp spice
 net-misc/wget							ntlm uuid
 net-voip/telepathy-gabble					plugins
 net-wireless/wpa_supplicant					ap eap-sim p2p -qt4 tdls wps
-sci-geosciences/gpsd						latency_timing
 sci-libs/armadillo						arpack superlu tbb
 sci-libs/cholmod						cuda metis
 sci-libs/coinor-clp						glpk metis mumps sparse
@@ -305,10 +299,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
 # Temporary Fixes (for broken packages)
 
-=dev-util/electron-0.37.8					-lto
 =media-gfx/graphviz-2.38.0-r1					-postscript
-=media-plugins/grilo-plugins-0.3.2				-chromaprint
-=net-proxy/dante-1.4.1						-upnp
 =sci-libs/armadillo-6.200.3					-superlu
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/gdal-2.0.2-r2						-jpeg2k
