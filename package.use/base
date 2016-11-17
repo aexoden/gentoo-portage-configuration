@@ -9,9 +9,9 @@
 
 # Global Flags
 
-*/*	accessibility audit avahi blas caps cddb cjk cscope curl cvs djvu dv dvb ffmpeg fftw fontconfig gd geolocation gmp gphoto2 graphviz gsm guile
+*/*	accessibility audit avahi bidi blas caps cddb cjk cscope curl cvs djvu dv dvb ffmpeg fftw fontconfig gd geolocation gmp gphoto2 graphviz gsm guile
 */*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lua lzma modplug mono mtp multilib musepack
-*/*	networkmanager ocaml odbc openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile snmp soap speex sqlite subversion syslog szip
+*/*	networkmanager ocaml odbc offensive openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile snmp soap speex sqlite subversion syslog szip
 */*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf zsh-completion
 
 # Package Flags
@@ -26,6 +26,7 @@ app-crypt/gnupg							tofu tools
 app-crypt/gpgme							common-lisp
 app-crypt/mit-krb5						openldap
 app-crypt/pinentry						-qt4
+app-crypt/qca							botan gcrypt gpg logger nss pkcs11 softstore
 app-doc/doxygen							clang dot doxysearch
 app-editors/gvim						gtk3 racket
 app-editors/nano						justify
@@ -86,7 +87,8 @@ dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/PyQt5						declarative designer gles2 help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
 dev-ruby/rrdtool-bindings					graph
-dev-qt/designer							declarative phonon
+dev-qt/designer							declarative
+dev-qt/linguist-tools						qml
 dev-qt/qtbluetooth						qml
 dev-qt/qtdeclarative:5						gles2 localstorage
 dev-qt/qtgui:4							egl gtkstyle
@@ -97,10 +99,12 @@ dev-qt/qtopengl:4						egl
 dev-qt/qtopengl:5						gles2
 dev-qt/qtpositioning						geoclue qml
 dev-qt/qtprintsupport						gles2
+dev-qt/qtscript							scripttools
 dev-qt/qtsensors						qml
 dev-qt/qtwebchannel						qml
 dev-qt/qtwebengine						widgets
 dev-qt/qtwebkit							orientation printsupport qml webchannel
+dev-qt/qtwebkit:4						-gstreamer
 dev-qt/qtwebsockets						qml
 dev-qt/qtwidgets						gles2 gtkstyle
 dev-tex/dot2texi						pgf pstricks
@@ -109,6 +113,7 @@ dev-util/ctags							json yaml
 dev-util/geany							gtk3
 dev-util/gtk-doc						highlight vim
 dev-util/nvidia-cuda-toolkit					profiler
+dev-util/strace							aio unwind
 dev-vcs/git							highlight mediawiki mediawiki-experimental
 dev-vcs/mercurial						gpg
 dev-vcs/subversion						ctypes-python -dso extras
@@ -148,7 +153,6 @@ media-libs/libmypaint						gegl
 media-libs/libpagemaker						tools
 media-libs/libraw						demosaic
 media-libs/libquicktime						schroedinger
-media-libs/libquvi-scripts					offensive
 media-libs/libsdl						tslib
 media-libs/libvisio						tools
 media-libs/libvpx						postproc svc
@@ -156,6 +160,7 @@ media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
 media-libs/opencv						contrib contrib_cvv contrib_hdf contrib_sfm cuda gflags gdal glog opencl tesseract vtk xine
 media-libs/opus							ambisonics
+media-libs/phonon						designer
 media-libs/raptor						json
 media-libs/taglib						boost
 media-libs/x264							opencl
@@ -173,7 +178,7 @@ media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite 
 media-video/mjpegtools						quicktime sdlgfx
 media-video/mpv							archive bluray libguess rubberband vf-dlopen
 media-video/totem						zeitgeist
-media-video/vlc							bidi bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
+media-video/vlc							bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
 net-analyzer/net-snmp						elf lm_sensors netlink pci
 net-analyzer/nmap						ncat ndiff nmap-update nping zenmap
 net-analyzer/rrdtool						dbi graph rrdcgi
@@ -187,10 +192,12 @@ net-fs/cifs-utils						creds
 net-fs/samba							addns ads aio client gnutls iprint quota winbind
 net-im/pidgin							gadu groupwise meanwhile mxit prediction silc zephyr
 net-im/telepathy-connection-managers				gadu icq meanwhile msn sip sipe steam yahoo
+net-irc/quassel							phonon snorenotify
 net-nds/openldap						cxx kinit slp smbkrb5passwd
 net-libs/gnutls							dane pkcs11
 net-libs/ldns							dane gost
 net-libs/libgadu						gnutls
+net-libs/libgsasl						gcrypt ntlm
 net-libs/libmicrohttpd						epoll messages
 net-libs/libnftnl						json
 net-libs/liboauth						-nss
@@ -264,6 +271,7 @@ sys-libs/readline						utils
 virtual/ffmpeg							opus
 virtual/linux-sources						firmware
 www-client/firefox						wifi
+www-client/links						libevent
 www-client/w3m							imlib nntp xface
 www-servers/apache						suexec
 www-servers/xsp							net35 net40 net45
@@ -276,6 +284,7 @@ x11-libs/libdrm							libkms
 x11-libs/libva							egl
 x11-libs/libwnck						tools
 x11-libs/qscintilla						designer
+x11-libs/snorenotify						sound
 x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
 x11-misc/redshift						geoclue
