@@ -10,15 +10,15 @@
 # Global Flags
 
 */*	accessibility audit avahi bidi blas caps cddb cjk cscope curl cvs djvu dv dvb ffmpeg fftw fontconfig gd geolocation gmp gphoto2 graphviz gsm guile
-*/*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lua lzma modplug mono mtp multilib musepack
+*/*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lua lzma lzo modplug mono mtp multilib musepack
 */*	networkmanager ocaml odbc offensive openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smartcard smp sndfile snmp soap speex sqlite subversion syslog szip
-*/*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf zsh-completion
+*/*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm xscreensaver zeroconf zsh-completion
 
 # Package Flags
 
 app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
-app-arch/libarchive						lz4 lzo
+app-arch/libarchive						lz4
 app-arch/unzip							natspec
 app-arch/zip							natspec
 app-cdr/brasero							playlist
@@ -31,6 +31,8 @@ app-doc/doxygen							clang dot doxysearch
 app-editors/gvim						gtk3 racket
 app-editors/nano						justify
 app-editors/vim							racket vim-pager
+app-emulation/qemu						gnutls nfs numa sdl2 snappy spice ssh usbredir vde virgl virtfs vte xfs
+app-emulation/spice						lz4
 app-i18n/ibus							gconf
 app-misc/ca-certificates					cacert
 app-misc/geoclue:0						geonames gsmloc hostip manual nominatim plazes yahoo-geo
@@ -58,7 +60,6 @@ dev-lang/php							bcmath calendar enchant flatfile ftp imap inifile intl ldap-s
 dev-lang/python							wininst
 dev-lang/ruby							socks5
 dev-lang/spidermonkey:24					jit
-dev-lang/tk							xscreensaver
 dev-libs/appstream-glib						stemmer
 dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
@@ -154,6 +155,7 @@ media-libs/libpagemaker						tools
 media-libs/libraw						demosaic
 media-libs/libquicktime						schroedinger
 media-libs/libsdl						tslib
+media-libs/libsdl2						gles haptic tslib
 media-libs/libvisio						tools
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
@@ -219,6 +221,7 @@ net-misc/networkmanager						connection-sharing json ofono teamd
 net-misc/ofono							dundee tools
 net-misc/openssh						ldns
 net-misc/spice-gtk						gstvideo lz4 mjpeg usbredir webdav
+net-misc/vde							pcap
 net-misc/vinagre						rdp spice
 net-misc/wget							ntlm uuid
 net-voip/telepathy-gabble					plugins
