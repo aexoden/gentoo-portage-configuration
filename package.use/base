@@ -256,6 +256,7 @@ sys-boot/plymouth						gdm
 sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc
 sys-devel/gettext						git
 sys-devel/llvm							clang gold lldb
+sys-firmware/ipxe						efi iso lkrn undi vmware
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
 sys-fs/udisks							cryptsetup
