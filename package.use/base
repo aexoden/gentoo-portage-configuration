@@ -11,7 +11,7 @@
 
 */*	accessibility audit avahi bidi blas caps cddb cjk cscope curl cvs djvu dv dvb ffmpeg fftw fontconfig gd geolocation gmp gphoto2 graphviz gsm guile
 */*	hdf5 icu idn ieee1394 imagemagick ios jack java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lua lzma modplug mono mtp multilib musepack
-*/*	networkmanager ocaml odbc offensive openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smp sndfile snmp soap speex sqlite subversion syslog szip
+*/*	networkmanager ocaml odbc offensive openal openexr perl postscript python qt5 raw ruby samba sasl sctp skey smartcard smp sndfile snmp soap speex sqlite subversion syslog szip
 */*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm zeroconf zsh-completion
 
 # Package Flags
@@ -318,7 +318,8 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
 # Future Flags
 
-# */*	mysql smartcard
+# */*	mysql
 
 # dev-vcs/mercurial						bugzilla
 # media-libs/ming						php
+# apache flags
