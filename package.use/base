@@ -160,13 +160,13 @@ media-libs/libvisio						tools
 media-libs/libvpx						postproc svc
 media-libs/mesa							d3d9 opencl openmax osmesa xa xvmc
 media-libs/openal						portaudio
-media-libs/opencv						contrib contrib_cvv contrib_hdf contrib_sfm cuda gflags gdal glog opencl tesseract vtk xine
+media-libs/opencv						contrib contrib_cvv contrib_hdf contrib_sfm cuda gflags gdal glog opencl tesseract vtk
+media-libs/openh264						utils
 media-libs/opus							ambisonics
 media-libs/phonon						designer
 media-libs/raptor						json
 media-libs/taglib						boost
 media-libs/x264							opencl
-media-libs/xine-lib						bluray dxr3 vdr vpx xvmc
 media-plugins/alsa-plugins					libsamplerate
 media-plugins/grilo-plugins					chromaprint daap flickr freebox subtitles thetvdb vimeo
 media-plugins/gst-plugins-meta					http libvisual mms opus vpx
@@ -176,9 +176,10 @@ media-sound/alsa-utils						bat
 media-sound/pulseaudio						equalizer native-headset ofono-headset sox
 media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt faac fdk flite frei0r fribidi gme gnutls iec61883 librtmp libsoxr libv4l openssl opus quvi schroedinger snappy ssh twolame vpx x265 zvbi
+media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt chromaprint ebur128 faac fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libilbc librtmp libsoxr libv4l nvenc openh264 openssl opus quvi rubberband schroedinger snappy ssh twolame vpx x265 zimg zvbi
 media-video/mjpegtools						quicktime sdlgfx
-media-video/mpv							archive bluray libguess rubberband vf-dlopen
+media-video/mpv							archive bluray libguess rubberband tools vf-dlopen
+media-video/nvidia_video_sdk					tools
 media-video/totem						zeitgeist
 media-video/vlc							bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
 net-analyzer/net-snmp						elf lm_sensors netlink pci
@@ -240,7 +241,7 @@ sci-libs/netcdf							hdf tools
 sci-libs/scipy							sparse
 sci-libs/scotch							int64 tools
 sci-libs/vtk							R boost cg gdal imaging json rendering tbb views web xdmf2
-sci-mathematics/octave						gnuplot gui
+sci-mathematics/octave						gnuplot gui openssl portaudio
 sci-mathematics/pari						data
 sci-visualization/gnuplot					bitmap libcerf
 sys-apps/busybox						math pam -static
@@ -266,7 +267,7 @@ sys-fs/udisks							cryptsetup
 sys-kernel/gentoo-sources					experimental
 sys-libs/gdbm							exporter
 sys-libs/libomp							hwloc ompt
-sys-libs/ncurses						ada
+sys-libs/ncurses						ada tinfo
 sys-libs/zlib							minizip
 sys-process/lsof						rpc
 sys-process/procps						modern-top
