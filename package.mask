@@ -1,3 +1,4 @@
 app-accessibility/speech-dispatcher::cg
 app-text/enchant::soft
 >dev-java/asm-5.0.3:4
+>=net-misc/freerdp-2
