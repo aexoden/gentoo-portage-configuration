@@ -4,7 +4,7 @@
 # USE_EXPAND Flags
 
 */*	ABI_X86: 32
-*/*	RUBY_TARGETS: ruby23
+*/*	RUBY_TARGETS: ruby23 ruby24
 */*	PYTHON_TARGETS: python3_5
 
 # Global Flags
@@ -19,6 +19,7 @@
 app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
 app-arch/libarchive						lz4
+app-arch/p7zip							rar
 app-arch/unzip							natspec
 app-arch/zip							natspec
 app-cdr/brasero							playlist
@@ -43,10 +44,14 @@ app-shells/zsh							maildir
 app-text/asciidoc						highlight
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
+app-text/libebook						tools
+app-text/libmwaw						tools
+app-text/libwps							tools
 app-text/poppler						nss
-app-text/tesseract						math osd opencl training
+app-text/tesseract						math osd opencl scrollview training
 app-text/texlive						context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music omega pdfannotextractor pstricks publishers science tex4ht texi2html xetex xindy
 app-text/texlive-core						xetex
+dev-cpp/eigen							c++11 cuda
 dev-cpp/glog							gflags unwind
 dev-cpp/libcmis							man
 dev-db/sqlite							tools
@@ -143,6 +148,7 @@ media-libs/chromaprint						tools
 media-libs/freetype						fontforge harfbuzz utils
 media-libs/gegl							lensfun umfpack
 media-libs/gst-plugins-bad					egl
+media-libs/gstreamer						unwind
 media-libs/leptonica						utils
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus udf utils
@@ -178,7 +184,7 @@ media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
 media-video/ffmpeg						aacplus amr amrenc bluray bs2b cdio celt chromaprint ebur128 faac fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libilbc librtmp libsoxr libv4l nvenc openh264 openssl opus quvi rubberband schroedinger snappy ssh twolame vpx x265 zimg zvbi
 media-video/mjpegtools						quicktime sdlgfx
-media-video/mpv							archive bluray libguess rubberband tools vf-dlopen
+media-video/mpv							archive bluray cplugins libguess rubberband tools vf-dlopen
 media-video/nvidia_video_sdk					tools
 media-video/totem						zeitgeist
 media-video/vlc							bluray chromaprint dc1394 faad fdk fluidsynth gme gnutls httpd kate libtiger live matroska omxil opencv opus postproc projectm -qt4 rdp rtsp schroedinger sdl-image sftp shout sid skins twolame vcdx vlm vpx x265 zvbi
@@ -196,8 +202,8 @@ net-fs/samba							addns ads aio client gnutls iprint quota winbind
 net-im/pidgin							gadu groupwise meanwhile mxit prediction silc zephyr
 net-im/telepathy-connection-managers				gadu icq meanwhile msn sip sipe steam yahoo
 net-irc/quassel							phonon snorenotify
-net-nds/openldap						cxx kinit slp smbkrb5passwd
-net-libs/gnutls							dane pkcs11
+net-nds/openldap						cxx kinit pbkdf2 slp smbkrb5passwd
+net-libs/gnutls							dane pkcs11 tools
 net-libs/ldns							dane gost
 net-libs/libgadu						gnutls
 net-libs/libgsasl						gcrypt ntlm
@@ -251,6 +257,7 @@ sys-apps/hwloc							cuda gl plugins
 sys-apps/lm_sensors						sensord
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd nat qrcode sysv-utils xkb
 sys-apps/pciutils						dns
+sys-apps/portage						native-extensions
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
@@ -269,6 +276,7 @@ sys-libs/gdbm							exporter
 sys-libs/libomp							hwloc ompt
 sys-libs/ncurses						ada tinfo
 sys-libs/zlib							minizip
+sys-process/audit						gssapi
 sys-process/lsof						rpc
 sys-process/procps						modern-top
 sys-process/systemd-cron					cron-boot minutely setgid yearly
@@ -288,7 +296,7 @@ x11-libs/gtksourceview:3.0					glade
 x11-libs/libdrm							libkms
 x11-libs/libva							egl
 x11-libs/libwnck						tools
-x11-libs/qscintilla						designer
+x11-libs/qscintilla						designer -qt4
 x11-libs/snorenotify						sound
 x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
@@ -313,13 +321,15 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
 # Temporary Fixes (for broken packages)
 
+=app-accessibility/brltty-5.2-r1				-ocaml
 =media-gfx/graphviz-2.38.0-r1					-postscript
 =sci-libs/armadillo-6.200.3					-superlu
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/gdal-2.0.2-r2						-jpeg2k
 =sci-libs/geos-3.5.0-r2						-php
-=sci-libs/vtk-6.1.0-r4						-xdmf2
+=sci-libs/vtk-7.1.0						-python -web -xdmf2
 =sys-apps/hwloc-1.11.2						-cuda
+=sys-devel/llvm-3.9.1-r1					-ocaml
 
 # Future Flags
 
