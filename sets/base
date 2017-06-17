@@ -34,6 +34,7 @@ media-sound/picard
 media-sound/vorbis-tools
 media-video/mpv
 net-analyzer/iftop
+net-im/discord-bin
 net-irc/quassel
 net-misc/dhcpcd
 net-misc/streamlink
@@ -60,6 +61,5 @@ www-client/vivaldi
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
 x11-base/xorg-server
-x11-misc/discord
 x11-misc/redshift
 x11-misc/synergy

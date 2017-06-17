@@ -202,7 +202,7 @@ net-dialup/ppp							activefilter atm dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat utils
 net-dns/bind-tools						gost gssapi
 net-dns/dnsmasq							conntrack dhcp-tools dnssec -idn libidn2 script tftp
-net-dns/unbound							dnstap gost
+net-dns/unbound							dnscrypt dnstap gost
 net-firewall/iptables						conntrack netlink nftables pcap
 net-fs/cifs-utils						creds
 net-fs/samba							addns ads aio client gnutls iprint quota winbind
