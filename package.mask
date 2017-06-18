@@ -3,4 +3,4 @@ sci-libs/hdf5::cg
 app-text/enchant::soft
 >dev-java/asm-5.0.3:4
 >=net-misc/freerdp-2
->=sys-kernel/gentoo-sources-4.11
+>=sys-kernel/gentoo-sources-4.12
