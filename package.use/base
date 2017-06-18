@@ -47,6 +47,7 @@ app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
 app-text/libebook						tools
 app-text/libmwaw						tools
+app-text/libstaroffice						tools
 app-text/libwps							tools
 app-text/poppler						nss
 app-text/tesseract						math osd opencl scrollview training
@@ -170,6 +171,7 @@ media-libs/libsdl						tslib
 media-libs/libsdl2						gles haptic tslib
 media-libs/libvisio						tools
 media-libs/libvpx						postproc svc
+media-libs/libzmf						tools
 media-libs/mesa							d3d9 opencl openmax osmesa unwind xa xvmc
 media-libs/openal						portaudio
 media-libs/opencv						contrib contrib_cvv contrib_hdf contrib_sfm contrib_xfeatures2d cuda gflags gdal glog opencl tesseract vtk
@@ -318,6 +320,7 @@ x11-wm/mutter							gles2
 app-editors/gedit						PYTHON_SINGLE_TARGET: -python3_4 python3_5 PYTHON_TARGETS: -python3_4
 app-editors/gvim						PYTHON_SINGLE_TARGET: -python3_4 python3_6
 app-editors/vim							PYTHON_SINGLE_TARGET: -python3_4 python3_6
+app-office/libreoffice						PYTHON_SINGLE_TARGET: -python3_4 python3_6
 app-office/unoconv						PYTHON_SINGLE_TARGET: -python3_4 python3_5
 dev-libs/gobject-introspection					PYTHON_SINGLE_TARGET: -python3_4 python3_5
 dev-libs/libixion						PYTHON_SINGLE_TARGET: -python3_4 python3_6
