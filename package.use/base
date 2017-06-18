@@ -326,6 +326,7 @@ dev-libs/libpeas						PYTHON_SINGLE_TARGET: -python3_4 python3_5 PYTHON_TARGETS:
 media-sound/gnome-music						PYTHON_SINGLE_TARGET: -python3_4 python3_5
 media-video/totem						PYTHON_SINGLE_TARGET: -python3_4 python3_5 PYTHON_TARGETS: -python3_4
 net-irc/weechat							PYTHON_SINGLE_TARGET: -python2_7 python3_5
+sys-apps/pcsc-lite						PYTHON_SINGLE_TARGET: -python3_4 python3_6
 sys-apps/util-linux						PYTHON_SINGLE_TARGET: -python3_4 python3_6
 sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
