@@ -337,6 +337,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 
 =app-accessibility/brltty-5.2-r1				-ocaml
 =media-gfx/graphviz-2.38.0-r1					-postscript
+=media-libs/opencv-3.2.0-r1					-cuda
 =sci-libs/armadillo-7.950.0					-superlu
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/gdal-2.0.2-r2						-jpeg2k
