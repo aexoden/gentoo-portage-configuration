@@ -336,6 +336,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_4
 # Temporary Fixes (for broken packages)
 
 =app-accessibility/brltty-5.2-r1				-ocaml
+=dev-lisp/clisp-2.49-r100					-gdbm
 =media-gfx/graphviz-2.38.0-r1					-postscript
 =media-libs/opencv-3.2.0-r1					-cuda
 =net-dns/unbound-1.6.3						-dnscrypt
