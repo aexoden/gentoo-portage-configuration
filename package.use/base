@@ -129,6 +129,7 @@ gnome-extra/sushi						office
 gnome-extra/zeitgeist						downloads-monitor telepathy
 mail-client/evolution						archive highlight
 mail-client/thunderbird						wifi
+media-gfx/apngasm						7z zopfli
 media-gfx/exiv2							webready
 media-gfx/gimp							vector-icons
 media-gfx/gnome-photos						flickr
