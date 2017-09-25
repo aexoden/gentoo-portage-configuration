@@ -2,5 +2,4 @@
 # Base Package Set
 
 # Remove OpenRC from @system
-
 -*sys-apps/openrc
