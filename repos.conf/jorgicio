@@ -1,0 +1,7 @@
+[jorgicio]
+location = /var/lib/repositories/jorgicio
+sync-type = git
+sync-uri = https://github.com/jorgicio/jorgicio-gentoo.git
+auto-sync = yes
+clone-depth = 0
+priority = 500

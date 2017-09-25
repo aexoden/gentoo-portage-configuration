@@ -3,4 +3,5 @@ location = /var/lib/repositories/aexoden
 sync-type = git
 sync-uri = https://github.com/aexoden/gentoo-overlay.git
 auto-sync = yes
+clone-depth = 0
 priority = 1000
