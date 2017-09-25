@@ -1,4 +1,5 @@
 make.conf/local
+package.mask/local
 package.use/local
 repo.postsync.d/
 savedconfig/
