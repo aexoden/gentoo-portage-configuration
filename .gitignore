@@ -1,3 +1,4 @@
-make.conf/local.conf
+make.conf/local
+package.use/local
 repo.postsync.d/
 savedconfig/
