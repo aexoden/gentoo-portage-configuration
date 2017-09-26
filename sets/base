@@ -47,8 +47,8 @@ sys-apps/usbutils
 sys-devel/gdb
 sys-fs/ddrescue
 sys-fs/dosfstools
+sys-kernel/ck-sources
 sys-kernel/dracut
-sys-kernel/gentoo-sources
 sys-process/iotop
 sys-process/lsof
 sys-process/systemd-cron
