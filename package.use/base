@@ -253,7 +253,7 @@ sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
 sys-block/parted						device-mapper
 sys-boot/grub							device-mapper
-sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc
+sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc pgo
 sys-devel/gettext						git
 sys-devel/llvm							gold
 sys-fs/cryptsetup						pwquality reencrypt
