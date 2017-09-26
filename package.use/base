@@ -54,6 +54,7 @@ app-text/texlive-core						xetex
 dev-cpp/eigen							c++11 cuda
 dev-cpp/glog							gflags unwind
 dev-cpp/libcmis							man
+dev-db/mariadb							innodb-lz4 innodb-lzo innodb-snappy
 dev-db/sqlite							tools
 dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
 dev-java/icedtea-bin:8						nsplugin
@@ -307,11 +308,13 @@ net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_5
 =app-accessibility/brltty-5.2-r1				-ocaml
 =dev-cpp/eigen-3.3.3						-cuda
 =dev-lisp/clisp-2.49-r100					-gdbm
+=dev-python/rdflib-4.2.2					-mysql
 =media-libs/opencv-3.3.0-r1					-cuda -contrib_xfeatures2d
 =net-dns/unbound-1.6.4						-dnscrypt
 =net-fs/nfs-utils-2.1.2_rc5					-kerberos
 =net-fs/samba-4.6.8						-addns
 =sci-libs/coinor-osi-0.106.6					-glpk
+=sci-libs/gdal-2.0.3						-mysql
 =sys-apps/hwloc-1.11.7						-cuda
 =sys-libs/libcxx-5.0.0						-libunwind
 =sys-libs/libcxxabi-5.0.0					-libunwind
