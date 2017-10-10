@@ -316,8 +316,6 @@ net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_5
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/gdal-2.0.3						-mysql
 =sys-apps/hwloc-1.11.7						-cuda
-=sys-libs/libcxx-5.0.0						-libunwind
-=sys-libs/libcxxabi-5.0.0					-libunwind
 
 # Notes
 
