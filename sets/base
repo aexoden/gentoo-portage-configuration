@@ -15,6 +15,7 @@ dev-cpp/tclap
 dev-lang/php
 dev-python/httplib2
 dev-python/pip
+dev-python/virtualenvwrapper
 dev-util/android-studio
 dev-util/android-tools
 dev-util/meld
