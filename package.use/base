@@ -5,8 +5,8 @@
 
 */*	ABI_X86: 32
 */*	PYTHON_SINGLE_TARGET: -* python3_6
-*/*	PYTHON_TARGETS: python3_5 python3_6
-*/*	RUBY_TARGETS: ruby23 ruby24
+*/*	PYTHON_TARGETS: python3_4 python3_5 python3_6
+*/*	RUBY_TARGETS: ruby23 ruby24 ruby25
 
 # Global Flags
 
@@ -21,7 +21,6 @@ app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
 app-arch/libarchive						lz4
 app-arch/p7zip							rar
-app-arch/unzip							natspec
 app-arch/zip							natspec
 app-cdr/brasero							playlist
 app-crypt/gnupg							tofu tools
@@ -30,7 +29,7 @@ app-crypt/mit-krb5						openldap
 app-crypt/qca							botan gcrypt gpg logger nss softstore
 app-crypt/rhash							openssl
 app-doc/doxygen							clang dot
-app-editors/gvim						gtk3 racket
+app-editors/gvim						gtk3 racket session
 app-editors/nano						justify
 app-editors/vim							racket terminal
 app-i18n/enca							recode
@@ -38,13 +37,16 @@ app-misc/ca-certificates					cacert
 app-misc/geoclue:0						geonames gsmloc hostip manual nominatim plazes yahoo-geo
 app-misc/jq							oniguruma
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
-app-office/libreoffice						coinmp collada gltf googledrive gtk3 odk pdfimport LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
+app-office/gnucash						aqbanking ofx quotes register2
+app-office/libreoffice						coinmp googledrive odk pdfimport LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
+app-portage/gemato						sha3
 app-shells/zsh							maildir
 app-text/asciidoc						highlight
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
 app-text/libebook						tools
 app-text/libmwaw						tools
+app-text/libqxp							tools
 app-text/libstaroffice						tools
 app-text/libwps							tools
 app-text/poppler						nss
@@ -54,16 +56,17 @@ app-text/texlive-core						xetex
 dev-cpp/eigen							c++11 cuda
 dev-cpp/glog							gflags unwind
 dev-cpp/libcmis							man
-dev-db/mariadb							innodb-lz4 innodb-lzo innodb-snappy
+dev-db/mariadb							cracklib innodb-lz4 innodb-lzo innodb-snappy
 dev-db/sqlite							tools
 dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
 dev-java/icedtea-bin:8						nsplugin
 dev-java/icedtea-web						nsplugin tagsoup
 dev-java/log4j							javamail jms
 dev-lang/luajit							lua52compat
-dev-lang/php							bcmath calendar enchant flatfile ftp imap inifile intl ldap-sasl mhash pcntl pdo phpdbg sockets sysvipc tidy truetype wddx xmlreader xmlrpc xmlwriter xslt zip
+dev-lang/php							bcmath calendar enchant flatfile ftp imap inifile intl ldap-sasl mhash pcntl pdo phpdbg sharedmem sockets sodium sysvipc tidy truetype wddx xmlreader xmlrpc xmlwriter xslt zip zip-encryption
 dev-lang/python							wininst
 dev-lang/ruby							socks5
+dev-lang/rust							extended
 dev-libs/appstream-glib						stemmer
 dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
@@ -75,13 +78,12 @@ dev-libs/glib							utils
 dev-libs/gmime							smime
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
-dev-libs/libburn						cdio
 dev-libs/libgpg-error						common-lisp
 dev-libs/libgweather						glade
 dev-libs/libnl							utils
 dev-libs/liborcus						tools
-dev-libs/libpcre						pcre16 pcre32
-dev-libs/libpcre2						pcre16 pcre32
+dev-libs/libpcre						pcre32
+dev-libs/libpcre2						pcre32
 dev-libs/libpeas						glade
 dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
@@ -92,7 +94,6 @@ dev-python/pillow						imagequant
 dev-python/pygobject:2						libffi
 dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/PyQt5						declarative designer help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
-dev-python/sphinx						net
 dev-python/twisted						conch http2
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative
@@ -100,7 +101,7 @@ dev-qt/linguist-tools						qml
 dev-qt/qtbluetooth						qml
 dev-qt/qtdeclarative:5						localstorage
 dev-qt/qtgui:4							egl gtkstyle
-dev-qt/qtgui:5							egl evdev ibus libinput tslib tuio
+dev-qt/qtgui:5							evdev ibus tslib tuio
 dev-qt/qtmultimedia						qml widgets
 dev-qt/qtnetwork						libproxy
 dev-qt/qtopengl:4						egl
@@ -127,7 +128,6 @@ gnome-base/librsvg						tools
 gnome-base/nautilus						sendto
 gnome-extra/nm-applet						gcr
 gnome-extra/sushi						office
-gnome-extra/zeitgeist						downloads-monitor telepathy
 mail-client/evolution						archive highlight
 mail-client/thunderbird						wifi
 media-gfx/apngasm						7z zopfli
@@ -142,25 +142,24 @@ media-libs/alsa-lib						alisp
 media-libs/chromaprint						tools
 media-libs/freetype						fontforge harfbuzz utils
 media-libs/gegl							lensfun umfpack
-media-libs/gst-plugins-bad					egl
 media-libs/gstreamer						unwind
 media-libs/leptonica						utils
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus utils
 media-libs/libcanberra						tdb
 media-libs/libmediaart						-qt5
-media-libs/libmypaint						gegl
 media-libs/libpagemaker						tools
 media-libs/libraw						demosaic
 media-libs/libquicktime						schroedinger
 media-libs/libsdl						tslib
 media-libs/libsdl2						gles haptic tslib
 media-libs/libvisio						tools
-media-libs/libvpx						postproc svc
+media-libs/libvpx						postproc
 media-libs/libzmf						tools
+media-libs/lv2							plugins
 media-libs/mesa							d3d9 opencl openmax osmesa unwind xa xvmc
 media-libs/openal						portaudio
-media-libs/opencv						contrib contrib_cvv contrib_hdf contrib_sfm contrib_xfeatures2d cuda gflags gdal glog opencl tesseract vtk
+media-libs/opencv						contrib contrib_cvv contrib_dnn contrib_hdf contrib_sfm contrib_xfeatures2d cuda gflags gdal glog opencl tesseract vtk
 media-libs/openh264						utils
 media-libs/opus							ambisonics
 media-libs/phonon						designer qt4 -vlc
@@ -175,14 +174,17 @@ media-plugins/gst-plugins-meta					http libvisual mms opus vpx
 media-plugins/gst-plugins-vaapi:1.0				egl
 media-plugins/libvisual-plugins					mplayer
 media-sound/alsa-utils						bat
+media-sound/audacity						id3tag sbsms twolame vamp
+media-sound/mpg123						portaudio
+media-sound/parlatype						libreoffice
 media-sound/pulseaudio						equalizer native-headset ofono-headset sox
+media-sound/shntool						alac mac shorten sox
 media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libilbc librtmp libsoxr libv4l nvenc openh264 openssl opus rubberband schroedinger snappy sofalizer ssh twolame vpx x265 zeromq zimg zvbi
+media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libilbc librtmp libsoxr libv4l nvenc openh264 openssl opus rubberband snappy ssh twolame vpx x265 zeromq zimg zvbi
 media-video/mjpegtools						quicktime sdlgfx
 media-video/mpv							archive bluray cplugins cuda rubberband tools
 media-video/nvidia_video_sdk					tools
-media-video/totem						zeitgeist
 net-analyzer/net-snmp						elf lm_sensors netlink pci
 net-analyzer/nmap						ncat ndiff nmap-update nping zenmap
 net-analyzer/rrdtool						dbi graph rrdcgi
@@ -197,6 +199,7 @@ net-fs/nfs-utils						nfsdcld nfsv41
 net-fs/samba							addns ads client gnutls iprint quota winbind
 net-irc/quassel							phonon snorenotify
 net-nds/openldap						cxx kinit pbkdf2 sha2 slp smbkrb5passwd
+net-libs/aqbanking						ebics ofx
 net-libs/gnutls							dane openpgp tools
 net-libs/ldns							gost
 net-libs/libgsasl						gcrypt ntlm
@@ -209,10 +212,11 @@ net-libs/libsoup						gssapi
 net-libs/libsrtp						aesicm openssl
 net-libs/libssh							gssapi pcap server
 net-libs/neon							libproxy
+net-libs/nodejs							inspector
 net-libs/nghttp2						hpack-tools utils
 net-libs/phodav							spice
 net-libs/zeromq							pgm
-net-misc/curl							http2 metalink rtmp ssh
+net-misc/curl							brotli http2 metalink rtmp ssh
 net-misc/freerdp						openh264
 net-misc/gnome-online-miners					flickr
 net-misc/iputils						clockdiff tracepath traceroute
@@ -233,7 +237,7 @@ sci-libs/coinor-osi						glpk
 sci-libs/coinor-utils						glpk
 sci-libs/fftw							quad
 sci-libs/gdal							armadillo fits geos gml netcdf ogdi opencl spatialite xls
-sci-libs/hdf5							fortran2003 -threads
+sci-libs/hdf5							-threads
 sci-libs/mumps							metis
 sci-libs/netcdf							hdf tools
 sci-libs/scipy							sparse
@@ -246,8 +250,9 @@ sys-apps/busybox						math
 sys-apps/gawk							mpfr
 sys-apps/gnome-disk-utility					fat
 sys-apps/hwloc							cuda gl plugins
+sys-apps/iproute2						elf
 sys-apps/lm_sensors						sensord
-sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd libidn2 nat qrcode sysv-utils xkb
+sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd libidn2 nat qrcode xkb
 sys-apps/pciutils						dns
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
@@ -259,8 +264,9 @@ sys-devel/gettext						git
 sys-devel/llvm							gold
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
-sys-fs/udisks							cryptsetup lvm
-sys-kernel/gentoo-sources					experimental
+sys-fs/udisks							lvm
+sys-kernel/ck-sources						experimental
+sys-libs/gwenhywfar						designer qml sensors serialport
 sys-libs/libblockdev						bcache kbd lvm
 sys-libs/libomp							hwloc ompt
 sys-libs/ncurses						tinfo
@@ -272,7 +278,7 @@ sys-process/systemd-cron					cron-boot minutely setgid yearly
 sys-libs/readline						utils
 virtual/ffmpeg							opus
 virtual/linux-sources						firmware
-www-client/firefox						nsplugin wifi
+www-client/firefox						wifi
 www-client/links						libevent
 www-client/w3m							nntp xface
 www-servers/apache						suexec
@@ -282,46 +288,37 @@ x11-libs/fltk							games
 x11-libs/gtk+:3							cloudprint
 x11-libs/gtksourceview:3.0					glade
 x11-libs/libdrm							libkms
-x11-libs/libva							egl utils
+x11-libs/libva							utils
 x11-libs/libwnck						tools
 x11-libs/qscintilla						designer
 x11-libs/snorenotify						sound
 x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
-x11-misc/synergy						qt4
 
 # Python Adjustments
 
-app-editors/gedit						PYTHON_SINGLE_TARGET: python3_5
-app-office/unoconv						PYTHON_SINGLE_TARGET: python3_5
 app-portage/elogviewer						PYTHON_SINGLE_TARGET: python3_5
 app-text/asciidoc						PYTHON_SINGLE_TARGET: python2_7
-dev-libs/libpeas						PYTHON_SINGLE_TARGET: python3_5
 gnome-base/libglade						PYTHON_SINGLE_TARGET: python2_7
 gnome-extra/chrome-gnome-shell					PYTHON_SINGLE_TARGET: python3_5
 media-sound/gnome-music						PYTHON_SINGLE_TARGET: python3_5
-media-video/totem						PYTHON_SINGLE_TARGET: python3_5
 net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_5
 
 # Temporary Fixes (for broken packages)
 
 =app-accessibility/brltty-5.2-r1				-ocaml
-=dev-cpp/eigen-3.3.3						-cuda
-=dev-lisp/clisp-2.49-r100					-gdbm
+=dev-lang/rust-1.23.0-r1					-extended
 =dev-python/rdflib-4.2.2					-mysql
-=media-libs/opencv-3.3.0-r1					-cuda -contrib_xfeatures2d
-=net-dns/unbound-1.6.7						-dnscrypt
-=net-fs/nfs-utils-2.1.2_rc5					-kerberos
-=net-fs/samba-4.7.0-r1						-addns
+=media-libs/opencv-3.3.0-r5					-cuda -contrib_xfeatures2d
+=net-dns/unbound-1.6.8						-dnscrypt
+=net-fs/nfs-utils-2.3.1-r1					-kerberos
+=net-fs/samba-4.7.5						-addns
+=net-mail/mailutils-3.4						-guile
 =sci-libs/coinor-osi-0.106.6					-glpk
-=sci-libs/gdal-2.0.3						-mysql
+=sci-libs/gdal-2.2.3-r1						-ogdi
 =sys-apps/hwloc-1.11.7						-cuda
 
 # Notes
-
-# cuda is currently disabled on many packages due to nvidia-cuda-toolkit not
-# supporting the current GCC version (6.4). It's debatable whether cuda should
-# be enabled here anyway, as it's not applicable to all machines.
 
 # The scrollview flag is currently not enabled on tesseract as it pulls in a
 # bunch of outdated dependencies.

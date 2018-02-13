@@ -1,0 +1,15 @@
+diff --git a/pan/gui/header-pane.cc b/pan/gui/header-pane.cc
+index 94417e4..363d497 100644
+--- a/pan/gui/header-pane.cc
++++ b/pan/gui/header-pane.cc
+@@ -1275,8 +1275,8 @@ namespace
+     const Article * a (pane->get_first_selected_article());
+     if (a) {
+       const size_t lines = a->get_line_count();
+-      const bool is_smallish = lines  <= 5000;
+-      const bool is_mediumish = lines <= 20000;
++      const bool is_smallish = lines  <= 500000;
++      const bool is_mediumish = lines <= 2000000;
+       const bool image_subject = has_image_type_in_subject (*a);
+       const bool is_pictures_newsgroup = pane->get_group().to_view().strstr("pictures")!=0;
+       if (is_smallish || image_subject)
