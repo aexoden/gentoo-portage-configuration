@@ -19,6 +19,7 @@
 
 app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
+app-arch/engrampa						caja magic
 app-arch/libarchive						lz4
 app-arch/p7zip							rar
 app-arch/zip							natspec
@@ -42,6 +43,7 @@ app-office/libreoffice						coinmp googledrive odk pdfimport LIBREOFFICE_EXTENSI
 app-portage/gemato						sha3
 app-shells/zsh							maildir
 app-text/asciidoc						highlight
+app-text/atril							caja dvi epub t1lib xps
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
 app-text/libebook						tools
@@ -78,6 +80,7 @@ dev-libs/glib							utils
 dev-libs/gmime							smime
 dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
+dev-libs/libdbusmenu						gtk3
 dev-libs/libgpg-error						common-lisp
 dev-libs/libgweather						glade
 dev-libs/libnl							utils
@@ -92,8 +95,8 @@ dev-libs/xmlsec							gcrypt gnutls nss
 dev-lisp/clisp							pari
 dev-python/pillow						imagequant
 dev-python/pygobject:2						libffi
-dev-python/PyQt4						declarative designer help multimedia phonon script scripttools sql testlib xmlpatterns
 dev-python/PyQt5						declarative designer help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
+dev-python/setuptools_scm					git mercurial
 dev-python/twisted						conch http2
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative
@@ -104,7 +107,6 @@ dev-qt/qtgui:4							egl gtkstyle
 dev-qt/qtgui:5							evdev ibus tslib tuio
 dev-qt/qtmultimedia						qml widgets
 dev-qt/qtnetwork						libproxy
-dev-qt/qtopengl:4						egl
 dev-qt/qtpositioning						geoclue qml
 dev-qt/qtscript							scripttools
 dev-qt/qtsensors						qml
@@ -113,12 +115,13 @@ dev-qt/qtwebengine						widgets
 dev-qt/qtwebkit							orientation printsupport qml webchannel
 dev-qt/qtwebsockets						qml
 dev-tex/dot2texi						pgf pstricks
-dev-util/cmake							server
 dev-util/ctags							json yaml
 dev-util/gtk-doc						highlight
+dev-util/nvidia-cuda-sdk					opencl
 dev-util/nvidia-cuda-toolkit					profiler
 dev-util/strace							aio unwind
 dev-vcs/git							highlight mediawiki mediawiki-experimental
+dev-vcs/mercurial						bugzilla gpg
 dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/gdm							fprint
 gnome-base/gnome-shell						nsplugin
@@ -130,6 +133,13 @@ gnome-extra/nm-applet						gcr
 gnome-extra/sushi						office
 mail-client/evolution						archive highlight
 mail-client/thunderbird						wifi
+mate-base/mate							help
+mate-base/mate-applets-meta					appindicator sensors
+mate-base/mate-control-center					appindicator
+mate-extra/caja-extensions					gksu image-converter share
+mate-extra/mate-polkit						accountsservice appindicator
+mate-extra/mate-sensors-applet					hddtemp lm_sensors
+mate-extra/mate-utils						applet
 media-gfx/apngasm						7z zopfli
 media-gfx/exiv2							webready
 media-gfx/gimp							vector-icons
@@ -148,6 +158,7 @@ media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus utils
 media-libs/libcanberra						tdb
 media-libs/libmediaart						-qt5
+media-libs/libmediainfo						mms
 media-libs/libpagemaker						tools
 media-libs/libraw						demosaic
 media-libs/libquicktime						schroedinger
@@ -162,13 +173,12 @@ media-libs/openal						portaudio
 media-libs/opencv						contrib contrib_cvv contrib_dnn contrib_hdf contrib_sfm contrib_xfeatures2d cuda gflags gdal glog opencl tesseract vtk
 media-libs/openh264						utils
 media-libs/opus							ambisonics
-media-libs/phonon						designer qt4 -vlc
-media-libs/phonon-gstreamer					qt4
+media-libs/phonon						designer -vlc
 media-libs/raptor						json
 media-libs/speex						utils
 media-libs/x264							opencl
 media-libs/x265							numa
-media-plugins/alsa-plugins					libsamplerate
+media-plugins/alsa-plugins					libsamplerate oss
 media-plugins/grilo-plugins					chromaprint daap flickr freebox subtitles thetvdb vimeo
 media-plugins/gst-plugins-meta					http libvisual mms opus vpx
 media-plugins/gst-plugins-vaapi:1.0				egl
@@ -181,7 +191,8 @@ media-sound/pulseaudio						equalizer native-headset ofono-headset sox
 media-sound/shntool						alac mac shorten sox
 media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libilbc librtmp libsoxr libv4l nvenc openh264 openssl opus rubberband snappy ssh twolame vpx x265 zeromq zimg zvbi
+media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libdrm libilbc librtmp libsoxr libv4l nvenc opencl openh264 openssl opus rubberband snappy ssh twolame vpx x265 zeromq zimg zvbi
+media-video/mediainfo						mms
 media-video/mjpegtools						quicktime sdlgfx
 media-video/mpv							archive bluray cplugins cuda rubberband tools
 media-video/nvidia_video_sdk					tools
@@ -242,7 +253,7 @@ sci-libs/mumps							metis
 sci-libs/netcdf							hdf tools
 sci-libs/scipy							sparse
 sci-libs/scotch							int64 tools
-sci-libs/vtk							R boost gdal imaging json rendering tbb views xdmf2
+sci-libs/vtk							R boost gdal imaging json rendering tbb views web xdmf2
 sci-mathematics/octave						gnuplot gui openssl portaudio
 sci-mathematics/pari						data
 sci-visualization/gnuplot					bitmap libcerf
@@ -261,14 +272,14 @@ sys-block/parted						device-mapper
 sys-boot/grub							device-mapper
 sys-devel/gcc							cilk gcj go graphite mpx objc objc++ objc-gc pgo
 sys-devel/gettext						git
-sys-devel/llvm							gold
+sys-devel/llvm							gold xar
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
 sys-fs/udisks							lvm
 sys-kernel/ck-sources						experimental
 sys-libs/gwenhywfar						designer qml sensors serialport
 sys-libs/libblockdev						bcache kbd lvm
-sys-libs/libomp							hwloc ompt
+sys-libs/libomp							cuda hwloc offload ompt
 sys-libs/ncurses						tinfo
 sys-libs/zlib							minizip
 sys-process/audit						gssapi
@@ -283,7 +294,7 @@ www-client/links						libevent
 www-client/w3m							nntp xface
 www-servers/apache						suexec
 x11-apps/mesa-progs						egl gles2
-x11-base/xorg-server						tslib unwind xephyr
+x11-base/xorg-server						kdrive tslib unwind xephyr
 x11-libs/fltk							games
 x11-libs/gtk+:3							cloudprint
 x11-libs/gtksourceview:3.0					glade
@@ -294,34 +305,33 @@ x11-libs/qscintilla						designer
 x11-libs/snorenotify						sound
 x11-libs/vte:2.91						glade
 x11-misc/colord							argyllcms extra-print-profiles scanner
+x11-misc/synergy						qt4
 
 # Python Adjustments
 
 app-portage/elogviewer						PYTHON_SINGLE_TARGET: python3_5
 app-text/asciidoc						PYTHON_SINGLE_TARGET: python2_7
 gnome-base/libglade						PYTHON_SINGLE_TARGET: python2_7
-gnome-extra/chrome-gnome-shell					PYTHON_SINGLE_TARGET: python3_5
 media-sound/gnome-music						PYTHON_SINGLE_TARGET: python3_5
 net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_5
 
 # Temporary Fixes (for broken packages)
 
 =app-accessibility/brltty-5.2-r1				-ocaml
+=app-i18n/enca-1.19-r1						-recode
 =dev-lang/rust-1.23.0-r1					-extended
+=dev-lisp/clisp-2.49.90						-pari
 =dev-python/rdflib-4.2.2					-mysql
 =media-libs/opencv-3.3.0-r5					-cuda -contrib_xfeatures2d
-=net-dns/unbound-1.6.8						-dnscrypt
 =net-fs/nfs-utils-2.3.1-r1					-kerberos
-=net-fs/samba-4.7.5						-addns
+=net-fs/samba-4.8.0						-addns
 =net-mail/mailutils-3.4						-guile
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/gdal-2.2.3-r1						-ogdi
+=sci-libs/vtk-8.1.0-r1						-web
 =sys-apps/hwloc-1.11.7						-cuda
 
 # Notes
 
 # The scrollview flag is currently not enabled on tesseract as it pulls in a
 # bunch of outdated dependencies.
-
-# The web flag is currently not enabled on vtk as it forces a downgrade of
-# twisted.

@@ -1,3 +1,2 @@
-# Horribly broken font rendering.
-=media-libs/freetype-2.8.1
-=media-libs/freetype-2.9
+=x11-misc/synergy-2.0.0
+=sys-kernel/ck-sources-4.15*
