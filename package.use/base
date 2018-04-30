@@ -12,7 +12,7 @@
 
 */*	accessibility audit avahi bidi blas caps cddb cjk cscope curl cvs djvu dv dvb ffmpeg fftw fontconfig gd geolocation gmp gphoto2 graphviz gsm guile
 */*	hdf5 icu idn ieee1394 imagemagick ios java javascript jbig jpeg2k kerberos ladspa lame lapack latex libass lua lzma lzo modplug mono mtp multilib musepack mysql
-*/*	networkmanager ocaml offensive openal openexr perl postscript python -qt4 qt5 raw ruby samba sasl smp sndfile snmp soap speex sqlite subversion syslog szip
+*/*	networkmanager ocaml offensive openal openexr perl postscript python qt5 raw ruby samba sasl smp sndfile snmp soap speex sqlite subversion syslog szip
 */*	taglib tcl theora threads tk upnp upnp-av v4l vaapi vala vcd vdpau vim-syntax vnc wavpack webkit webp wmf xinerama xmp xpm xscreensaver zeroconf zsh-completion
 
 # Package Flags
@@ -28,7 +28,6 @@ app-crypt/gnupg							tofu tools
 app-crypt/gpgme							common-lisp
 app-crypt/mit-krb5						openldap
 app-crypt/qca							botan gcrypt gpg logger nss softstore
-app-crypt/rhash							openssl
 app-doc/doxygen							clang dot
 app-editors/gvim						gtk3 racket session
 app-editors/nano						justify
@@ -78,7 +77,6 @@ dev-libs/folks							utils zeitgeist
 dev-libs/fstrm							utils
 dev-libs/glib							utils
 dev-libs/gmime							smime
-dev-libs/gmp							pgo
 dev-libs/gobject-introspection					doctool
 dev-libs/libdbusmenu						gtk3
 dev-libs/libgpg-error						common-lisp
@@ -92,7 +90,6 @@ dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
 dev-libs/totem-pl-parser					archive
 dev-libs/xmlsec							gcrypt gnutls nss
-dev-lisp/clisp							pari
 dev-python/pillow						imagequant
 dev-python/pygobject:2						libffi
 dev-python/PyQt5						declarative designer help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
@@ -129,7 +126,6 @@ gnome-base/gvfs							afp archive bluray fuse google nfs
 gnome-base/libglade						tools
 gnome-base/librsvg						tools
 gnome-base/nautilus						sendto
-gnome-extra/nm-applet						gcr
 gnome-extra/sushi						office
 mail-client/evolution						archive highlight
 mail-client/thunderbird						wifi
@@ -163,7 +159,7 @@ media-libs/libpagemaker						tools
 media-libs/libraw						demosaic
 media-libs/libquicktime						schroedinger
 media-libs/libsdl						tslib
-media-libs/libsdl2						gles haptic tslib
+media-libs/libsdl2						gles haptic libsamplerate tslib
 media-libs/libvisio						tools
 media-libs/libvpx						postproc
 media-libs/libzmf						tools
@@ -191,7 +187,7 @@ media-sound/pulseaudio						equalizer native-headset ofono-headset sox
 media-sound/shntool						alac mac shorten sox
 media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libdrm libilbc librtmp libsoxr libv4l nvenc opencl openh264 openssl opus rubberband snappy ssh twolame vpx x265 zeromq zimg zvbi
+media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint chromium fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libdrm libilbc librtmp libsoxr libv4l nvenc opencl openh264 openssl opus rubberband snappy ssh twolame vpx x265 zeromq zimg zvbi
 media-video/mediainfo						mms
 media-video/mjpegtools						quicktime sdlgfx
 media-video/mpv							archive bluray cplugins cuda rubberband tools
@@ -255,7 +251,6 @@ sci-libs/scipy							sparse
 sci-libs/scotch							int64 tools
 sci-libs/vtk							R boost gdal imaging json rendering tbb views web xdmf2
 sci-mathematics/octave						gnuplot gui openssl portaudio
-sci-mathematics/pari						data
 sci-visualization/gnuplot					bitmap libcerf
 sys-apps/busybox						math
 sys-apps/gawk							mpfr
@@ -278,7 +273,7 @@ sys-fs/e2fsprogs						fuse
 sys-fs/udisks							lvm
 sys-kernel/ck-sources						experimental
 sys-libs/gwenhywfar						designer qml sensors serialport
-sys-libs/libblockdev						bcache kbd lvm
+sys-libs/libblockdev						bcache escrow kbd lvm
 sys-libs/libomp							cuda hwloc offload ompt
 sys-libs/ncurses						tinfo
 sys-libs/zlib							minizip
@@ -291,7 +286,7 @@ virtual/ffmpeg							opus
 virtual/linux-sources						firmware
 www-client/firefox						wifi
 www-client/links						libevent
-www-client/w3m							nntp xface
+www-client/w3m							gdk-pixbuf nntp xface
 www-servers/apache						suexec
 x11-apps/mesa-progs						egl gles2
 x11-base/xorg-server						kdrive tslib unwind xephyr
@@ -319,17 +314,14 @@ net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_5
 
 =app-accessibility/brltty-5.2-r1				-ocaml
 =app-i18n/enca-1.19-r1						-recode
-=dev-lang/rust-1.23.0-r1					-extended
-=dev-lisp/clisp-2.49.90						-pari
 =dev-python/rdflib-4.2.2					-mysql
+=media-gfx/exiv2-0.26_p20180319					-webready
 =media-libs/opencv-3.3.0-r5					-cuda -contrib_xfeatures2d
-=net-fs/nfs-utils-2.3.1-r1					-kerberos
-=net-fs/samba-4.8.0						-addns
+=net-fs/samba-4.8.1						-addns
 =net-mail/mailutils-3.4						-guile
 =sci-libs/coinor-osi-0.106.6					-glpk
 =sci-libs/gdal-2.2.3-r1						-ogdi
 =sci-libs/vtk-8.1.0-r1						-web
-=sys-apps/hwloc-1.11.7						-cuda
 
 # Notes
 
