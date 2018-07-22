@@ -1,0 +1,7 @@
+[science]
+location = /var/lib/repositories/science
+sync-type = git
+sync-uri = https://github.com/gentoo/sci.git
+auto-sync = yes
+clone-depth = 0
+priority = 500
