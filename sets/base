@@ -31,6 +31,7 @@ mail-client/thunderbird
 mate-base/mate
 media-gfx/apngasm
 media-gfx/displaycal
+media-gfx/gimp
 media-sound/alsa-utils
 media-sound/audacity
 media-sound/fluidsynth
@@ -53,6 +54,7 @@ net-misc/streamlink
 net-misc/youtube-dl
 net-nntp/pan
 net-p2p/syncthing
+sci-libs/openblas
 sci-libs/scipy
 sci-mathematics/octave
 sys-apps/hdparm

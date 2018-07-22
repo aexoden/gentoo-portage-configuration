@@ -1,2 +1,5 @@
+# Still an incomplete beta version.
 =x11-misc/synergy-2.0.0
-=sys-kernel/ck-sources-4.15*
+
+# Causes hangs on my machine. Masked until I find time to bisect the issue.
+>=sys-kernel/ck-sources-4.15.0
