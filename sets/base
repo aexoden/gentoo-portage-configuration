@@ -1,4 +1,5 @@
 app-arch/p7zip
+app-cdr/dvdisaster
 app-editors/atom-bin
 app-editors/gvim
 app-editors/nano
@@ -78,3 +79,4 @@ www-client/vivaldi-snapshot
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
 x11-misc/synergy
+x11-plugins/enigmail
