@@ -1,5 +1,8 @@
 # Still an incomplete beta version.
 =x11-misc/synergy-2.0.0
 
-# Causes hangs on my machine. Masked until I find time to bisect the issue.
->=sys-kernel/ck-sources-4.15.0
+# Masked because for some reason Portage refuses to enforce the fact that numerous packages require 2.0.
+>=dev-scheme/guile-2.2
+
+# Temporarily masked until someone figures out the blas/lapack situation.
+>=sci-libs/gsl-2.5
