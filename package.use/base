@@ -5,8 +5,8 @@
 
 */*	ABI_X86: 32
 */*	PYTHON_SINGLE_TARGET: -* python3_7
-*/*	PYTHON_TARGETS: python3_4 python3_5 python3_6 python3_7
-*/*	RUBY_TARGETS: ruby23 ruby24 ruby25
+*/*	PYTHON_TARGETS: python3_5 python3_6 python3_7
+*/*	RUBY_TARGETS: -ruby23 ruby25 ruby26
 
 # Global Flags
 
@@ -34,9 +34,12 @@ app-doc/doxygen							clang dot
 app-editors/gvim						gtk3 racket session
 app-editors/nano						justify
 app-editors/vim							racket terminal
+app-emulation/vkd3d						spirv-tools
+app-emulation/wine-vanilla					dos gssapi netapi odbc opencl osmesa pcap scanner vkd3d vulkan
 app-i18n/enca							recode
 app-misc/ca-certificates					cacert
-app-misc/geoclue:0						geonames gsmloc hostip manual nominatim plazes yahoo-geo
+app-misc/geoclue:2.0						modemmanager
+app-misc/gramps							geo
 app-misc/jq							oniguruma
 app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
 app-office/gnucash						aqbanking ofx quotes register2
@@ -61,6 +64,7 @@ dev-cpp/glog							gflags unwind
 dev-cpp/libcmis							man
 dev-db/mariadb							cracklib innodb-lz4 innodb-lzo innodb-snappy
 dev-db/sqlite							tools
+dev-games/physfs						7zip grp hog iso mvl qpak slb vdf wad
 dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
 dev-java/icedtea-bin:8						nsplugin
 dev-java/icedtea-web						nsplugin tagsoup
@@ -68,8 +72,8 @@ dev-java/log4j							javamail jms
 dev-lang/luajit							lua52compat
 dev-lang/php							bcmath calendar enchant flatfile ftp imap inifile intl ldap-sasl mhash pcntl pdo phpdbg sharedmem sockets sodium sysvipc tidy truetype wddx xmlreader xmlrpc xmlwriter xslt zip zip-encryption
 dev-lang/python							wininst
-dev-lang/ruby							socks5
-dev-lang/rust							cargo rls rustfmt
+dev-lang/ruby							jit socks5
+dev-lang/rust							rls rustfmt
 dev-libs/appstream-glib						stemmer
 dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
@@ -97,7 +101,7 @@ dev-libs/xmlsec							gcrypt gnutls
 dev-perl/MIME-Charset						L10N: ja
 dev-python/pillow						imagequant
 dev-python/pygobject:2						libffi
-dev-python/PyQt5						declarative designer help location multimedia positioning sensors serialport sql testlib webchannel webengine websockets x11extras xmlpatterns
+dev-python/PyQt5						declarative designer help location multimedia networkauth positioning sensors serialport sql testlib webchannel websockets x11extras xmlpatterns
 dev-python/twisted						conch http2
 dev-ruby/rrdtool-bindings					graph
 dev-qt/designer							declarative
@@ -107,7 +111,7 @@ dev-qt/qtdeclarative:5						localstorage
 dev-qt/qtgui:5							evdev ibus tslib tuio
 dev-qt/qtmultimedia						qml widgets
 dev-qt/qtnetwork						libproxy
-dev-qt/qtpositioning						geoclue qml
+dev-qt/qtpositioning						geoclue
 dev-qt/qtscript							scripttools
 dev-qt/qtsensors						qml
 dev-qt/qtwebchannel						qml
@@ -128,6 +132,7 @@ gnome-base/gvfs							afp archive bluray fuse google nfs
 gnome-base/libglade						tools
 gnome-base/librsvg						tools
 gnome-base/nautilus						sendto
+gnome-extra/gnome-contacts					telepathy
 gnome-extra/nm-applet						ayatana
 gnome-extra/sushi						office
 mail-client/evolution						archive highlight
@@ -135,13 +140,13 @@ mail-client/thunderbird						clang wifi
 mate-base/mate							help
 mate-base/mate-applets-meta					appindicator sensors
 mate-base/mate-control-center					appindicator
-mate-extra/caja-extensions					gksu image-converter share
+mate-extra/caja-extensions					image-converter share
 mate-extra/mate-polkit						accountsservice appindicator
 mate-extra/mate-sensors-applet					hddtemp lm_sensors
 mate-extra/mate-utils						applet
 media-gfx/apngasm						7z zopfli
 media-gfx/exiv2							webready
-media-gfx/gimp							vector-icons
+media-gfx/gimp							heif unwind vector-icons
 media-gfx/gnome-photos						flickr
 media-gfx/graphviz						gdk-pixbuf gts lasi
 media-gfx/imagemagick						corefonts fpx hdri heif lqr opencl q32 q8
@@ -159,19 +164,21 @@ media-libs/libcanberra						tdb
 media-libs/libmediaart						-qt5
 media-libs/libmediainfo						mms
 media-libs/libpagemaker						tools
-media-libs/libquicktime						schroedinger
 media-libs/libsdl						tslib
-media-libs/libsdl2						gles haptic libsamplerate tslib
+media-libs/libsdl2						gles haptic libsamplerate tslib vulkan
 media-libs/libvisio						tools
 media-libs/libvpx						postproc
 media-libs/libzmf						tools
 media-libs/lv2							plugins
-media-libs/mesa							d3d9 lm_sensors osmesa unwind xa xvmc
+media-libs/mesa							lm_sensors osmesa unwind xa xvmc
 media-libs/openal						portaudio
 media-libs/opencv						contrib contrib_cvv contrib_dnn contrib_hdf contrib_sfm contrib_xfeatures2d cuda gflags gdal glog opencl tesseract vtk
 media-libs/openh264						utils
 media-libs/raptor						json
+media-libs/sdl-sound						mikmod physfs
 media-libs/speex						utils
+media-libs/tiff							zstd
+media-libs/vulkan-loader					layers
 media-libs/x264							opencl
 media-libs/x265							numa
 media-plugins/alsa-plugins					libsamplerate oss
@@ -186,11 +193,10 @@ media-sound/pulseaudio						equalizer gconf native-headset ofono-headset sox
 media-sound/shntool						alac mac shorten sox
 media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						amr amrenc bluray bs2b cdio celt chromaprint chromium fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libdrm libilbc librtmp libsoxr libv4l nvenc opencl openh264 openssl opus rubberband snappy ssh twolame vpx x265 zeromq zimg zvbi
+media-video/ffmpeg						amr amrenc bluray bs2b cdio chromaprint chromium codec2 fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libaom libdrm libilbc librtmp libsoxr libv4l lv2 opencl openh264 openssl opus rubberband snappy srt ssh twolame vpx x265 zeromq zimg zvbi
 media-video/mediainfo						mms
 media-video/mjpegtools						quicktime sdlgfx
-media-video/mpv							archive bluray cplugins cuda rubberband tools
-media-video/nvidia_video_sdk					tools
+media-video/mpv							archive bluray cplugins cuda libmpv rubberband sdl tools vulkan
 net-analyzer/net-snmp						elf lm_sensors netlink pci
 net-analyzer/nmap						ncat ndiff nmap-update nping zenmap
 net-analyzer/rrdtool						dbi graph rrdcgi
@@ -208,11 +214,10 @@ net-irc/quassel							snorenotify urlpreview
 net-nds/openldap						cxx kinit pbkdf2 sha2 slp smbkrb5passwd
 net-nds/rpcbind							remotecalls
 net-libs/aqbanking						ebics ofx
-net-libs/gnutls							dane openpgp tools
+net-libs/gnutls							dane tools
 net-libs/ldns							gost
 net-libs/libgsasl						gcrypt ntlm
 net-libs/libmicrohttpd						epoll messages
-net-libs/libnftnl						json
 net-libs/liboauth						-nss
 net-libs/libpcap						bluetooth netlink
 net-libs/libproxy						spidermonkey
@@ -236,8 +241,9 @@ net-misc/vinagre						rdp spice
 net-misc/wget							ntlm uuid
 net-p2p/syncthing						tools
 net-print/cups-filters						ipp_autosetup pclm
+net-wireless/bluez						user-session
 net-wireless/wpa_supplicant					ap p2p tdls wps
-sci-libs/armadillo						arpack superlu tbb
+sci-libs/armadillo						arpack superlu
 sci-libs/cholmod						cuda metis
 sci-libs/coinor-clp						glpk metis mumps sparse
 sci-libs/coinor-osi						glpk
@@ -256,6 +262,7 @@ sci-libs/xblas							int64
 sci-mathematics/octave						gnuplot gui portaudio
 sci-visualization/gnuplot					bitmap libcerf
 sys-apps/busybox						math
+sys-apps/dbus							user-session
 sys-apps/gawk							mpfr
 sys-apps/gnome-disk-utility					fat
 sys-apps/hwloc							cuda gl plugins
@@ -280,6 +287,7 @@ sys-libs/libblockdev						bcache escrow kbd lvm vdo
 sys-libs/libomp							cuda hwloc offload ompt
 sys-libs/ncurses						tinfo
 sys-libs/zlib							minizip
+sys-power/nut							gui
 sys-process/audit						gssapi
 sys-process/lsof						rpc
 sys-process/procps						modern-top
@@ -295,6 +303,7 @@ www-client/links						libevent
 www-client/w3m							gdk-pixbuf nntp xface
 www-servers/apache						suexec suexec-syslog
 x11-base/xorg-server						kdrive unwind xephyr
+x11-libs/cairo							utils
 x11-libs/fltk							games
 x11-libs/gtk+:3							cloudprint
 x11-libs/gtksourceview:3.0					glade
@@ -308,45 +317,45 @@ x11-misc/colord							argyllcms extra-print-profiles scanner
 
 # Python Adjustments
 
+app-admin/system-config-printer					PYTHON_SINGLE_TARGET: python3_6
 app-editors/gedit						PYTHON_SINGLE_TARGET: python3_6
-app-editors/gvim						PYTHON_SINGLE_TARGET: python3_6
-app-editors/vim							PYTHON_SINGLE_TARGET: python3_6
 app-i18n/ibus-anthy						PYTHON_SINGLE_TARGET: python3_6
+app-misc/gramps							PYTHON_SINGLE_TARGET: python3_6
 app-misc/pax-utils						PYTHON_SINGLE_TARGET: python3_6
 app-office/gnucash						PYTHON_SINGLE_TARGET: python3_6
-app-office/libreoffice						PYTHON_SINGLE_TARGET: python3_6
 app-office/unoconv						PYTHON_SINGLE_TARGET: python3_6
 app-portage/elogviewer						PYTHON_SINGLE_TARGET: python3_6
 app-text/asciidoc						PYTHON_SINGLE_TARGET: python2_7
 dev-libs/libixion						PYTHON_SINGLE_TARGET: python3_6
 dev-libs/liborcus						PYTHON_SINGLE_TARGET: python3_6
 dev-libs/libpeas						PYTHON_SINGLE_TARGET: -python3_7 python3_6 # Until Totem supports 3.7
-dev-util/meld							PYTHON_SINGLE_TARGET: python3_6
 gnome-base/gnome-shell						PYTHON_SINGLE_TARGET: python3_6
 gnome-base/libglade						PYTHON_SINGLE_TARGET: python2_7
 gnome-extra/chrome-gnome-shell					PYTHON_SINGLE_TARGET: python3_6
-media-libs/alsa-lib						PYTHON_SINGLE_TARGET: python3_6
+gnome-extra/gnome-tweak-tool					PYTHON_SINGLE_TARGET: python3_6
 media-libs/lensfun						PYTHON_SINGLE_TARGET: python3_6
 media-libs/lv2							PYTHON_SINGLE_TARGET: python3_6
 media-sound/gnome-music						PYTHON_SINGLE_TARGET: python3_6
-media-sound/picard						PYTHON_SINGLE_TARGET: python3_6
 media-video/totem						PYTHON_SINGLE_TARGET: python3_6
 net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_6
-net-libs/gupnp							PYTHON_SINGLE_TARGET: python3_6
 net-misc/streamlink						PYTHON_SINGLE_TARGET: python3_6
 sci-libs/vtk							PYTHON_SINGLE_TARGET: python3_6
-sys-devel/gdb							PYTHON_SINGLE_TARGET: python3_6
 sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_6
 
 # Temporary Fixes (for broken packages)
 
 =app-accessibility/brltty-5.2-r1				-ocaml
 =app-i18n/enca-1.19-r1						-recode
+=app-office/libreoffice-6.1.4.2					-mysql			# Currently broken
 =dev-python/rdflib-4.2.2					-mysql
-=media-libs/opencv-3.4.1-r4					-contrib_xfeatures2d
-=net-misc/curl-7.61.1						-ssh
+=media-libs/opencv-3.4.1-r5					-contrib_xfeatures2d
+=media-video/ffmpeg-4.1						-srt			# srt does not currently build
+=net-dns/bind-tools-9.12.2_p2-r1				-gost			# Causes a build failure
+=net-mail/mailutils-3.4-r3					-guile
+=sci-libs/cholmod-2.1.2						-metis			# causes build failure
 =sci-libs/coinor-osi-0.106.6					-glpk
-=sci-libs/vtk-8.1.0-r2						-xdmf2
+=sci-libs/mumps-5.1.2						-metis			# Causes a build failure
+=sci-libs/vtk-8.1.0-r3						-xdmf2
 
 # Notes
 

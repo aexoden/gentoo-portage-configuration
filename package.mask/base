@@ -1,8 +1,11 @@
 # Still an incomplete beta version.
 =x11-misc/synergy-2.0.0
 
-# Masked because for some reason Portage refuses to enforce the fact that numerous packages require 2.0.
->=dev-scheme/guile-2.2
+# Causes build failures, mostly related to liboauth. Gentoo devs don't seem interested in fixing it, as usual.
+#   https://bugs.gentoo.org/675588 (resolved duplicate, but not actually duplicate)
+#   https://bugs.gentoo.org/675846
+=dev-libs/openssl-1.1*
+dev-libs/openssl:1.0.0
 
-# Temporarily masked until someone figures out the blas/lapack situation.
->=sci-libs/gsl-2.5
+# Masked until OpenSSL 1.1 is available.
+>=net-libs/nodejs-9
