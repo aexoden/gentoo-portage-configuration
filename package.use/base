@@ -17,10 +17,11 @@
 
 # Package Flags
 
+app-accessibility/brltty					louis
 app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
 app-arch/engrampa						caja magic
-app-arch/libarchive						lz4
+app-arch/libarchive						lz4 zstd
 app-arch/p7zip							rar
 app-arch/zip							natspec
 app-arch/zstd							lz4
@@ -31,17 +32,18 @@ app-crypt/mit-krb5						openldap
 app-crypt/pinentry						fltk
 app-crypt/qca							botan gcrypt gpg logger nss softstore
 app-doc/doxygen							clang dot
-app-editors/gvim						gtk3 racket session
+app-editors/gvim						racket session
 app-editors/nano						justify
 app-editors/vim							racket terminal
+app-emulation/faudio						utils xnasong
 app-emulation/vkd3d						spirv-tools
 app-emulation/wine-vanilla					dos gssapi netapi odbc opencl osmesa pcap scanner vkd3d vulkan
-app-i18n/enca							recode
 app-misc/ca-certificates					cacert
 app-misc/geoclue:2.0						modemmanager
 app-misc/gramps							geo
 app-misc/jq							oniguruma
-app-misc/tracker						cue -ffmpeg firefox-bookmarks gsf iptc playlist rss stemmer xps
+app-misc/tracker						stemmer
+app-misc/tracker-miners						cue gsf iptc xps
 app-office/gnucash						aqbanking ofx quotes register2
 app-office/libreoffice						coinmp googledrive odk pdfimport LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/gemato						sha3
@@ -61,7 +63,7 @@ app-text/texlive						context detex dvi2tty epspdf extra games graphics humaniti
 app-text/texlive-core						xetex
 dev-cpp/eigen							c++11 cuda
 dev-cpp/glog							gflags unwind
-dev-cpp/libcmis							man
+dev-cpp/libcmis							man tools
 dev-db/mariadb							cracklib innodb-lz4 innodb-lzo innodb-snappy
 dev-db/sqlite							tools
 dev-games/physfs						7zip grp hog iso mvl qpak slb vdf wad
@@ -73,8 +75,9 @@ dev-lang/luajit							lua52compat
 dev-lang/php							bcmath calendar enchant flatfile ftp imap inifile intl ldap-sasl mhash pcntl pdo phpdbg sharedmem sockets sodium sysvipc tidy truetype wddx xmlreader xmlrpc xmlwriter xslt zip zip-encryption
 dev-lang/python							wininst
 dev-lang/ruby							jit socks5
-dev-lang/rust							rls rustfmt
-dev-libs/appstream-glib						stemmer
+dev-lang/rust							clippy rls rustfmt wasm llvm_targets_WebAssembly
+dev-lang/vala							valadoc
+dev-libs/appstream-glib						fonts stemmer
 dev-libs/apr-util						nss openssl
 dev-libs/boost							context tools
 dev-libs/botan							boost
@@ -86,6 +89,7 @@ dev-libs/fstrm							utils
 dev-libs/glib							utils
 dev-libs/gmime							smime
 dev-libs/gobject-introspection					doctool
+dev-libs/libbytesize						tools
 dev-libs/libdbusmenu						gtk3
 dev-libs/libgpg-error						common-lisp
 dev-libs/libgweather						glade
@@ -118,20 +122,24 @@ dev-qt/qtwebchannel						qml
 dev-qt/qtwebengine						designer widgets
 dev-qt/qtwebkit							nsplugin orientation qml
 dev-qt/qtwebsockets						qml
+dev-qt/qtxmlpatterns						qml
 dev-tex/dot2texi						pgf pstricks
 dev-util/ctags							json yaml
 dev-util/gtk-doc						highlight
 dev-util/nvidia-cuda-sdk					opencl
 dev-util/nvidia-cuda-toolkit					profiler
+dev-util/perf							clang unwind
 dev-util/strace							aio unwind
 dev-vcs/git							highlight mediawiki mediawiki-experimental
 dev-vcs/subversion						ctypes-python -dso extras
 gnome-base/gdm							fprint
+gnome-base/gnome-control-center					flickr
 gnome-base/gnome-shell						nsplugin telepathy
 gnome-base/gvfs							afp archive bluray fuse google nfs
 gnome-base/libglade						tools
 gnome-base/librsvg						tools
 gnome-base/nautilus						sendto
+gnome-extra/evolution-data-server				oauth
 gnome-extra/gnome-contacts					telepathy
 gnome-extra/nm-applet						ayatana
 gnome-extra/sushi						office
@@ -151,6 +159,7 @@ media-gfx/gnome-photos						flickr
 media-gfx/graphviz						gdk-pixbuf gts lasi
 media-gfx/imagemagick						corefonts fpx hdri heif lqr opencl q32 q8
 media-gfx/pstoedit						emf flash plotutils pptx
+media-gfx/shotwell						opencv
 media-libs/alsa-lib						alisp
 media-libs/chromaprint						tools
 media-libs/freetype						fontforge harfbuzz utils
@@ -182,7 +191,7 @@ media-libs/vulkan-loader					layers
 media-libs/x264							opencl
 media-libs/x265							numa
 media-plugins/alsa-plugins					libsamplerate oss
-media-plugins/grilo-plugins					chromaprint daap flickr freebox subtitles thetvdb vimeo
+media-plugins/grilo-plugins					chromaprint daap flickr freebox thetvdb
 media-plugins/gst-plugins-meta					http libvisual mms opus vpx
 media-plugins/libvisual-plugins					mplayer
 media-sound/alsa-utils						bat
@@ -193,12 +202,11 @@ media-sound/pulseaudio						equalizer gconf native-headset ofono-headset sox
 media-sound/shntool						alac mac shorten sox
 media-sound/sox							amr id3tag opus twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						amr amrenc bluray bs2b cdio chromaprint chromium codec2 fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libaom libdrm libilbc librtmp libsoxr libv4l lv2 opencl openh264 openssl opus rubberband snappy srt ssh twolame vpx x265 zeromq zimg zvbi
+media-video/ffmpeg						amr amrenc bluray bs2b cdio chromaprint chromium codec2 fdk flite frei0r fribidi gme gnutls iec61883 kvazaar libaom libdrm libilbc librtmp libsoxr libv4l libxml2 lv2 opencl openh264 openssl opus rubberband snappy srt ssh twolame vpx x265 zeromq zimg zvbi
 media-video/mediainfo						mms
 media-video/mjpegtools						quicktime sdlgfx
 media-video/mpv							archive bluray cplugins cuda libmpv rubberband sdl tools vulkan
 net-analyzer/net-snmp						elf lm_sensors netlink pci
-net-analyzer/nmap						ncat ndiff nmap-update nping zenmap
 net-analyzer/rrdtool						dbi graph rrdcgi
 net-dialup/ppp							activefilter dhcp eap-tls radius
 net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat
@@ -209,7 +217,7 @@ net-firewall/iptables						conntrack netlink nftables pcap
 net-fs/cifs-utils						creds
 net-fs/libnfs							utils
 net-fs/nfs-utils						junction nfsdcld nfsv41
-net-fs/samba							addns ads client gnutls iprint json quota winbind
+net-fs/samba							addns ads gnutls iprint json quota winbind
 net-irc/quassel							snorenotify urlpreview
 net-nds/openldap						cxx kinit pbkdf2 sha2 slp smbkrb5passwd
 net-nds/rpcbind							remotecalls
@@ -221,6 +229,7 @@ net-libs/libmicrohttpd						epoll messages
 net-libs/liboauth						-nss
 net-libs/libpcap						bluetooth netlink
 net-libs/libproxy						spidermonkey
+net-libs/libpsl							-icu
 net-libs/libsoup						gssapi
 net-libs/libssh							gssapi pcap server
 net-libs/neon							libproxy
@@ -231,7 +240,7 @@ net-libs/zeromq							pgm
 net-misc/curl							brotli http2 metalink rtmp ssh
 net-misc/freerdp						openh264
 net-misc/gnome-online-miners					flickr
-net-misc/iputils						clockdiff tracepath traceroute
+net-misc/iputils						clockdiff tracepath
 net-misc/modemmanager						mbim
 net-misc/networkmanager						connection-sharing json ofono
 net-misc/ofono							dundee tools
@@ -270,20 +279,23 @@ sys-apps/iproute2						elf
 sys-apps/lm_sensors						sensord
 sys-apps/systemd						apparmor cryptsetup elfutils gnuefi http importd libidn2 nat qrcode xkb
 sys-apps/pciutils						dns
+sys-apps/systemd						dns-over-tls
 sys-apps/tcp-wrappers						netgroups
 sys-apps/util-linux						tty-helpers
 sys-auth/polkit							jit
 sys-block/parted						device-mapper
 sys-boot/grub							device-mapper
-sys-devel/gcc							cilk go graphite mpx objc objc++ objc-gc pgo
+sys-devel/gcc							go graphite mpx objc objc++ objc-gc pgo
+sys-devel/gdb							source-highlight
 sys-devel/gettext						git
 sys-devel/llvm							exegesis gold xar
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						fuse
 sys-fs/udisks							lvm vdo
 sys-kernel/ck-sources						experimental
+sys-kernel/gentoo-sources					experimental
 sys-libs/gwenhywfar						designer qml sensors serialport
-sys-libs/libblockdev						bcache escrow kbd lvm vdo
+sys-libs/libblockdev						bcache device-mapper escrow kbd lvm vdo
 sys-libs/libomp							cuda hwloc offload ompt
 sys-libs/ncurses						tinfo
 sys-libs/zlib							minizip
@@ -298,7 +310,7 @@ virtual/cblas							int64
 virtual/ffmpeg							opus
 virtual/lapack							int64
 virtual/linux-sources						firmware
-www-client/firefox						clang geckodriver lto wifi
+www-client/firefox						clang geckodriver lto -system-sqlite wifi
 www-client/links						libevent
 www-client/w3m							gdk-pixbuf nntp xface
 www-servers/apache						suexec suexec-syslog
@@ -306,7 +318,7 @@ x11-base/xorg-server						kdrive unwind xephyr
 x11-libs/cairo							utils
 x11-libs/fltk							games
 x11-libs/gtk+:3							cloudprint
-x11-libs/gtksourceview:3.0					glade
+x11-libs/gtksourceview						glade
 x11-libs/libdrm							libkms
 x11-libs/libva							utils
 x11-libs/libwnck						tools
@@ -317,6 +329,7 @@ x11-misc/colord							argyllcms extra-print-profiles scanner
 
 # Python Adjustments
 
+app-accessibility/orca						PYTHON_SINGLE_TARGET: python3_6
 app-admin/system-config-printer					PYTHON_SINGLE_TARGET: python3_6
 app-editors/gedit						PYTHON_SINGLE_TARGET: python3_6
 app-i18n/ibus-anthy						PYTHON_SINGLE_TARGET: python3_6
@@ -326,13 +339,10 @@ app-office/gnucash						PYTHON_SINGLE_TARGET: python3_6
 app-office/unoconv						PYTHON_SINGLE_TARGET: python3_6
 app-portage/elogviewer						PYTHON_SINGLE_TARGET: python3_6
 app-text/asciidoc						PYTHON_SINGLE_TARGET: python2_7
-dev-libs/libixion						PYTHON_SINGLE_TARGET: python3_6
-dev-libs/liborcus						PYTHON_SINGLE_TARGET: python3_6
 dev-libs/libpeas						PYTHON_SINGLE_TARGET: -python3_7 python3_6 # Until Totem supports 3.7
-gnome-base/gnome-shell						PYTHON_SINGLE_TARGET: python3_6
 gnome-base/libglade						PYTHON_SINGLE_TARGET: python2_7
 gnome-extra/chrome-gnome-shell					PYTHON_SINGLE_TARGET: python3_6
-gnome-extra/gnome-tweak-tool					PYTHON_SINGLE_TARGET: python3_6
+gnome-extra/gnome-tweaks					PYTHON_SINGLE_TARGET: python3_6
 media-libs/lensfun						PYTHON_SINGLE_TARGET: python3_6
 media-libs/lv2							PYTHON_SINGLE_TARGET: python3_6
 media-sound/gnome-music						PYTHON_SINGLE_TARGET: python3_6
@@ -350,7 +360,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_6
 =dev-python/rdflib-4.2.2					-mysql
 =media-libs/opencv-3.4.1-r5					-contrib_xfeatures2d
 =media-video/ffmpeg-4.1						-srt			# srt does not currently build
-=net-dns/bind-tools-9.12.2_p2-r1				-gost			# Causes a build failure
+=net-dns/bind-tools-9.12.3_p4					-gost			# Causes a build failure
 =net-mail/mailutils-3.4-r3					-guile
 =sci-libs/cholmod-2.1.2						-metis			# causes build failure
 =sci-libs/coinor-osi-0.106.6					-glpk

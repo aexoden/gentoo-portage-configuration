@@ -1,11 +1,5 @@
 # Still an incomplete beta version.
 =x11-misc/synergy-2.0.0
 
-# Causes build failures, mostly related to liboauth. Gentoo devs don't seem interested in fixing it, as usual.
-#   https://bugs.gentoo.org/675588 (resolved duplicate, but not actually duplicate)
-#   https://bugs.gentoo.org/675846
-=dev-libs/openssl-1.1*
-dev-libs/openssl:1.0.0
-
-# Masked until OpenSSL 1.1 is available.
->=net-libs/nodejs-9
+# Needed to use eselect from ::science.
+app-admin/eselect::gentoo

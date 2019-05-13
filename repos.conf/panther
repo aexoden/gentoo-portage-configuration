@@ -1,0 +1,7 @@
+[panther]
+location = /var/lib/repositories/panther
+sync-type = git
+sync-uri = https://github.com/orangeturtle739/panther.git
+auto-sync = yes
+clone-depth = 0
+priority = 500

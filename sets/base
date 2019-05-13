@@ -1,6 +1,5 @@
 app-arch/p7zip
 app-cdr/dvdisaster
-app-editors/atom-bin
 app-editors/ghex
 app-editors/gvim
 app-editors/nano
@@ -20,14 +19,19 @@ app-shells/zsh
 app-text/texlive
 dev-cpp/tclap
 dev-lang/php
+dev-python/doc8
 dev-python/httplib2
 dev-python/pip
 dev-python/pipenv
 dev-python/pytz
+dev-python/sphinx
+dev-python/sphinx_rtd_theme
 dev-util/android-studio
 dev-util/android-tools
+dev-util/cookiecutter
 dev-util/meld
 dev-util/oprofile
+dev-util/perf
 dev-util/strace
 dev-vcs/git
 gnome-base/gnome
@@ -72,6 +76,7 @@ sys-fs/dosfstools
 sys-fs/ntfs3g
 sys-kernel/ck-sources
 sys-kernel/dracut
+sys-kernel/gentoo-sources
 sys-libs/libstdc++-v3
 sys-process/htop
 sys-process/iotop
@@ -79,6 +84,7 @@ sys-process/lsof
 sys-process/schedtool
 sys-process/systemd-cron
 virtual/wine
+www-client/firefox
 www-client/vivaldi-snapshot
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
