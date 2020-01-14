@@ -2,8 +2,15 @@
 main-repo = gentoo
 
 [gentoo]
-location = /usr/portage
-sync-type = git
-sync-uri = https://github.com/gentoo-mirror/gentoo.git
 auto-sync = yes
 clone-depth = 0
+location = /var/db/repos/gentoo
+sync-git-verify-commit-signature = yes
+sync-openpgp-key-path = /usr/share/openpgp-keys/gentoo-release.asc
+sync-openpgp-key-refresh-retry-count = 40
+sync-openpgp-key-refresh-retry-overall-timeout = 1200
+sync-openpgp-key-refresh-retry-delay-exp-base = 2
+sync-openpgp-key-refresh-retry-delay-max = 60
+sync-openpgp-key-refresh-retry-delay-mult = 4
+sync-type = git
+sync-uri = https://anongit.gentoo.org/git/repo/sync/gentoo.git

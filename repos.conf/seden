@@ -1,7 +1,0 @@
-[seden]
-location = /var/lib/repositories/seden
-sync-type = git
-sync-uri = https://anongit.gentoo.org/git/user/seden.git
-auto-sync = yes
-clone-depth = 0
-priority = 500

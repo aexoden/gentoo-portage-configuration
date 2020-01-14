@@ -2,17 +2,17 @@
 # Base Configuration
 
 # Language Selection
-L10N="en_US en-US en"
-LINGUAS="en_US en-US en"
+LINGUAS="en_US en"
 
 # C/C++ Compiler Options
-CFLAGS="-march=native -O2 -pipe"
-CXXFLAGS="${CFLAGS}"
-FFLAGS="${CFLAGS}"
-FCFLAGS="${FFLAGS}"
+COMMON_FLAGS="-march=native -O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
 
 # Portage Features
-EMERGE_DEFAULT_OPTS="--with-bdeps=y --dynamic-deps=n"
+EMERGE_DEFAULT_OPTS="--with-bdeps=y --backtrack=50 --dynamic-deps=n --autounmask-backtrack=y"
 FEATURES="splitdebug -config-protect-if-modified"
 
 # License Acceptance
@@ -24,6 +24,3 @@ ACCEPT_KEYWORDS="~amd64"
 # Logging
 PORTAGE_ELOG_CLASSES="warn error log"
 PORTAGE_ELOG_SYSTEM="echo save"
-
-# CHOST
-CHOST="x86_64-pc-linux-gnu"

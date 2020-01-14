@@ -50,8 +50,8 @@ for every package that supports it.
 This repository should be cloned directly into `/etc/portage`, replacing any
 pre-existing configuration.
 
-You should ensure the `/var/lib/repositories` directory exists, as this
-configuration makes use of overlays installed there.
+You should ensure the `/var/db/repos` directory exists, as this configuration
+makes use of overlays installed there.
 
 You should create a `local` file in the `/etc/portage/make.conf` directory
 containing any make.conf configuration you want to do. Most machines should at
@@ -59,9 +59,10 @@ least set an appropriate `MAKEOPTS` value here.
 
 You should simlarly create a `local` file in the `/etc/portage/package.use`
 directory to provide machine-specific USE flags, such as CPU flags, video cards
-or input drivers.
+or input drivers. If you have a CUDA-capable video card, you may wish to
+enable the cuda flag there as well.
 
-YOu may also wish to add `@base` to your `/var/lib/portage/world_sets` file in
+You may also wish to add `@base` to your `/var/lib/portage/world_sets` file in
 order to use the provided world packages. This is completely optional, and will
 probably install a bunch of programs you don't want. However, it does make it
 easy for me to install the same packages on all my machines.
