@@ -94,7 +94,6 @@ dev-libs/libverto						glib libevent tevent
 dev-libs/nss							cacert utils
 dev-libs/openssl						rfc3779 tls-heartbeat
 dev-libs/totem-pl-parser					archive
-dev-python/markdown						pygments
 dev-python/pillow						imagequant
 dev-python/PyQt5						declarative designer help location multimedia networkauth positioning sensors serialport sql testlib webchannel websockets x11extras xmlpatterns
 dev-python/pyyaml						libyaml
@@ -117,7 +116,6 @@ dev-qt/qtwebsockets						qml
 dev-qt/qtxmlpatterns						qml
 dev-ruby/rrdtool-bindings					graph
 dev-util/ctags							json yaml
-dev-util/gtk-doc						highlight vim
 dev-util/perf							clang numa slang
 dev-util/strace							aio
 dev-vcs/git							highlight mediawiki mediawiki-experimental
@@ -256,7 +254,7 @@ sys-apps/pciutils						dns
 sys-apps/shadow							bcrypt
 sys-apps/smartmontools						update_drivedb
 sys-apps/systemd						cryptsetup dns-over-tls elfutils gnuefi http importd nat qrcode xkb
-sys-apps/util-linux						tty-helpers
+sys-apps/util-linux						cryptsetup tty-helpers
 sys-boot/plymouth						gdm
 sys-block/parted						device-mapper
 sys-devel/clang							LLVM_TARGETS: WebAssembly
@@ -310,7 +308,7 @@ dev-libs/volume_key						PYTHON_SINGLE_TARGET: python3_7
 dev-util/gdbus-codegen						PYTHON_SINGLE_TARGET: python3_7
 dev-util/glade							PYTHON_SINGLE_TARGET: python2_7
 dev-util/glib-utils						PYTHON_SINGLE_TARGET: python3_7
-dev-util/gtk-doc						PYTHON_SINGLE_TARGET: python2_7
+dev-util/gtk-doc						PYTHON_SINGLE_TARGET: python3_7
 dev-util/gyp							PYTHON_SINGLE_TARGET: python2_7
 dev-util/meld							PYTHON_SINGLE_TARGET: python3_7
 dev-vcs/git							PYTHON_SINGLE_TARGET: python3_7
@@ -333,7 +331,7 @@ net-fs/samba							PYTHON_SINGLE_TARGET: python3_7
 net-libs/gupnp							PYTHON_SINGLE_TARGET: python3_7
 net-libs/ldns							PYTHON_SINGLE_TARGET: python3_7
 net-mail/mailutils						PYTHON_SINGLE_TARGET: python3_7
-net-misc/streamlink						PYTHON_SINGLE_TARGET: python3_6
+net-misc/streamlink						PYTHON_SINGLE_TARGET: python3_7
 net-wireless/bluez						PYTHON_SINGLE_TARGET: python2_7
 sci-libs/vtk							PYTHON_SINGLE_TARGET: python3_6
 sci-libs/xdmf2							PYTHON_SINGLE_TARGET: python2_7
@@ -350,9 +348,12 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 =dev-libs/libpeas-1.22.0					PYTHON_SINGLE_TARGET: -python3_8 python3_7 PYTHON_TARGETS: -python3_8
 =media-video/totem-3.32.1-r1					PYTHON_SINGLE_TARGET: -python3_8 python3_7 PYTHON_TARGETS: -python3_8
 
+# fonttools >=4 does not support python 2.7
+=dev-python/booleanOperations-0.8.2				PYTHON_TARGETS: -python2_7
+=dev-python/defcon-0.6.0					PYTHON_TARGETS: -python2_7
+
 # numpy >1.16 doesn't support python 2.7
-=sci-libs/vtk-8.1.0-r3						PYTHON_TARGETS: -python2_7
-=dev-libs/boost-1.72.0						PYTHON_TARGETS: -python2_7
+=dev-libs/boost-1.72.0-r1					PYTHON_TARGETS: -python2_7
 =media-libs/opencv-4.1.2-r2					PYTHON_TARGETS: -python2_7
 
 # samba does not support python 3.8
@@ -360,9 +361,6 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 =sys-libs/talloc-2.3.1						PYTHON_SINGLE_TARGET: -python3_8 python3_7
 =sys-libs/tdb-1.4.3						PYTHON_SINGLE_TARGET: -python3_8 python3_7
 =sys-libs/tevent-0.10.2						PYTHON_SINGLE_TARGET: -python3_8 python3_7
-
-# pycountry >16.11.8 doesn't support python 2.7
-=net-misc/streamlink-1.1.1					PYTHON_TARGETS: -python2_7
 
 # Temporary Fixes (for broken packages)
 
@@ -373,17 +371,13 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 # libplist does not build with python 3.8
 =app-pda/libplist-2.0.0						PYTHON_TARGETS: -python3_8
 
-# libproxy does not currently build with +perl
-# https://bugs.gentoo.org/705410
-=net-libs/libproxy-0.4.15					-perl
-
 # mumps does not build with +metis
 # https://bugs.gentoo.org/671998
 =sci-libs/mumps-5.1.2						-metis
 
 # ogdi requires proj <6.0 which conflicts with libgeotiff (which needs >=6.0)
 # https://bugs.gentoo.org/686086
-=sci-libs/gdal-2.4.3						-ogdi
+=sci-libs/gdal-3.0.4						-ogdi
 
 # oracle-javamail does not build
 # https://bugs.gentoo.org/698954
@@ -404,7 +398,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 =dev-libs/redland-1.0.17-r2					-mysql
 
 # parallel-compiler is currently a +nightly only feature
-=dev-lang/rust-1.40.0-r1					-parallel-compiler
+=dev-lang/rust-1.41.0						-parallel-compiler
 
 # vtk does not build with +web
 # https://bugs.gentoo.org/653588

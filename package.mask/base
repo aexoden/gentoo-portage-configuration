@@ -1,9 +1,6 @@
 # cholmod requires <5
 >=sci-libs/metis-5
 
-# gucharmap requires 12.0*
->=app-i18n/unicode-data-12.1.0
-
 # libfprint-2 is not supported by most fprint packages
 # https://bugs.gentoo.org/show_bug.cgi?id=704282
 # https://bugs.gentoo.org/show_bug.cgi?id=704158
@@ -12,6 +9,5 @@
 # synergy-2 is still a relatively broken beta
 >=x11-misc/synergy-2
 
-# nototools requires a version of fonttools with python 2.7 support
->=dev-python/fonttools-4
->=dev-python/pillow-7
+# zfs does not support linux >= 5.5
+>=sys-kernel/gentoo-sources-5.5
