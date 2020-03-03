@@ -21,6 +21,7 @@
 # Package Flags
 
 app-accessibility/brltty					louis
+app-accessibility/flite						voices
 app-accessibility/speech-dispatcher				flite
 app-arch/cabextract						extras
 app-arch/libarchive						blake2
@@ -44,7 +45,6 @@ app-misc/tracker						stemmer
 app-misc/tracker-miners						cue gsf iptc xps
 app-office/libreoffice						coinmp googledrive odk pdfimport LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
 app-portage/gemato						sha3 tools
-app-text/asciidoc						highlight
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
 app-text/libebook						tools
@@ -102,13 +102,14 @@ dev-python/urllib3						brotli
 dev-qt/designer							declarative
 dev-qt/linguist-tools						qml
 dev-qt/qtbluetooth						qml
-dev-qt/qtdeclarative						localstorage
-dev-qt/qtgui							ibus tuio
+dev-qt/qtdeclarative						localstorage vulkan
+dev-qt/qtgui							ibus tuio vulkan
 dev-qt/qtmultimedia						qml widgets
 dev-qt/qtnetwork						libproxy
 dev-qt/qtpositioning						geoclue
 dev-qt/qtscript							scripttools
 dev-qt/qtsensors						qml
+dev-qt/qtwayland						vulkan
 dev-qt/qtwebchannel						qml
 dev-qt/qtwebengine						designer widgets
 dev-qt/qtwebkit							nsplugin orientation qml
@@ -214,7 +215,7 @@ net-misc/iputils						clockdiff tftpd tracepath
 net-misc/modemmanager						mbim
 net-misc/networkmanager						connection-sharing iwd json ofono ovs
 net-misc/ofono							dundee tools
-net-misc/openssh						X509 ldns xmss
+net-misc/openssh						X509 ldns
 net-misc/spice-gtk						mjpeg usbredir webdav
 net-misc/vinagre						spice
 net-misc/wget							cookie_check metalink ntlm uuid
@@ -226,7 +227,6 @@ net-print/cups-filters						ipp_autosetup pclm
 net-wireless/bluez						btpclient midi user-session
 net-wireless/iwd						ofono wired
 sci-libs/armadillo						arpack superlu
-sci-libs/cholmod						metis
 sci-libs/coinor-clp						glpk metis mumps sparse
 sci-libs/coinor-osi						glpk
 sci-libs/coinor-utils						glpk
@@ -253,7 +253,7 @@ sys-apps/lm-sensors						sensord
 sys-apps/pciutils						dns
 sys-apps/shadow							bcrypt
 sys-apps/smartmontools						update_drivedb
-sys-apps/systemd						cryptsetup dns-over-tls elfutils gnuefi http importd nat qrcode xkb
+sys-apps/systemd						cryptsetup dns-over-tls elfutils gnuefi http importd nat pkcs11 pwquality qrcode xkb
 sys-apps/util-linux						cryptsetup tty-helpers
 sys-boot/plymouth						gdm
 sys-block/parted						device-mapper
@@ -261,7 +261,7 @@ sys-devel/clang							LLVM_TARGETS: WebAssembly
 sys-devel/clang-runtime						libcxx
 sys-devel/gcc							d go graphite lto objc objc++ objc-gc pgo
 sys-devel/gettext						-cvs
-sys-devel/gdb							source-highlight
+sys-devel/gdb							source-highlight xxhash
 sys-devel/llvm							exegesis gold xar z3 LLVM_TARGETS: WebAssembly
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						cron fuse
@@ -274,7 +274,6 @@ sys-libs/libomp							hwloc offload ompt
 sys-libs/libunwind						debug-frame libatomic
 sys-libs/readline						utils
 sys-libs/zlib							minizip
-sys-power/nut							gui
 sys-process/audit						gssapi
 sys-process/lsof						rpc
 sys-process/procps						modern-top
@@ -302,24 +301,17 @@ app-accessibility/orca						PYTHON_SINGLE_TARGET: python3_6
 app-admin/system-config-printer					PYTHON_SINGLE_TARGET: python3_7
 app-misc/gramps							PYTHON_SINGLE_TARGET: python3_6
 app-text/asciidoc						PYTHON_SINGLE_TARGET: python3_7
-dev-libs/gobject-introspection					PYTHON_SINGLE_TARGET: python3_7
 dev-libs/libnatspec						PYTHON_SINGLE_TARGET: python2_7
 dev-libs/volume_key						PYTHON_SINGLE_TARGET: python3_7
-dev-util/gdbus-codegen						PYTHON_SINGLE_TARGET: python3_7
-dev-util/glade							PYTHON_SINGLE_TARGET: python2_7
-dev-util/glib-utils						PYTHON_SINGLE_TARGET: python3_7
 dev-util/gtk-doc						PYTHON_SINGLE_TARGET: python3_7
 dev-util/gyp							PYTHON_SINGLE_TARGET: python2_7
-dev-util/meld							PYTHON_SINGLE_TARGET: python3_7
 dev-vcs/git							PYTHON_SINGLE_TARGET: python3_7
-gnome-base/gnome-shell						PYTHON_SINGLE_TARGET: python3_7
 gnome-base/libglade						PYTHON_SINGLE_TARGET: python2_7
 gnome-extra/gnome-tweaks					PYTHON_SINGLE_TARGET: python3_7
 media-gfx/fontforge						PYTHON_SINGLE_TARGET: python3_7
 media-gfx/gimp							PYTHON_SINGLE_TARGET: python2_7
 media-libs/alsa-lib						PYTHON_SINGLE_TARGET: python3_7
 media-libs/lensfun						PYTHON_SINGLE_TARGET: python3_7
-media-libs/libiptcdata						PYTHON_SINGLE_TARGET: python2_7
 media-libs/libkate						PYTHON_SINGLE_TARGET: python2_7
 media-libs/lv2							PYTHON_SINGLE_TARGET: python3_7
 media-sound/gnome-music						PYTHON_SINGLE_TARGET: python3_7
@@ -327,8 +319,6 @@ media-sound/picard						PYTHON_SINGLE_TARGET: python3_6
 net-analyzer/net-snmp						PYTHON_SINGLE_TARGET: python2_7
 net-analyzer/rrdtool						PYTHON_SINGLE_TARGET: python3_6
 net-dns/unbound							PYTHON_SINGLE_TARGET: python3_7
-net-fs/samba							PYTHON_SINGLE_TARGET: python3_7
-net-libs/gupnp							PYTHON_SINGLE_TARGET: python3_7
 net-libs/ldns							PYTHON_SINGLE_TARGET: python3_7
 net-mail/mailutils						PYTHON_SINGLE_TARGET: python3_7
 net-misc/streamlink						PYTHON_SINGLE_TARGET: python3_7
@@ -339,14 +329,10 @@ sys-apps/usbutils						PYTHON_SINGLE_TARGET: python3_7
 sys-devel/clang							PYTHON_SINGLE_TARGET: python3_7
 sys-devel/gdb							PYTHON_SINGLE_TARGET: python3_7
 sys-libs/libblockdev						PYTHON_SINGLE_TARGET: python3_7
-sys-power/nut							PYTHON_SINGLE_TARGET: python2_7
 sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 
-# libpeas does not currently build with python 3.8
-# https://bugs.gentoo.org/702810
-=app-editors/gedit-3.32.2-r1					PYTHON_SINGLE_TARGET: -python3_8 python3_7 PYTHON_TARGETS: -python3_8
-=dev-libs/libpeas-1.22.0					PYTHON_SINGLE_TARGET: -python3_8 python3_7 PYTHON_TARGETS: -python3_8
-=media-video/totem-3.32.1-r1					PYTHON_SINGLE_TARGET: -python3_8 python3_7 PYTHON_TARGETS: -python3_8
+# sphinx >=2 does not support python 2.7
+=dev-python/sphinx_rtd_theme-0.4.3				PYTHON_TARGETS: -python2_7
 
 # fonttools >=4 does not support python 2.7
 =dev-python/booleanOperations-0.8.2				PYTHON_TARGETS: -python2_7
@@ -355,12 +341,6 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 # numpy >1.16 doesn't support python 2.7
 =dev-libs/boost-1.72.0-r1					PYTHON_TARGETS: -python2_7
 =media-libs/opencv-4.1.2-r2					PYTHON_TARGETS: -python2_7
-
-# samba does not support python 3.8
-=sys-libs/ldb-2.0.8						PYTHON_SINGLE_TARGET: -python3_8 python3_7
-=sys-libs/talloc-2.3.1						PYTHON_SINGLE_TARGET: -python3_8 python3_7
-=sys-libs/tdb-1.4.3						PYTHON_SINGLE_TARGET: -python3_8 python3_7
-=sys-libs/tevent-0.10.2						PYTHON_SINGLE_TARGET: -python3_8 python3_7
 
 # Temporary Fixes (for broken packages)
 
@@ -377,7 +357,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 
 # ogdi requires proj <6.0 which conflicts with libgeotiff (which needs >=6.0)
 # https://bugs.gentoo.org/686086
-=sci-libs/gdal-3.0.4						-ogdi
+=sci-libs/gdal-3.0.4-r1						-ogdi
 
 # oracle-javamail does not build
 # https://bugs.gentoo.org/698954
@@ -398,11 +378,11 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 =dev-libs/redland-1.0.17-r2					-mysql
 
 # parallel-compiler is currently a +nightly only feature
-=dev-lang/rust-1.41.0						-parallel-compiler
+=dev-lang/rust-1.41.1						-parallel-compiler
 
 # vtk does not build with +web
 # https://bugs.gentoo.org/653588
-=sci-libs/vtk-8.1.0-r3						-web
+=sci-libs/vtk-8.1.0-r4						-web
 
 # xdmf2 does not build with +python
 # https://bugs.gentoo.org/664920

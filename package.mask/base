@@ -1,6 +1,3 @@
-# cholmod requires <5
->=sci-libs/metis-5
-
 # libfprint-2 is not supported by most fprint packages
 # https://bugs.gentoo.org/show_bug.cgi?id=704282
 # https://bugs.gentoo.org/show_bug.cgi?id=704158

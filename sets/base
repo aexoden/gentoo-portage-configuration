@@ -60,6 +60,7 @@ net-p2p/syncthing
 net-print/brother-genml1-bin
 sci-libs/scipy
 sci-mathematics/octave
+sys-apps/dmidecode
 sys-apps/hdparm
 sys-apps/hwinfo
 sys-apps/mlocate
