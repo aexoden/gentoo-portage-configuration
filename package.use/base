@@ -326,13 +326,10 @@ net-wireless/bluez						PYTHON_SINGLE_TARGET: python2_7
 sci-libs/vtk							PYTHON_SINGLE_TARGET: python3_6
 sci-libs/xdmf2							PYTHON_SINGLE_TARGET: python2_7
 sys-apps/usbutils						PYTHON_SINGLE_TARGET: python3_7
-sys-devel/clang							PYTHON_SINGLE_TARGET: python3_7
+sys-devel/clang:9						PYTHON_SINGLE_TARGET: python3_7
 sys-devel/gdb							PYTHON_SINGLE_TARGET: python3_7
 sys-libs/libblockdev						PYTHON_SINGLE_TARGET: python3_7
 sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
-
-# sphinx >=2 does not support python 2.7
-=dev-python/sphinx_rtd_theme-0.4.3				PYTHON_TARGETS: -python2_7
 
 # fonttools >=4 does not support python 2.7
 =dev-python/booleanOperations-0.8.2				PYTHON_TARGETS: -python2_7
@@ -340,7 +337,6 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 
 # numpy >1.16 doesn't support python 2.7
 =dev-libs/boost-1.72.0-r1					PYTHON_TARGETS: -python2_7
-=media-libs/opencv-4.1.2-r2					PYTHON_TARGETS: -python2_7
 
 # Temporary Fixes (for broken packages)
 
@@ -367,7 +363,7 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 # opencv does not build with +lapack, +contribxfeatures2d
 # https://bugs.gentoo.org/689838
 # https://bugs.gentoo.org/701940
-=media-libs/opencv-4.1.2-r2					-lapack -contribxfeatures2d
+=media-libs/opencv-4.1.2-r3					-lapack -contribxfeatures2d
 
 # rdflib depends on an unmaintained mysql library that doesn't build
 # https://bugs.gentoo.org/632578
@@ -379,6 +375,10 @@ sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 
 # parallel-compiler is currently a +nightly only feature
 =dev-lang/rust-1.41.1						-parallel-compiler
+
+# curl requires an unreleased version of quiche
+# https://bugs.gentoo.org/711928
+=net-misc/curl-7.69.0						-quiche
 
 # vtk does not build with +web
 # https://bugs.gentoo.org/653588

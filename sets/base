@@ -61,8 +61,10 @@ net-print/brother-genml1-bin
 sci-libs/scipy
 sci-mathematics/octave
 sys-apps/dmidecode
+sys-apps/edac-utils
 sys-apps/hdparm
 sys-apps/hwinfo
+sys-apps/i2c-tools
 sys-apps/mlocate
 sys-apps/pv
 sys-apps/smartmontools
