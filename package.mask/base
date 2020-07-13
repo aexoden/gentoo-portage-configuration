@@ -6,5 +6,15 @@
 # synergy-2 is still a relatively broken beta
 >=x11-misc/synergy-2
 
-# zfs does not support linux >= 5.5
->=sys-kernel/gentoo-sources-5.5
+# wxpython:3.0 can only use python 2.7
+>=dev-python/pycairo-1.19
+>=dev-python/pyopengl-3.1.5
+
+# zfs-kmod does not yet support linux 5.7
+>=sys-kernel/gentoo-sources-5.7.0
+
+# gucharmap requires a particualr version of unicode data
+>=app-i18n/unicode-data-13
+
+# mutter does not support newer versions
+>=dev-util/sysprof-capture-3.35

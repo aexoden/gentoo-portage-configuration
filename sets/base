@@ -8,7 +8,9 @@ app-editors/visual-studio-code
 app-i18n/mozc
 app-misc/gnote
 app-misc/gramps
+app-misc/screen
 app-misc/uptimed
+app-office/lyx
 app-portage/cpuid2cpuflags
 app-portage/genlop
 app-portage/gentoolkit
@@ -16,6 +18,7 @@ app-portage/mirrorselect
 app-shells/zsh
 dev-lang/php
 dev-python/bandit
+dev-python/matplotlib
 dev-python/pipenv
 dev-python/pylint
 dev-python/python-dateutil
@@ -81,7 +84,9 @@ sys-process/iotop
 sys-process/lsof
 sys-process/schedtool
 sys-process/systemd-cron
+sys-process/tiptop
 www-client/firefox
+www-client/google-chrome
 www-client/vivaldi
 x11-misc/synergy
 x11-plugins/enigmail
