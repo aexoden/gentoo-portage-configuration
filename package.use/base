@@ -325,6 +325,9 @@ net-wireless/bluez						PYTHON_SINGLE_TARGET: python2_7
 sci-libs/xdmf2							PYTHON_SINGLE_TARGET: python2_7
 sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
 
+# boost does not build with python 2.7
+=dev-libs/boost-1.73.0						PYTHON_TARGETS: -python2_7
+
 # fonttools >=4 does not support python 2.7
 =dev-python/booleanOperations-0.8.2				PYTHON_TARGETS: -python2_7
 =dev-python/defcon-0.6.0					PYTHON_TARGETS: -python2_7
@@ -357,6 +360,9 @@ dev-python/virtualenv						PYTHON_TARGETS: -python2_7
 # coinor-osi uses an old GLPK api
 # https://bugs.gentoo.org/521978
 =sci-libs/coinor-osi-0.106.6					-glpk
+
+# gnome-contacts does not build with +telepathy
+=gnome-extra/gnome-contacts-3.36.2				-telepathy
 
 # libplist does not build with python 3.8
 =app-pda/libplist-2.0.0						PYTHON_TARGETS: -python3_8

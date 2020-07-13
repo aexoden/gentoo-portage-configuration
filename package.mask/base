@@ -13,8 +13,5 @@
 # zfs-kmod does not yet support linux 5.7
 >=sys-kernel/gentoo-sources-5.7.0
 
-# gucharmap requires a particualr version of unicode data
+# gucharmap requires a particular version of unicode data
 >=app-i18n/unicode-data-13
-
-# mutter does not support newer versions
->=dev-util/sysprof-capture-3.35
