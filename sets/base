@@ -1,3 +1,4 @@
+app-admin/rasdaemon
 app-arch/p7zip
 app-crypt/efitools
 app-editors/ghex
@@ -24,21 +25,27 @@ dev-python/pylint
 dev-python/python-dateutil
 dev-python/python-discid
 dev-python/pytz
+dev-python/scipy
 dev-python/sphinx
 dev-util/android-studio
 dev-util/android-tools
 dev-util/meld
 dev-util/oprofile
 dev-util/perf
+dev-util/smem
 dev-util/strace
+games-util/steam-meta
 gnome-base/gnome
+mail-client/geary
 mail-client/thunderbird
 mail-mta/postfix
 media-fonts/noto
 media-fonts/noto-emoji
 media-gfx/apngasm
-media-gfx/displaycal
+# Removed until it supports python3 and is readded.
+#media-gfx/displaycal
 media-gfx/gimp
+media-libs/libsfml
 media-sound/alsa-utils
 media-sound/audacity
 media-sound/fluidsynth
@@ -54,6 +61,7 @@ net-analyzer/iftop
 net-analyzer/netcat
 net-fs/nfs-utils
 net-im/discord-bin
+net-im/element-desktop-bin
 net-irc/quassel
 net-libs/nodejs
 net-misc/streamlink
@@ -61,7 +69,6 @@ net-misc/youtube-dl
 net-nntp/pan
 net-p2p/syncthing
 net-print/brother-genml1-bin
-sci-libs/scipy
 sci-mathematics/octave
 sys-apps/dmidecode
 sys-apps/edac-utils
@@ -87,6 +94,6 @@ sys-process/systemd-cron
 sys-process/tiptop
 www-client/firefox
 www-client/google-chrome
+www-client/microsoft-edge-dev
 www-client/vivaldi
 x11-misc/synergy
-x11-plugins/enigmail

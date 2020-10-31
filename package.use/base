@@ -11,11 +11,11 @@
 
 # Global Flags
 
-*/*	accessibility audit ayatana bidi blas bluetooth calendar caps cddb cjk cracklib curl cvs cxx dbi djvu dv dvb exif ffmpeg fftw fontconfig ftp gd geolocation git gmp
-*/*	gnuplot gphoto2 graphviz gsm guile hdf5 idn ieee1394 imagemagick imap ios java javascript jbig jit jpeg2k kerberos ladspa lame lapack latex libass libffi libsamplerate
+*/*	accessibility audit bidi blas bluetooth calendar caps cddb cjk cracklib curl cvs cxx dbi djvu dv dvb exif ffmpeg fftw fontconfig ftp gd geolocation git gmp
+*/*	gnuplot gphoto2 graphviz gsm guile hdf5 idn ieee1394 imagemagick imap ios java javascript jbig jit jpeg2k kerberos ladspa lame lapack latex ldap libass libffi libsamplerate
 */*	lm-sensors lua lz4 lzma lzo maildir mhash mmap mms modplug mono mplayer mtp mysql mysqli netcdf nntp ocaml offensive openal openexr opus perl plotutils postscript python
 */*	quicktime qt5 radius raw rdp ruby samba sasl scanner session snappy sndfile snmp soap sockets socks5 sox sound speex sqlite subversion syslog szip taglib tcl
-*/*	theora threads tidy tk truetype upnp upnp-av unwind v4l vaapi vala vcd vim-syntax vnc wavpack wayland webkit webp wifi wmf xcomposite xface xinerama xmlrpc xmp
+*/*	theora threads tidy tk truetype upnp upnp-av unwind v4l vaapi vala vcd vim-syntax vnc wavpack webkit webp wifi wmf xface xinerama xmlrpc xmp
 */*	xpm xscreensaver zeroconf zip zstd
 
 # Package Flags
@@ -34,7 +34,7 @@ app-crypt/gpgme							common-lisp
 app-crypt/mit-krb5						lmdb openldap
 app-crypt/qca							botan gcrypt gpg logger nss pkcs11 softstore
 app-doc/doxygen							clang dot doxysearch
-app-editors/nano						justify
+app-editors/nano						justify magic
 app-editors/gvim						cscope racket
 app-editors/vim							cscope racket terminal vim-pager
 app-i18n/mozc							ibus renderer
@@ -45,8 +45,8 @@ app-misc/jq							oniguruma
 app-misc/tracker						stemmer
 app-misc/tracker-miners						cue gsf iptc xps
 app-office/libreoffice						base coinmp firebird googledrive odk pdfimport LIBREOFFICE_EXTENSIONS: nlpsolver scripting-beanshell scripting-javascript wiki-publisher
-app-office/lyx							docbook
-app-portage/gemato						sha3 tools
+app-office/lyx							dia dot html rtf
+app-portage/gemato						tools
 app-text/docbook-sgml-utils					jadetex
 app-text/evince							dvi t1lib xps
 app-text/libebook						tools
@@ -57,20 +57,18 @@ app-text/libwps							tools
 app-text/poppler						nss
 app-text/tesseract						opencl training
 app-text/texlive-core						xetex xindy
-app-text/texlive						context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor pstricks publishers science tex4ht texi2html xetex
-dev-cpp/eigen							c++11
+app-text/texlive						context epspdf extra games graphics humanities luatex metapost music pdfannotextractor pstricks publishers science tex4ht texi2html xetex
 dev-cpp/glog							gflags
 dev-cpp/libcmis							man tools
-dev-db/mariadb							extraengine innodb-lz4 innodb-lzo innodb-snappy numa oqgraph rocksdb sphinx
+dev-db/mariadb							columnstore extraengine innodb-lz4 innodb-lzo innodb-snappy numa oqgraph rocksdb s3 sphinx
 dev-db/sqlite							tools
 dev-java/commons-logging					avalon-framework avalon-logkit log4j servletapi
-dev-java/icedtea-bin						multilib webstart
-dev-java/icedtea-web						tagsoup
 dev-java/log4j							javamail jms
 dev-lang/luajit							lua52compat
 dev-lang/ocaml							flambda spacetime
 dev-lang/php							argon2 bcmath enchant ffi inifile intl ldap-sasl lmdb pcntl pdo phpdbg sharedmem sodium sysvipc xmlreader xmlwriter xslt
 dev-lang/rust							clippy miri parallel-compiler rls rustfmt wasm LLVM_TARGETS: WebAssembly
+dev-lang/spidermonkey						lto
 dev-lang/vala							valadoc
 dev-libs/appstream-glib						fonts stemmer
 dev-libs/apr-util						openssl
@@ -99,10 +97,12 @@ dev-libs/libzip							tools
 dev-libs/nss							cacert utils
 dev-libs/openssl						rfc3779 tls-heartbeat
 dev-libs/totem-pl-parser					archive
+dev-perl/File-Which						pwhich
+dev-python/autobahn						scram
 dev-python/matplotlib						excel gtk3
 dev-python/pillow						imagequant
-dev-python/PyQt5						declarative designer help location multimedia networkauth positioning sensors serialport sql testlib webchannel websockets x11extras xmlpatterns
-dev-python/pyyaml						libyaml
+dev-python/PyQt5						declarative designer help location networkauth positioning sensors serialport sql testlib webchannel websockets x11extras xmlpatterns
+dev-python/scipy						sparse
 dev-python/twisted						conch http2 serial
 dev-python/urllib3						brotli
 dev-qt/designer							declarative
@@ -122,33 +122,33 @@ dev-qt/qtwebkit							nsplugin orientation qml
 dev-qt/qtwebsockets						qml
 dev-qt/qtxmlpatterns						qml
 dev-ruby/rrdtool-bindings					graph
-dev-tex/dot2texi						pgf pstricks
+dev-tex/html2latex						libwww
+dev-util/android-studio						custom-jdk
 dev-util/ctags							json yaml
 dev-util/perf							clang numa slang
 dev-util/strace							aio
 dev-vcs/git							highlight mediawiki mediawiki-experimental
-dev-vcs/subversion						ctypes-python -dso
+games-util/steam-client-meta					steamfonts steamvr trayicon
 gnome-base/gdm							fprint plymouth
 gnome-base/gnome-control-center					flickr
 gnome-base/gnome-settings-daemon				modemmanager
 gnome-base/gnome-shell						telepathy
 gnome-base/gvfs							afp archive bluray fuse google nfs
-gnome-base/libglade						tools
-gnome-base/librsvg						tools
 gnome-base/nautilus						sendto
 gnome-extra/gnome-contacts					telepathy
-gnome-extra/nm-applet						appindicator lto modemmanager wwan
+gnome-extra/nm-applet						appindicator modemmanager
 gnome-extra/sushi						office
 gui-libs/libhandy						glade
 mail-client/evolution						archive highlight ytnef
-mail-client/thunderbird						clang lto -system-libvpx -system-sqlite
+mail-client/geary						ytnef
+mail-client/thunderbird						clang lto
 media-fonts/corefonts						tahoma
 media-gfx/apngasm						7z zopfli
 media-gfx/exiv2							webready
 media-gfx/fontforge						truetype-debugger woff2
 media-gfx/gimp							heif vector-icons
 media-gfx/gnome-photos						flickr
-media-gfx/graphviz						gdk-pixbuf gts lasi
+media-gfx/graphviz						gts lasi
 media-gfx/imagemagick						corefonts fpx hdri heif lqr opencl
 media-gfx/pstoedit						emf pptx
 media-gfx/shotwell						opencv
@@ -157,23 +157,28 @@ media-libs/chromaprint						tools
 media-libs/freetype						brotli fontforge harfbuzz utils
 media-libs/gegl							lensfun umfpack
 media-libs/gst-plugins-base					gbm
+media-libs/ilmbase						large-stack
 media-libs/leptonica						utils
 media-libs/libbdplus						aacs
 media-libs/libbluray						aacs bdplus utils
 media-libs/libcanberra						tdb
+media-libs/libde265						dec265 enc265 tools
+media-libs/libheif						gdk-pixbuf go
 media-libs/libmediaart						-qt5
 media-libs/libmypaint						gegl
 media-libs/libpagemaker						tools
 media-libs/libplacebo						glslang
-media-libs/libsdl2						haptic gles gles2 kms vulkan
+media-libs/libsdl2						haptic gles2 ibus kms vulkan
 media-libs/libvisio						tools
 media-libs/libvpx						postproc
 media-libs/libwebp						swap-16bit-csp
 media-libs/libzmf						tools
-media-libs/mesa							d3d9 libglvnd opencl osmesa vulkan vulkan-overlay xa
-media-libs/opencv						contrib contribcvv contribdnn contribhdf contribsfm contribxfeatures2d download gdal gflags glog opencl opencvapps tesseract vtk
+media-libs/mesa							d3d9 opencl osmesa vulkan vulkan-overlay xa zink
+media-libs/opencv						contrib contribcvv contribdnn contribhdf contribsfm contribfreetype contribxfeatures2d download gdal gflags glog lto opencl opencvapps tesseract vtk
+media-libs/openexr						utils
 media-libs/openh264						utils
 media-libs/raptor						json
+media-libs/rubberband						vamp
 media-libs/speex						utils
 media-libs/vulkan-loader					layers
 media-libs/x264							opencl
@@ -181,20 +186,22 @@ media-libs/x265							numa
 media-plugins/grilo-plugins					chromaprint daap flickr freebox thetvdb
 media-plugins/gst-plugins-meta					http libvisual vpx
 media-sound/alsa-utils						bat
-media-sound/audacity						id3tag midi sbsms twolame vamp
+media-sound/audacity						id3tag sbsms portmidi portsmf twolame vamp
 media-sound/mpg123						int-quality
 media-sound/parlatype						glade libreoffice
+media-sound/picard						discid fingerprints
 media-sound/pulseaudio						equalizer native-headset ofono-headset
 media-sound/shntool						alac mac shorten
 media-sound/sox							amr id3tag twolame
 media-sound/vorbis-tools					kate
-media-video/ffmpeg						amr amrenc bluray bs2b cdio chromaprint chromium codec2 dav1d fdk flite frei0r fribidi gme iec61883 kvazaar libaom libaribb24 libdrm libilbc librtmp libsoxr libtesseract libv4l libxml2 lv2 opencl openh264 openssl rav1e rubberband srt ssh twolame vidstab vpx vulkan x265 zeromq zimg zvbi
+media-video/ffmpeg						amr amrenc bluray bs2b cdio chromaprint chromium codec2 fdk flite frei0r fribidi gme iec61883 kvazaar libaom libaribb24 libdrm libilbc librtmp libsoxr libtesseract libv4l libxml2 lv2 opencl openh264 openssl rav1e rubberband srt ssh twolame vidstab vpx vulkan x265 zeromq zimg zvbi
 media-video/mjpegtools						sdlgfx
 media-video/mpv							archive bluray cplugins rubberband tools vulkan zimg
+media-video/pipewire						vulkan
 net-analyzer/net-snmp						elf kmem netlink pcap pci
 net-analyzer/rrdtool						graph rrdcgi
 net-dialup/ppp							activefilter dhcp eap-tls
-net-dns/avahi							autoipd bookmarks gtk3 howl-compat mdnsresponder-compat
+net-dns/avahi							autoipd bookmarks howl-compat mdnsresponder-compat
 net-dns/bind-tools						gssapi
 net-dns/dnsmasq							auth-dns conntrack dhcp-tools dnssec id libidn2 script tftp
 net-dns/unbound							dnscrypt dnstap ecs gost redis
@@ -212,12 +219,13 @@ net-libs/libpcap						netlink
 net-libs/libproxy						spidermonkey
 net-libs/libsoup						brotli gssapi
 net-libs/libssh							gssapi pcap server
+net-libs/miniupnpc						verify-sig
 net-libs/neon							libproxy pkcs11
 net-libs/nghttp2						hpack-tools utils
 net-libs/nodejs							inspector
 net-libs/phodav							spice
 net-libs/zeromq							pgm
-net-misc/curl							alt-svc brotli gopher http2 metalink quiche rtmp ssh telnet
+net-misc/curl							alt-svc brotli gopher metalink quiche rtmp ssh telnet
 net-misc/gnome-online-miners					flickr
 net-misc/freerdp						openh264 server
 net-misc/iputils						clockdiff tftpd tracepath
@@ -233,12 +241,11 @@ net-nds/openldap						kinit pbkdf2 sha2 smbkrb5passwd
 net-nds/rpcbind							remotecalls
 net-p2p/syncthing						tools
 net-print/brother-genml1-bin					avahi
-net-print/cups-filters						ipp_autosetup pclm
-net-wireless/bluez						btpclient midi user-session
+net-print/cups-filters						pclm
+net-wireless/bluez						btpclient midi
 net-wireless/iwd						ofono wired
 sci-libs/armadillo						arpack superlu
 sci-libs/coinor-clp						glpk metis mumps sparse
-sci-libs/coinor-osi						glpk
 sci-libs/coinor-utils						glpk
 sci-libs/fftw							quad
 sci-libs/gdal							armadillo fits geos gml mdb ogdi opencl spatialite xls
@@ -247,14 +254,11 @@ sci-libs/lapack							lapacke
 sci-libs/mumps							metis
 sci-libs/netcdf							hdf tools
 sci-libs/proj							europe
-sci-libs/scipy							sparse
 sci-libs/scotch							int64 tools
 sci-libs/vtk							R boost gdal imaging json rendering tbb views web xdmf2
-sci-mathematics/octave						gui
 sci-mathematics/z3						isabelle
 sci-visualization/gnuplot					bitmap libcerf
 sys-apps/busybox						math
-sys-apps/dbus							user-session
 sys-apps/gawk							mpfr
 sys-apps/gnome-disk-utility					fat
 sys-apps/hwloc							libudev netloc
@@ -262,11 +266,10 @@ sys-apps/iproute2						elf
 sys-apps/kmod							pkcs7
 sys-apps/lm-sensors						sensord
 sys-apps/pciutils						dns
-sys-apps/shadow							bcrypt
+sys-apps/shadow							bcrypt -cracklib
 sys-apps/smartmontools						update_drivedb
 sys-apps/systemd						cryptsetup dns-over-tls elfutils gnuefi homed http importd nat pkcs11 pwquality qrcode repart xkb
 sys-apps/util-linux						cryptsetup tty-helpers
-sys-boot/plymouth						gdm
 sys-block/parted						device-mapper
 sys-devel/clang							LLVM_TARGETS: WebAssembly
 sys-devel/clang-runtime						libcxx
@@ -277,11 +280,12 @@ sys-devel/llvm							exegesis gold xar z3 LLVM_TARGETS: WebAssembly
 sys-fs/cryptsetup						pwquality reencrypt
 sys-fs/e2fsprogs						cron fuse
 sys-fs/ntfs3g							ntfsdecrypt
-sys-fs/udisks							lvm vdo
+sys-fs/udisks							lvm vdo zram
 sys-kernel/genkernel-next					cryptsetup gpg plymouth
 sys-kernel/gentoo-sources					experimental
 sys-libs/libblockdev						bcache device-mapper escrow kbd lvm vdo
 sys-libs/libomp							hwloc offload ompt
+sys-libs/libseccomp						static-libs
 sys-libs/libunwind						debug-frame libatomic
 sys-libs/readline						utils
 sys-libs/zlib							minizip
@@ -290,10 +294,9 @@ sys-process/lsof						rpc
 sys-process/procps						modern-top
 sys-process/systemd-cron					minutely yearly
 virtual/linux-sources						firmware
-www-client/firefox						clang geckodriver hwaccel lto -system-libvpx -system-sqlite
+www-client/firefox						clang geckodriver hwaccel lto -system-libvpx
 www-client/w3m							gdk-pixbuf
 www-servers/apache						suexec suexec-syslog
-x11-base/xorg-server						libglvnd
 x11-libs/cairo							utils
 x11-libs/fltk							games
 x11-libs/gtk+:3							cloudprint
@@ -302,74 +305,17 @@ x11-libs/libdrm							libkms
 x11-libs/libva							utils
 x11-libs/libwnck						tools
 x11-libs/qscintilla						designer
-x11-libs/vte							glade
 x11-misc/colord							argyllcms
 x11-wm/mutter							screencast
 
 # Python Adjustments
-
-app-accessibility/orca						PYTHON_SINGLE_TARGET: python3_7
-dev-lang/yasm							PYTHON_SINGLE_TARGET: python2_7
-dev-libs/libnatspec						PYTHON_SINGLE_TARGET: python2_7
-dev-libs/volume_key						PYTHON_SINGLE_TARGET: python3_7
-dev-util/gtk-doc						PYTHON_SINGLE_TARGET: python3_7
-dev-util/gyp							PYTHON_SINGLE_TARGET: python2_7
-dev-vcs/git							PYTHON_SINGLE_TARGET: python3_7
-gnome-base/libglade						PYTHON_SINGLE_TARGET: python2_7
-media-gfx/gimp							PYTHON_SINGLE_TARGET: python2_7
-media-libs/libkate						PYTHON_SINGLE_TARGET: python2_7
-net-analyzer/net-snmp						PYTHON_SINGLE_TARGET: python2_7
-net-dns/unbound							PYTHON_SINGLE_TARGET: python3_7
-net-misc/streamlink						PYTHON_SINGLE_TARGET: python3_7
-net-wireless/bluez						PYTHON_SINGLE_TARGET: python2_7
-sci-libs/xdmf2							PYTHON_SINGLE_TARGET: python2_7
-sys-process/systemd-cron					PYTHON_SINGLE_TARGET: python3_7
-
-# boost does not build with python 2.7
-=dev-libs/boost-1.73.0						PYTHON_TARGETS: -python2_7
-
-# fonttools >=4 does not support python 2.7
-=dev-python/booleanOperations-0.8.2				PYTHON_TARGETS: -python2_7
-=dev-python/defcon-0.6.0					PYTHON_TARGETS: -python2_7
-
-# numpy >1.16 doesn't support python 2.7
-=dev-libs/boost-1.72.0-r1					PYTHON_TARGETS: -python2_7
-
-# zipp >2 does not support python 2.7
-dev-python/importlib_metadata					PYTHON_TARGETS: -python2_7
-dev-python/importlib_resources					PYTHON_TARGETS: -python2_7
-dev-python/virtualenv						PYTHON_TARGETS: -python2_7
-
-# pycairo >=1.19 does not support python 2.7
-=app-i18n/ibus-1.5.22						PYTHON_TARGETS: -python2_7
-=dev-python/gst-python-1.16.2					PYTHON_TARGETS: -python2_7
-=dev-python/pyatspi-2.36.0					PYTHON_TARGETS: -python2_7
-=dev-python/pygobject-3.34.0					PYTHON_TARGETS: -python2_7
-
-# pygments >=2.6 does not support python 2.7
-=dev-python/automat-20.2.0					PYTHON_TARGETS: -python2_7
-=dev-python/docutils-0.16					PYTHON_TARGETS: -python2_7
-=dev-python/m2r-0.2.1						PYTHON_TARGETS: -python2_7
-
-# pyrsistent >= 0.16 does not support python 2.7
-=dev-python/fixtures-3.0.0					PYTHON_TARGETS: -python2_7
-=dev-python/testtools-2.4.0					PYTHON_TARGETS: -python2_7
+=dev-util/gtk-doc-1.32-r2					PYTHON_SINGLE_TARGET: python3_7
+=net-misc/streamlink-1.3.1-r1					PYTHON_SINGLE_TARGET: python3_7
 
 # Temporary Fixes (for broken packages)
 
-# coinor-osi uses an old GLPK api
-# https://bugs.gentoo.org/521978
-=sci-libs/coinor-osi-0.106.6					-glpk
-
 # gnome-contacts does not build with +telepathy
 =gnome-extra/gnome-contacts-3.36.2				-telepathy
-
-# libplist does not build with python 3.8
-=app-pda/libplist-2.0.0						PYTHON_TARGETS: -python3_8
-
-# mumps does not build with +metis
-# https://bugs.gentoo.org/671998
-=sci-libs/mumps-5.1.2						-metis
 
 # ogdi requires proj <6.0 which conflicts with libgeotiff (which needs >=6.0)
 # https://bugs.gentoo.org/686086
@@ -377,50 +323,24 @@ dev-python/virtualenv						PYTHON_TARGETS: -python2_7
 
 # oracle-javamail does not build
 # https://bugs.gentoo.org/698954
-=app-text/texlive-2020-r5					-pdfannotextractor
+=app-text/texlive-2020-r9					-pdfannotextractor
 =dev-java/commons-logging-1.2-r2				-avalon-framework -avalon-logkit
 =dev-java/log4j-1.2.17-r3					-javamail
 
 # opencv does not build with +lapack, +contribxfeatures2d
 # https://bugs.gentoo.org/689838
 # https://bugs.gentoo.org/701940
-=media-libs/opencv-4.1.2-r3					-lapack -contribxfeatures2d
+=media-libs/opencv-4.5.0					-lapack -contribxfeatures2d
 
 # pybrotli conflicts with brtoli[python]
-=dev-python/urllib3-1.25.9					-brotli
-
-# rdflib depends on an unmaintained mysql library that doesn't build
-# https://bugs.gentoo.org/632578
-=dev-python/rdflib-4.2.2-r1					-mysql
+=dev-python/urllib3-1.25.11					-brotli
 
 # redland does not build with +mysql
 # https://bugs.gentoo.org/692462
 =dev-libs/redland-1.0.17-r2					-mysql
 
 # miri and parallel-compiler are currently +nightly only features
-=dev-lang/rust-1.44.1						-miri -parallel-compiler
+=dev-lang/rust-1.47.0-r1					-miri -parallel-compiler
 
 # neon does not build with +pkcs11
 =net-libs/neon-0.31.2						-pkcs11
-
-# subversion does not build with +python
-=dev-vcs/subversion-1.14.0					-python
-
-# thunderbird requires an older version of lld with +clang
-=mail-client/thunderbird-68.5.0					-clang
-
-# curl requires an unreleased version of quiche
-# https://bugs.gentoo.org/730416
-=net-misc/curl-7.71.1						-quiche
-
-# vtk does not build with +web
-# https://bugs.gentoo.org/653588
-=sci-libs/vtk-8.1.0-r6						-web
-
-# xdmf2 does not build with +python
-# https://bugs.gentoo.org/664920
-=sci-libs/xdmf2-1.0_p141226-r3					-python
-
-# z3 does not currently build with java
-# https://bugs.gentoo.org/673126
-=sci-mathematics/z3-4.8.6					-java
