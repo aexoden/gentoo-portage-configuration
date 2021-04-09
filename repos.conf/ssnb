@@ -1,7 +1,0 @@
-[ssnb]
-auto-sync = yes
-clone-depth = 0
-location = /var/db/repos/ssnb
-priority = 50
-sync-type = git
-sync-uri = https://github.com/samuelbernardo/ssnb-overlay.git

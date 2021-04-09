@@ -8,6 +8,10 @@ This is the configuration I use for my desktop Gentoo machines. It attempts to
 enable every feature that might be conceivably useful on a modern GNOME desktop,
 while eschewing any outdated or rarely used items.
 
+The current state is a little more chaotic than the above description, as it
+also installs KDE Plasma, among other various random programs, especially if the
+included set is used.
+
 ## Rationale
 
 One of the highly touted features Gentoo offers to its users is the concept of
