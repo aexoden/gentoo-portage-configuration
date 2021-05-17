@@ -1,0 +1,7 @@
+[guru]
+auto-sync = yes
+clone-depth = 0
+location = /var/db/repos/guru
+priority = 50
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/guru.git
