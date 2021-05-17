@@ -5,7 +5,7 @@ app-editors/ghex
 app-editors/gvim
 app-editors/nano
 app-editors/vim
-app-editors/visual-studio-code
+app-editors/visual-studio-code-bin
 app-emulation/virt-viewer
 app-i18n/mozc
 app-misc/gnote
@@ -13,6 +13,7 @@ app-misc/gramps
 app-misc/screen
 app-misc/uptimed
 app-office/lyx
+app-office/wps-office
 app-portage/cpuid2cpuflags
 app-portage/genlop
 app-portage/gentoolkit
@@ -37,7 +38,6 @@ dev-util/smem
 dev-util/strace
 games-util/steam-meta
 gnome-base/gnome
-kde-plasma/plasma-meta
 mail-client/geary
 mail-client/thunderbird
 mail-mta/postfix
@@ -51,6 +51,7 @@ media-gfx/gimp
 media-libs/libsfml
 media-sound/alsa-utils
 media-sound/audacity
+media-video/ccextractor
 media-sound/fluidsynth
 media-sound/opus-tools
 media-sound/parlatype
@@ -64,6 +65,7 @@ media-video/makemkv
 media-video/mediainfo
 media-video/mkvtoolnix
 media-video/mpv
+media-video/vlc
 net-analyzer/iftop
 net-fs/nfs-utils
 net-im/discord-bin
@@ -88,13 +90,12 @@ sys-apps/pv
 sys-apps/smartmontools
 sys-apps/usbutils
 sys-apps/yarn
+sys-boot/efibootmgr
 sys-devel/gdb
 sys-fs/ddrescue
 sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/zfs
-sys-kernel/buildkernel
-sys-kernel/gentoo-sources
 sys-power/nut
 sys-process/htop
 sys-process/iotop

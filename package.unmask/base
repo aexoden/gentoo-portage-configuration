@@ -1,0 +1,4 @@
+net-nntp/pan
+
+# Allowed packages from src_prepare-overlay
+sys-kernel/xanmod-sources::src_prepare-overlay

@@ -1,7 +1,0 @@
-[sakaki-tools]
-auto-sync = yes
-clone-depth = 0
-location = /var/db/repos/sakaki-tools
-priority = 50
-sync-type = git
-sync-uri = https://github.com/sakaki-/sakaki-tools.git

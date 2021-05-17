@@ -1,0 +1,10 @@
+# sphinx requires a lower version
+>=dev-python/docutils-0.17
+
+# Avoid using the src_prepare-overlay by default
+*/*::src_prepare-overlay
+
+# Avoid using unusable 5.11 versions of dist-kernel from the ::gentoo repository
+# Usable versions are based on available xanmod-patched kernels. Once the 5.12
+# series is available, this can be removed most likely.
+virtual/dist-kernel::gentoo

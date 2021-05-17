@@ -1,7 +1,0 @@
-[dotnet]
-auto-sync = yes
-clone-depth = 0
-location = /var/db/repos/dotnet
-priority = 100
-sync-type = git
-sync-uri = https://github.com/gentoo/dotnet.git
