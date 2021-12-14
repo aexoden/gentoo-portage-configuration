@@ -1,6 +1,6 @@
-make.conf/local
-package.mask/local
-package.unmask/local
-package.use/local
+make.conf/50_local
+package.mask/50_local
+package.unmask/50_local
+package.use/50_local
 repo.postsync.d/
 savedconfig/
