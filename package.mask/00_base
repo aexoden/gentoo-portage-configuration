@@ -1,10 +1,17 @@
-# sphinx requires a lower version
->=dev-python/docutils-0.17
+# Gentoo Portage Configuration
+# Package Mask
 
-# Avoid using the src_prepare-overlay by default
-*/*::src_prepare-overlay
+# Masks listed in this file are to either temporarily mask software that does
+# not build or to temporarily restrict versions to avoid annoying messages about
+# skipped packages during world upgrades.
 
-# Avoid using unusable 5.11 versions of dist-kernel from the ::gentoo repository
-# Usable versions are based on available xanmod-patched kernels. Once the 5.12
-# series is available, this can be removed most likely.
-virtual/dist-kernel::gentoo
+# sphinx requires an older version of docutils
+# https://bugs.gentoo.org/802618
+#>=dev-python/docutils-0.18
+
+# octave doesn't build with >=sundials-6.2.0
+# https://bugs.gentoo.org/846968
+>=sci-libs/sundials-6.2.0
+
+# breaks vtk
+#>=sci-libs/netcdf-4.9

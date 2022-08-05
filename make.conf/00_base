@@ -4,7 +4,7 @@
 # Language Selection
 LINGUAS="en_US en"
 
-# C/C++ Compiler Options
+# Compiler Options
 COMMON_FLAGS="-march=native -O2 -pipe"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
@@ -12,7 +12,7 @@ FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
 
 # Portage Features
-EMERGE_DEFAULT_OPTS="--with-bdeps=y --backtrack=50 --dynamic-deps=n --autounmask-backtrack=y"
+EMERGE_DEFAULT_OPTS="--with-bdeps=y --backtrack=200 --dynamic-deps=n --autounmask-backtrack=y"
 FEATURES="splitdebug -config-protect-if-modified"
 
 # License Acceptance
@@ -24,6 +24,3 @@ ACCEPT_KEYWORDS="~amd64"
 # Logging
 PORTAGE_ELOG_CLASSES="warn error log"
 PORTAGE_ELOG_SYSTEM="echo save"
-
-# Steam USE_EXPAND
-USE_EXPAND="${USE_EXPAND} STEAMGAMES"

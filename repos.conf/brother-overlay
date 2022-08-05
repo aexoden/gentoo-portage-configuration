@@ -1,7 +1,0 @@
-[brother-overlay]
-auto-sync = yes
-clone-depth =  0
-location = /var/db/repos/brother-overlay
-priority = 50
-sync-type = git
-sync-uri = https://github.com/stefan-langenmaier/brother-overlay.git
