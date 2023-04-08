@@ -1,0 +1,10 @@
+# Gentoo Portage Configuration
+# Local Configuration
+
+# Parallel Make
+# MAKEOPTS="-j32"
+
+# Logging Customization
+# PORTAGE_ELOG_SYSTEM="echo mail"
+# PORTAGE_ELOG_MAILFROM="portage@hostname.example.com"
+# PORTAGE_ELOG_MAILURI="admin@example.com localhost"

@@ -1,0 +1,24 @@
+# Gentoo Portage Configuration
+# USE Flags
+
+# CPU Feature Flags
+#*/*     CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3
+
+# Hardware Flags
+#*/*     VIDEO_CARDS: -* nvidia
+
+# Global Flags
+#*/*     cuda nvenc vdpau
+
+# Package Flags
+#dev-lang/rust                                   LLVM_TARGETS: NVPTX
+#dev-util/nvidia-cuda-toolkit                    debugger nsight profiler sanitizer vis-profiler
+#sys-apps/hwloc                                  nvml
+#sys-libs/libomp                                 LLVM_TARGETS: NVPTX
+#x11-drivers/nvidia-drivers                      persistenced
+
+# Temporary Fixes
+
+# CUDA and LTO are incompatible.
+# https://bugs.gentoo.org/811162
+#=media-libs/opencv-4.7.0                        -lto
