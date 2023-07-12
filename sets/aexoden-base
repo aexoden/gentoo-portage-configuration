@@ -5,9 +5,11 @@ app-portage/gentoolkit
 app-shells/gentoo-zsh-completions
 
 # System Utilities
+app-admin/hddtemp
 app-admin/rasdaemon
 app-admin/sudo
 app-cdr/bchunk
+app-crypt/efitools
 app-editors/nano
 app-editors/vim
 app-misc/binwalk
@@ -20,9 +22,11 @@ dev-util/strace
 mail-mta/postfix
 net-analyzer/iftop
 net-analyzer/nmap
+net-dns/bind-tools
 net-fs/nfs-utils
 net-misc/aria2
 net-p2p/syncthing
+net-vpn/tailscale
 sys-apps/ethtool
 sys-apps/hdparm
 sys-apps/hwinfo
@@ -62,9 +66,6 @@ dev-util/rustup
 dev-util/tup
 dev-vcs/git
 
-# Currently used for building VTK.
-sys-devel/gcc:11
-
 # Media and Video
 media-gfx/apngasm
 media-libs/exiftool
@@ -75,10 +76,12 @@ media-plugins/vapoursynth-havsfunc
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/opus-tools
+media-sound/shntool
 media-sound/vorbis-tools
 media-video/atomicparsley
 media-video/dvdbackup
 media-video/lsdvd
+media-video/x264-encoder
 net-misc/yt-dlp
 
 # Science and Mathematics

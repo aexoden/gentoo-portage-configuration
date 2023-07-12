@@ -69,6 +69,10 @@ circular dependencies that will require temporarily USE flag changes. There is
 also an issue of bootstrapping GCC with D and Ada support. If you don't use
 those languages, it may be easier to just disable those USE flags on GCC.
 
+This configuration currently limits the GCC version to the latest supported by
+CUDA. If you are not using CUDA, you may be able to unmask later versions of GCC
+without consequence, but this has not been tested.
+
 You may wish to modify the `package.env` or `env` settings. VTK is currently
 restricted to 12 threads due to memory issues on a machine with 256GB of RAM. If
 you are building VTK with CUDA and have less memory (which is likely on most
