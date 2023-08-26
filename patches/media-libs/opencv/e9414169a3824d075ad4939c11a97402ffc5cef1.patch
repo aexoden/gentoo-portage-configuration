@@ -1,0 +1,56 @@
+From e9414169a3824d075ad4939c11a97402ffc5cef1 Mon Sep 17 00:00:00 2001
+From: Vincent Rabaud <vrabaud@google.com>
+Date: Thu, 29 Jun 2023 16:21:28 +0200
+Subject: [PATCH] Fix compilation when HAVE_QUIRC is not set.
+
+One variable is unknown while the other one is unused.
+Fixed build warnings.
+---
+ modules/objdetect/test/test_qr_utils.hpp | 3 +++
+ modules/objdetect/test/test_qrcode.cpp   | 4 ++--
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/modules/objdetect/test/test_qr_utils.hpp b/modules/objdetect/test/test_qr_utils.hpp
+index cfbe1a5078b9..115c767f7189 100644
+--- a/modules/objdetect/test/test_qr_utils.hpp
++++ b/modules/objdetect/test/test_qr_utils.hpp
+@@ -10,6 +10,9 @@ void check_qr(const string& root, const string& name_current_image, const string
+                 const std::vector<Point>& corners,
+                 const std::vector<string>& decoded_info, const int max_pixel_error,
+                 bool isMulti = false) {
++#ifndef HAVE_QUIRC
++    CV_UNUSED(decoded_info);
++#endif
+     const std::string dataset_config = findDataFile(root + "dataset_config.json");
+     FileStorage file_config(dataset_config, FileStorage::READ);
+     ASSERT_TRUE(file_config.isOpened()) << "Can't read validation data: " << dataset_config;
+diff --git a/modules/objdetect/test/test_qrcode.cpp b/modules/objdetect/test/test_qrcode.cpp
+index 5e6ec6faf5db..9b7d8ceda489 100644
+--- a/modules/objdetect/test/test_qrcode.cpp
++++ b/modules/objdetect/test/test_qrcode.cpp
+@@ -374,8 +374,8 @@ TEST_P(Objdetect_QRCode_Multi, regression)
+         qrcode = QRCodeDetectorAruco();
+     }
+     std::vector<Point> corners;
+-#ifdef HAVE_QUIRC
+     std::vector<cv::String> decoded_info;
++#ifdef HAVE_QUIRC
+     std::vector<Mat> straight_barcode;
+     EXPECT_TRUE(qrcode.detectAndDecodeMulti(src, decoded_info, corners, straight_barcode));
+     ASSERT_FALSE(corners.empty());
+@@ -538,7 +538,6 @@ TEST(Objdetect_QRCode_detect_flipped, regression_23249)
+ 
+     for(const auto &flipped_image : flipped_images){
+         const std::string &image_name = flipped_image.first;
+-        const std::string &expect_msg = flipped_image.second;
+ 
+         std::string image_path = findDataFile(root + image_name);
+         Mat src = imread(image_path);
+@@ -551,6 +550,7 @@ TEST(Objdetect_QRCode_detect_flipped, regression_23249)
+         EXPECT_TRUE(!corners.empty());
+         std::string decoded_msg;
+         #ifdef HAVE_QUIRC
++            const std::string &expect_msg = flipped_image.second;
+             EXPECT_NO_THROW(decoded_msg = qrcode.decode(src, corners, straight_barcode));
+             ASSERT_FALSE(straight_barcode.empty()) << "Can't decode qrimage.";
+             EXPECT_EQ(expect_msg, decoded_msg);

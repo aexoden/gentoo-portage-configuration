@@ -36,10 +36,13 @@ media-video/makemkv
 media-video/mkvtoolnix
 media-video/mpv
 net-im/discord
+net-im/element-desktop-bin
+net-im/slack
 net-irc/quassel
 net-misc/streamlink
 net-nntp/pan
 net-p2p/qbittorrent
+sci-geosciences/josm-bin
 www-client/firefox
 www-client/google-chrome
 www-client/microsoft-edge

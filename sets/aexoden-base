@@ -56,15 +56,18 @@ app-containers/docker-buildx
 app-containers/docker-compose
 app-containers/lxd
 app-containers/nvidia-container-toolkit
+app-emulation/virt-manager
 
 # Development
 dev-lang/php
+dev-python/pip
 dev-python/pipenv
 dev-util/android-tools
 dev-util/perf
 dev-util/rustup
 dev-util/tup
 dev-vcs/git
+sys-apps/yarn
 
 # Media and Video
 media-gfx/apngasm
