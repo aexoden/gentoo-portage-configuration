@@ -2,6 +2,13 @@
 
 Jason Lynch <jason@calindora.com>
 
+## Unmaintained
+
+I do not currently use Gentoo on any of my machines, so this repository is
+effectively unmaintained. If I install Gentoo at some point, it may once again
+be maintained, but at this point, the time spent auditing USE flag changes and
+working around bugs is more than I can realistically dedicate.
+
 ## Introduction
 
 This is the configuration I use for my desktop Gentoo machines. It attempts to
