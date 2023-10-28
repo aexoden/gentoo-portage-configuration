@@ -60,6 +60,7 @@ app-emulation/virt-manager
 
 # Development
 dev-lang/php
+dev-python/pdm
 dev-python/pip
 dev-python/pipenv
 dev-util/android-tools
