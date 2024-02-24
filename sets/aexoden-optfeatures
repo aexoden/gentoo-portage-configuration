@@ -1,0 +1,61 @@
+# app-emulation/virtualbox
+app-emulation/virtualbox-additions
+app-emulation/virtualbox-extpack-oracle
+
+# app-misc/anki-bin
+dev-python/orjson
+
+# app-office/scribus
+app-text/antiword
+
+# dev-lang/julia
+sci-visualization/gr
+
+# dev-libs/libinput
+dev-python/libevdev
+
+# dev-python/fs
+dev-python/boto
+dev-python/paramiko
+
+# dev-python/lxml
+dev-python/cssselect
+
+# dev-python/rich
+dev-python/ipywidgets
+
+# dev-util/source-highlight
+dev-util/ctags
+
+# gnome-base/gnome-shell
+gnome-extra/gnome-browser-connector
+
+# kde-apps/cantor
+sci-mathematics/maxima
+
+# kde-apps/kate-addons
+media-gfx/kgraphviewer
+
+# kde-frameworks/solid
+app-misc/media-player-info
+
+# kde-frameworks/kfilemetadata
+app-text/catdoc
+dev-libs/libxls
+
+# kde-plasma/kinfocenter
+app-text/aha
+
+# media-libs/libvisual
+media-plugins/libvisual-projectm
+
+# media-libs/oneVPL
+media-libs/oneVPL-cpu
+
+# net-libs/webkit-gtk
+media-plugins/gst-plugins-dash
+media-plugins/gst-plugins-hls
+
+# sys-block/nbdkit
+dev-libs/libisoburn
+

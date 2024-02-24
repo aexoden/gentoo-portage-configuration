@@ -1,10 +1,16 @@
 # Gentoo Portage Configuration
 # Local Configuration
 
+# Go Optimization
+# GOAMD64="v3"
+
 # Parallel Make
-# MAKEOPTS="-j32"
+# MAKEOPTS="-j48"
 
 # Logging Customization
 # PORTAGE_ELOG_SYSTEM="echo mail"
 # PORTAGE_ELOG_MAILFROM="portage@hostname.example.com"
 # PORTAGE_ELOG_MAILURI="admin@example.com localhost"
+
+# Mirrors
+# GENTOO_MIRRORS="https://1.gentoo.example.com https://2.gentoo.example.com"

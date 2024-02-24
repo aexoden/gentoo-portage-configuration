@@ -1,0 +1,48 @@
+diff -ur boinc-client_release-7.24-7.24.1-orig/configure.ac boinc-client_release-7.24-7.24.1/configure.ac
+--- boinc-client_release-7.24-7.24.1-orig/configure.ac	2023-08-12 00:36:25.000000000 -0700
++++ boinc-client_release-7.24-7.24.1/configure.ac	2024-02-12 09:18:29.592789427 -0800
+@@ -238,7 +238,6 @@
+ 
+ if test x$enable_client = xyes ; then
+   configured_to_build="client"
+-  enable_xss="yes"
+ fi
+ if test x$enable_manager = xyes ; then
+   configured_to_build="${configured_to_build} manager"
+@@ -677,19 +676,6 @@
+ 
+ AM_CONDITIONAL(BUILD_GRAPHICS_API, [ test "$have_glut" = yes -a "$have_jpeg" = 1])
+ 
+-dnl check for X screen saver lib (X-based idle detection on Linux)
+-if test "$enable_xss" = yes; then
+-    if test "X${no_x}" = "Xyes" ; then
+-        AC_MSG_WARN([X Window include files/libs excluded or location unknown, disabling X ScreenSaver user idle detection])
+-    else
+-        AC_CHECK_LIB([Xss], [XScreenSaverAllocInfo], [have_Xss="yes"], [have_Xss="no"])
+-        AC_CHECK_HEADER([X11/extensions/scrnsaver.h], [have_Xss="yes"], [have_Xss="no"])
+-        if test "$have_Xss" = no; then
+-            AC_MSG_WARN([libxss missing, disabling X ScreenSaver user idle detection])
+-        fi
+-    fi
+-fi
+-
+ dnl --------------------------------------------------------------------------------
+ dnl put double-inclusion protection into config.h
+ AH_TOP([
+@@ -1270,16 +1256,6 @@
+ fi
+ LIBS=$svlibs
+ 
+-if test "$enable_xss" = yes -a "$have_Xss" = yes; then
+-    SAH_CHECK_LIB([Xss],[XScreenSaverAllocInfo],[
+-        AC_DEFINE([HAVE_XSS],[1],[Define to 1 if you have xss library])
+-        CLIENTLIBS="${sah_lib_last} ${CLIENTLIBS}"])
+-    SAH_CHECK_LIB([X11],[XOpenDisplay],[
+-        AC_DEFINE([HAVE_X11],[1],[Define to 1 if you have X11 library])
+-        CLIENTLIBS="${sah_lib_last} ${CLIENTLIBS}"])
+-    echo DEBUG: CLIENTLIBS=${CLIENTLIBS} >&5
+-fi
+-
+ SAH_CHECK_LIB([resolv],[res_query],[
+     AC_DEFINE([HAVE_RESOLV],[1],[Define to 1 if you have the resolv library])
+     CLIENTLIBS="${sah_lib_last} ${CLIENTLIBS}"])

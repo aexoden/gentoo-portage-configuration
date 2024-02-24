@@ -2,73 +2,101 @@
 app-portage/cpuid2cpuflags
 app-portage/genlop
 app-portage/gentoolkit
+app-portage/mirrorselect
 app-shells/gentoo-zsh-completions
 
 # System Utilities
 app-admin/hddtemp
 app-admin/rasdaemon
 app-admin/sudo
+app-arch/7zip
+app-arch/lzip
 app-cdr/bchunk
 app-crypt/efitools
+app-crypt/tpm2-tools
 app-editors/nano
 app-editors/vim
 app-misc/binwalk
+app-misc/jq
 app-misc/tmux
 app-misc/uptimed
 app-shells/zsh
+app-text/lesspipe
+dev-debug/strace
 dev-util/clinfo
 dev-util/smem
-dev-util/strace
 mail-mta/postfix
 net-analyzer/iftop
 net-analyzer/nmap
 net-dns/bind-tools
 net-fs/nfs-utils
 net-misc/aria2
+net-misc/bridge-utils
 net-p2p/syncthing
+net-print/cups-meta
 net-vpn/tailscale
+sys-apps/apparmor-utils
+sys-apps/bat
+sys-apps/bat-extras
+sys-apps/etckeeper
 sys-apps/ethtool
 sys-apps/hdparm
 sys-apps/hwinfo
 sys-apps/mlocate
 sys-apps/moreutils
 sys-apps/nvme-cli
+sys-apps/pciutils
+sys-apps/progress
 sys-apps/pv
+sys-apps/sg3_utils
+sys-apps/usermode-utilities
+sys-block/fio
 sys-boot/efibootmgr
+sys-fs/compsize
 sys-fs/ddrescue
+sys-fs/dd-rescue
 sys-fs/dosfstools
+sys-fs/exfatprogs
 sys-fs/mdadm
 sys-fs/ntfs3g
+sys-fs/quota
+sys-fs/squashfs-tools
 sys-fs/zfs
 sys-fs/zfs-auto-snapshot
+sys-power/cpupower
 sys-power/nut
-sys-process/cronie
 sys-process/htop
 sys-process/iotop
 sys-process/lsof
+sys-process/nvtop
 sys-process/schedtool
+sys-process/systemd-cron
 sys-process/time
 
 # Containers and VMs
+app-containers/distrobox
 app-containers/distrobuilder
 app-containers/docker
 app-containers/docker-buildx
 app-containers/docker-compose
-app-containers/lxd
+app-containers/incus
 app-containers/nvidia-container-toolkit
 app-emulation/virt-manager
+app-emulation/virtualbox
 
 # Development
 dev-lang/php
+dev-lang/rust
 dev-python/pdm
 dev-python/pip
 dev-python/pipenv
+dev-python/poetry
+dev-util/act
 dev-util/android-tools
 dev-util/perf
 dev-util/rustup
-dev-util/tup
 dev-vcs/git
-sys-apps/yarn
+sys-devel/gcc:12
 
 # Media and Video
 media-gfx/apngasm
@@ -79,6 +107,7 @@ media-plugins/vapoursynth-mvtools
 media-plugins/vapoursynth-havsfunc
 media-sound/alsa-tools
 media-sound/alsa-utils
+media-sound/fluid-soundfont
 media-sound/opus-tools
 media-sound/shntool
 media-sound/vorbis-tools
@@ -91,3 +120,11 @@ net-misc/yt-dlp
 # Science and Mathematics
 sci-mathematics/glpk
 sci-misc/boinc
+
+# Libraries
+sys-libs/ncurses-compat
+
+# AMD GPU
+dev-libs/rocm-opencl-runtime
+dev-util/rocminfo
+dev-util/rocm-smi

@@ -1,3 +1,5 @@
+/bashrc
+conf-update.d/etckeeper
 make.conf/50-local.conf
 package.mask/50-local.conf
 package.unmask/50-local.conf

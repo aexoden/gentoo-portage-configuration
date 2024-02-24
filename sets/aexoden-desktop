@@ -1,24 +1,25 @@
 # Desktop Environments
 gnome-base/gnome
+kde-apps/kde-apps-meta
 kde-plasma/plasma-meta
 x11-base/xorg-server
 
 # Input Methods
 app-i18n/fcitx-anthy
-app-i18n/fcitx-meta
-
-# Media
-media-sound/fluid-soundfont
+app-i18n/fcitx-configtool
+app-i18n/fcitx-gtk
+app-i18n/fcitx-qt
 
 # Applications
 app-editors/ghex
+app-editors/gnome-text-editor
 app-editors/gvim
 app-editors/vscode
 app-emulation/virt-viewer
-app-emulation/virtualbox
 app-misc/anki-bin
 app-misc/gramps
 app-misc/piper
+app-misc/wayland-utils
 app-office/gnucash
 app-office/libreoffice
 app-office/lyx
@@ -27,14 +28,16 @@ dev-games/godot:3
 dev-games/godot:4
 dev-util/android-studio
 dev-util/meld
+dev-util/vulkan-tools
 games-emulation/dosbox-x
-kde-apps/kde-apps-meta
+gui-apps/gnome-console
 mail-client/thunderbird
 media-gfx/darktable
 media-gfx/digikam
 media-gfx/displaycal-py3
 media-gfx/gimp
 media-sound/audacity
+media-sound/lilypond
 media-sound/pavucontrol-qt
 media-sound/picard
 media-video/libva-utils
@@ -54,6 +57,9 @@ www-client/firefox
 www-client/google-chrome
 www-client/microsoft-edge
 www-client/vivaldi
+x11-apps/mesa-progs
+x11-apps/xdpyinfo
+x11-apps/xrandr
 x11-misc/synergy
 x11-misc/vdpauinfo
 x11-misc/xsel

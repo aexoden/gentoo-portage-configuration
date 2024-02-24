@@ -1,13 +1,6 @@
 # Gentoo Portage Configuration
 
-Jason Lynch <jason@calindora.com>
-
-## Unmaintained
-
-I do not currently use Gentoo on any of my machines, so this repository is
-effectively unmaintained. If I install Gentoo at some point, it may once again
-be maintained, but at this point, the time spent auditing USE flag changes and
-working around bugs is more than I can realistically dedicate.
+Jason Lynch <jason@aexoden.com>
 
 ## Introduction
 
@@ -39,7 +32,7 @@ features they may not even know exist.
 
 To some extent, this is mitigated by the desktop profiles, but they don't seem
 to go nearly far enough. Funtoo appears to have a partial solution, though I
-haven't used or verified how well it works in practice. In additiona, their
+haven't used or verified how well it works in practice. In addition, their
 refusal to allow systemd makes Funtoo a non-starter in any case. It also doesn't
 help Gentoo at all.
 
@@ -66,25 +59,31 @@ makes use of overlays installed there.
 You should copy and modify the sample `local` files in `/etc/portage/make.conf`
 and `/etc/portage/package.use`.
 
-You may also wish to add `@aexoden-base`, `@aexoden-desktop` and
-`@aexoden-kernel` to install the packages included in this configuration. This
-is completely optional, and will probably install a bunch of programs you don't
-want.
+You may also wish to add some combination of `@aexoden-base`, `@aexoden-desktop`,
+`@aexoden-optfeatures` and `aexoden-kernel` to install the packages included in
+this configuration. This is completely optional, and will probably install a
+bunch of programs you don't want. Most of the names should be self-explanatory,
+except `@aexoden-optfeatures` which installs a few packages that are listed as
+optional features for other packages.
 
 Bootstrapping the install can be somewhat difficult, as there are a couple of
-circular dependencies that will require temporarily USE flag changes. There is
+circular dependencies that will require temporary USE flag changes. There is
 also an issue of bootstrapping GCC with D and Ada support. If you don't use
 those languages, it may be easier to just disable those USE flags on GCC.
 
-This configuration currently limits the GCC version to the latest supported by
-CUDA. If you are not using CUDA, you may be able to unmask later versions of GCC
-without consequence, but this has not been tested.
+CUDA is not enabled in the public configuration files, only in the local file
+specific to my main Gentoo machine, but some of its related settings may leak
+into other configuration files. CUDA itself is only officially compatible with
+GCC 12.2 or earlier. The earliest 12.x version that Gentoo currently offers is
+12.3.x, which I believe to work fine at the moment. I have currently encountered
+no packages that require an explicit switch to an earlier GCC. OpenCV and VTK
+are the most likely candidates, but cuda is currently disabled on those due to
+it requiring other USE flags to be disabled.
 
 You may wish to modify the `package.env` or `env` settings. VTK is currently
-restricted to 12 threads due to memory issues on a machine with 256GB of RAM. If
-you are building VTK with CUDA and have less memory (which is likely on most
-desktop machines), you may wish to force a further reduction. The ebuild does
-a check of its own, but it failed to prevent the problem in my case.
+restricted to 12 threads due to memory issues on a machine with 256GB of RAM if
+CUDA is enabled. If you are building VTK with CUDA and have less memory (which
+is likely on most desktop machines), you may wish to force a further reduction.
 
 ## Suggestions
 
