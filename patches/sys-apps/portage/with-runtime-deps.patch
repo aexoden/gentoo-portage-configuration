@@ -1,0 +1,38 @@
+diff --git a/lib/_emerge/depgraph.py b/lib/_emerge/depgraph.py
+index 6853ec491..952b73f56 100644
+--- a/lib/_emerge/depgraph.py
++++ b/lib/_emerge/depgraph.py
+@@ -4013,6 +4013,10 @@ class depgraph:
+             if self._frozen_config.myopts.get("--onlydeps-with-ideps") in ("n", None):
+                 edepend["IDEPEND"] = ""
+ 
++        if self._frozen_config.myopts.get("--with-runtime-deps") == "n":
++            edepend["RDEPEND"] = ""
++            edepend["PDEPEND"] = ""
++
+         ignore_build_time_deps = False
+         if pkg.built and not removal_action:
+             if self._dynamic_config.myparams.get("bdeps") in ("y", "auto"):
+diff --git a/lib/_emerge/main.py b/lib/_emerge/main.py
+index 6a52404c8..59fdf98a5 100644
+--- a/lib/_emerge/main.py
++++ b/lib/_emerge/main.py
+@@ -188,6 +188,7 @@ def insert_optional_args(args):
+         "--verbose": y_or_n,
+         "--verbose-slot-rebuilds": y_or_n,
+         "--with-test-deps": y_or_n,
++        "--with-runtime-deps": y_or_n,
+     }
+ 
+     short_arg_opts = {
+@@ -744,6 +745,10 @@ def parse_opts(tmpcmdline, silent=False):
+             "help": "verbose slot rebuild output",
+             "choices": true_y_or_n,
+         },
++        "--with-runtime-deps": {
++            "help": "include runtime dependencies (RDEPEND AND PDEPEND)",
++            "choices": true_y_or_n,
++        },
+         "--with-test-deps": {
+             "help": "pull in test deps for packages " + "matched by arguments",
+             "choices": true_y_or_n,

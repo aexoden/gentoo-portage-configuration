@@ -11,6 +11,7 @@ app-i18n/fcitx-gtk
 app-i18n/fcitx-qt
 
 # Applications
+app-editors/gedit
 app-editors/ghex
 app-editors/gnome-text-editor
 app-editors/gvim
@@ -63,16 +64,23 @@ x11-apps/xrandr
 x11-misc/synergy
 x11-misc/vdpauinfo
 x11-misc/xsel
+x11-plugins/syncthingtray
+x11-terms/gnome-terminal
+x11-terms/wezterm
+
+# Games
+games-board/crafty
+games-board/gnuchess
+games-board/sjeng
+games-board/stockfish
 
 # Fonts
 media-fonts/anonymous-pro
 media-fonts/croscorefonts
 media-fonts/crosextrafonts-caladea
 media-fonts/crosextrafonts-carlito
-media-fonts/firacode-nerdfont
+media-fonts/nerdfonts
 media-fonts/inconsolata
-media-fonts/iosevka-nerdfont
 media-fonts/libertinus
-media-fonts/robotomono-nerdfont
 media-fonts/sil-gentium
 media-fonts/ubuntu-font-family

@@ -14,12 +14,27 @@ sci-visualization/gr
 # dev-libs/libinput
 dev-python/libevdev
 
+# dev-python/aesara
+dev-python/pycuda
+
 # dev-python/fs
-dev-python/boto
 dev-python/paramiko
+
+# dev-python/ipython
+dev-python/line-profiler
+dev-python/sympy
 
 # dev-python/lxml
 dev-python/cssselect
+
+# dev-python/mpmath
+dev-python/gmpy
+
+# dev-python/pandas
+dev-python/rpy
+
+# dev-python/pipdeptree
+dev-python/graphviz
 
 # dev-python/rich
 dev-python/ipywidgets
@@ -45,6 +60,9 @@ dev-libs/libxls
 
 # kde-plasma/kinfocenter
 app-text/aha
+
+# mail-client/thunderbird
+net-libs/libotr
 
 # media-libs/libvisual
 media-plugins/libvisual-projectm

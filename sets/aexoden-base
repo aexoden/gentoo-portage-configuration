@@ -11,12 +11,12 @@ app-admin/rasdaemon
 app-admin/sudo
 app-arch/7zip
 app-arch/lzip
+app-arch/par2cmdline-turbo
 app-cdr/bchunk
 app-crypt/efitools
 app-crypt/tpm2-tools
 app-editors/nano
 app-editors/vim
-app-misc/binwalk
 app-misc/jq
 app-misc/tmux
 app-misc/uptimed
@@ -52,6 +52,7 @@ sys-apps/sg3_utils
 sys-apps/usermode-utilities
 sys-block/fio
 sys-boot/efibootmgr
+sys-boot/zfsbootmenu
 sys-fs/compsize
 sys-fs/ddrescue
 sys-fs/dd-rescue
@@ -72,6 +73,7 @@ sys-process/nvtop
 sys-process/schedtool
 sys-process/systemd-cron
 sys-process/time
+x11-misc/read-edid
 
 # Containers and VMs
 app-containers/distrobox
@@ -85,10 +87,13 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 
 # Development
+dev-debug/gdb
+dev-debug/lldb
 dev-lang/php
 dev-lang/rust
 dev-python/pdm
 dev-python/pip
+dev-python/pipx
 dev-python/pipenv
 dev-python/poetry
 dev-util/act

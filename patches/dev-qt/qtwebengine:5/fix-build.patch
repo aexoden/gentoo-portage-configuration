@@ -1,0 +1,11 @@
+diff '--color=auto' -ur qtwebengine-5.15.13_p20240322.orig/src/3rdparty/chromium/content/browser/BUILD.gn qtwebengine-5.15.13_p20240322/src/3rdparty/chromium/content/browser/BUILD.gn
+--- qtwebengine-5.15.13_p20240322.orig/src/3rdparty/chromium/content/browser/BUILD.gn	2024-03-23 04:29:17.000000000 -0700
++++ qtwebengine-5.15.13_p20240322/src/3rdparty/chromium/content/browser/BUILD.gn	2024-04-17 07:25:25.713770480 -0700
+@@ -36,6 +36,7 @@
+ 
+   deps = [
+     "//base",
++    "//components/spellcheck:buildflags",
+     "//content/browser/devtools:devtools_background_services_proto",
+     "//content/browser/devtools:protocol_sources",
+     "//content/common:buildflags",
