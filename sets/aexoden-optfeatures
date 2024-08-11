@@ -15,7 +15,9 @@ sci-visualization/gr
 dev-python/libevdev
 
 # dev-python/aesara
-dev-python/pycuda
+# Does not currently build
+# https://bugs.gentoo.org/932712
+#dev-python/pycuda
 
 # dev-python/fs
 dev-python/paramiko

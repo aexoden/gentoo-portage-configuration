@@ -23,6 +23,7 @@ app-misc/uptimed
 app-shells/zsh
 app-text/lesspipe
 dev-debug/strace
+dev-libs/libcgroup
 dev-util/clinfo
 dev-util/smem
 mail-mta/postfix
@@ -61,9 +62,9 @@ sys-fs/exfatprogs
 sys-fs/mdadm
 sys-fs/ntfs3g
 sys-fs/quota
+sys-fs/sanoid
 sys-fs/squashfs-tools
 sys-fs/zfs
-sys-fs/zfs-auto-snapshot
 sys-power/cpupower
 sys-power/nut
 sys-process/htop
@@ -101,7 +102,6 @@ dev-util/android-tools
 dev-util/perf
 dev-util/rustup
 dev-vcs/git
-sys-devel/gcc:12
 
 # Media and Video
 games-emulation/sdlmame
@@ -125,6 +125,7 @@ net-misc/yt-dlp
 
 # Science and Mathematics
 sci-mathematics/glpk
+sci-mathematics/msieve
 sci-misc/boinc
 
 # Libraries
@@ -133,4 +134,4 @@ sys-libs/ncurses-compat
 # AMD GPU
 dev-libs/rocm-opencl-runtime
 dev-util/rocminfo
-dev-util/rocm-smi
+#dev-util/rocm-smi

@@ -16,6 +16,8 @@ app-editors/ghex
 app-editors/gnome-text-editor
 app-editors/gvim
 app-editors/vscode
+app-emulation/86Box
+app-emulation/pcem
 app-emulation/virt-viewer
 app-misc/anki-bin
 app-misc/gramps
@@ -39,6 +41,7 @@ media-gfx/displaycal-py3
 media-gfx/gimp
 media-sound/audacity
 media-sound/lilypond
+media-sound/musescore
 media-sound/pavucontrol-qt
 media-sound/picard
 media-video/libva-utils
@@ -76,6 +79,7 @@ games-board/stockfish
 
 # Fonts
 media-fonts/anonymous-pro
+media-fonts/cascadia-code
 media-fonts/croscorefonts
 media-fonts/crosextrafonts-caladea
 media-fonts/crosextrafonts-carlito
