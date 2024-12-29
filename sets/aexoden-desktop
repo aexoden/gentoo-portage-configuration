@@ -1,3 +1,6 @@
+# Gentoo Portage Configuration
+# Desktop Package Set
+
 # Desktop Environments
 gnome-base/gnome
 kde-apps/kde-apps-meta
@@ -27,18 +30,19 @@ app-office/gnucash
 app-office/libreoffice
 app-office/lyx
 app-office/scribus
-dev-games/godot:3
-dev-games/godot:4
+dev-games/godot
 dev-util/android-studio
 dev-util/meld
 dev-util/vulkan-tools
 games-emulation/dosbox-x
+gnome-base/dconf-editor
 gui-apps/gnome-console
 mail-client/thunderbird
 media-gfx/darktable
 media-gfx/digikam
 media-gfx/displaycal-py3
 media-gfx/gimp
+media-gfx/inkscape
 media-sound/audacity
 media-sound/lilypond
 media-sound/musescore
@@ -57,19 +61,20 @@ net-misc/streamlink
 net-nntp/pan
 net-p2p/qbittorrent
 sci-geosciences/josm-bin
+www-client/falkon
 www-client/firefox
 www-client/google-chrome
 www-client/microsoft-edge
 www-client/vivaldi
 x11-apps/mesa-progs
 x11-apps/xdpyinfo
+x11-apps/xev
 x11-apps/xrandr
 x11-misc/synergy
 x11-misc/vdpauinfo
 x11-misc/xsel
 x11-plugins/syncthingtray
 x11-terms/gnome-terminal
-x11-terms/wezterm
 
 # Games
 games-board/crafty

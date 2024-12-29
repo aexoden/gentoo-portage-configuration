@@ -1,0 +1,8 @@
+# Gentoo Portage Configuration
+# AMD GPU Package Set
+
+# This set of packages is packages primarily useful with AMD graphics cards.
+
+dev-libs/rocm-opencl-runtime
+dev-util/rocminfo
+dev-util/rocm-smi

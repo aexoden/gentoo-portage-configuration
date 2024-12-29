@@ -1,1 +1,6 @@
+# Gentoo Linux Configuration
+# Kernel Package Set
+
+sys-firmware/sof-firmware
 sys-kernel/gentoo-kernel
+sys-kernel/linux-firmware

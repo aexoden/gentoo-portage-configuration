@@ -60,7 +60,7 @@ You should copy and modify the sample `local` files in `/etc/portage/make.conf`
 and `/etc/portage/package.use`.
 
 You may also wish to add some combination of `@aexoden-base`, `@aexoden-desktop`,
-`@aexoden-optfeatures` and `aexoden-kernel` to install the packages included in
+`@aexoden-optfeatures` and `@aexoden-kernel` to install the packages included in
 this configuration. This is completely optional, and will probably install a
 bunch of programs you don't want. Most of the names should be self-explanatory,
 except `@aexoden-optfeatures` which installs a few packages that are listed as
@@ -68,22 +68,22 @@ optional features for other packages.
 
 Bootstrapping the install can be somewhat difficult, as there are a couple of
 circular dependencies that will require temporary USE flag changes. There is
-also an issue of bootstrapping GCC with D and Ada support. If you don't use
-those languages, it may be easier to just disable those USE flags on GCC.
+also an issue of bootstrapping GCC with D support. If you don't use D, it may
+be easier to just disable the USE flag on GCC. Otherwise, you will likely need
+to install several older versions of GCC in succession, switching among them as
+you ggo.
 
-CUDA is not enabled in the public configuration files, only in the local file
-specific to my main Gentoo machine, but some of its related settings may leak
-into other configuration files. CUDA itself is only officially compatible with
-GCC 12.2 or earlier. The earliest 12.x version that Gentoo currently offers is
-12.3.x, which I believe to work fine at the moment. I have currently encountered
-no packages that require an explicit switch to an earlier GCC. OpenCV and VTK
-are the most likely candidates, but cuda is currently disabled on those due to
-it requiring other USE flags to be disabled.
-
-You may wish to modify the `package.env` or `env` settings. VTK is currently
-restricted to 12 threads due to memory issues on a machine with 256GB of RAM if
-CUDA is enabled. If you are building VTK with CUDA and have less memory (which
-is likely on most desktop machines), you may wish to force a further reduction.
+My main machine currently uses an all-AMD video stack, including both an
+integrated GPU that runs my displays and a discrete GPU primarily used for
+computation. Some Portage configuration specific to this hardware may be present
+in the files, so if you have no need for AMD hardware, you may wish to watch
+this carefully. Similarly, I currently have no NVIDIA devices on a Gentoo
+machine and have made no attempt to make sure things work with CUDA. In the past,
+there have been numerous issues that needed handholding, including verifying the
+most recent GCC that CUDA is compatible with. OpenCV and VTK are packages that
+have been particularly problematic in the past. VTK in particular required an
+exceedingly large amount of RAM with CUDA enabled, so reducing thread count
+using the `package.env` and `env` settings may be required.
 
 ## Suggestions
 
