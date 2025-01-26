@@ -6,3 +6,4 @@
 dev-libs/rocm-opencl-runtime
 dev-util/rocminfo
 dev-util/rocm-smi
+sys-apps/lact

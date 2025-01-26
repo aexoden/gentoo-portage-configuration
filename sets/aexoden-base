@@ -33,6 +33,7 @@ app-shells/zsh
 app-text/lesspipe
 dev-debug/strace
 dev-libs/libcgroup
+dev-python/internetarchive
 dev-util/clinfo
 dev-util/smem
 mail-mta/postfix
@@ -50,6 +51,7 @@ sys-apps/bat-extras
 sys-apps/ethtool
 sys-apps/hdparm
 sys-apps/hwinfo
+sys-apps/lshw
 sys-apps/plocate
 sys-apps/moreutils
 sys-apps/nvme-cli

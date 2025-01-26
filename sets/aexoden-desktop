@@ -70,11 +70,11 @@ x11-apps/mesa-progs
 x11-apps/xdpyinfo
 x11-apps/xev
 x11-apps/xrandr
-x11-misc/synergy
 x11-misc/vdpauinfo
 x11-misc/xsel
 x11-plugins/syncthingtray
 x11-terms/gnome-terminal
+x11-terms/ptyxis
 
 # Games
 games-board/crafty
