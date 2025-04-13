@@ -60,6 +60,7 @@ net-misc/remmina
 net-misc/streamlink
 net-nntp/pan
 net-p2p/qbittorrent
+sci-calculators/qalculate-qt
 sci-geosciences/josm-bin
 www-client/falkon
 www-client/firefox

@@ -1,0 +1,7 @@
+# Gentoo Portage Configuration
+# Intel GPU Package Set
+
+# This set of packages is packages primarily useful with Intel graphics cards.
+
+media-libs/libva-intel-media-driver
+x11-apps/igt-gpu-tools

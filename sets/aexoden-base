@@ -31,6 +31,7 @@ app-misc/tmux
 app-misc/uptimed
 app-shells/zsh
 app-text/lesspipe
+app-text/pandoc-cli
 dev-debug/strace
 dev-libs/libcgroup
 dev-python/internetarchive
@@ -51,6 +52,7 @@ sys-apps/bat-extras
 sys-apps/ethtool
 sys-apps/hdparm
 sys-apps/hwinfo
+sys-apps/ipmitool
 sys-apps/lshw
 sys-apps/plocate
 sys-apps/moreutils
@@ -59,6 +61,7 @@ sys-apps/pciutils
 sys-apps/progress
 sys-apps/pv
 sys-apps/sg3_utils
+sys-apps/usbutils
 sys-apps/usermode-utilities
 sys-block/fio
 sys-block/io-scheduler-udev-rules
@@ -105,6 +108,8 @@ app-emulation/virtualbox-kvm
 # Development
 dev-debug/gdb
 dev-lang/php
+dev-lang/python:3.10
+dev-lang/python:3.11
 dev-lang/rust
 dev-python/pdm
 dev-python/pip
