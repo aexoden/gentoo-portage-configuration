@@ -110,12 +110,14 @@ dev-debug/gdb
 dev-lang/php
 dev-lang/python:3.10
 dev-lang/python:3.11
+dev-lang/python:3.12
 dev-lang/rust
 dev-python/pdm
 dev-python/pip
 dev-python/pipx
 dev-python/pipenv
 dev-python/poetry
+dev-python/uv
 dev-util/act
 dev-util/android-tools
 dev-util/perf

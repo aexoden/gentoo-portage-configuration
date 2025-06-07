@@ -16,9 +16,6 @@ sys-process/criu
 # app-i18n/translate-shell
 app-misc/rlwrap
 
-# app-misc/anki-bin
-dev-python/orjson
-
 # app-office/scribus
 app-text/antiword
 
@@ -111,9 +108,6 @@ media-gfx/sane-airscan
 
 # media-libs/libvisual
 media-plugins/libvisual-projectm
-
-# media-libs/libvpl
-media-libs/oneVPL-cpu
 
 # media-video/pipewire
 sys-auth/rtkit

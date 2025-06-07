@@ -20,9 +20,11 @@ app-editors/gnome-text-editor
 app-editors/gvim
 app-editors/vscode
 app-emulation/86Box
-app-emulation/pcem
+# Diabled until it compiles
+#app-emulation/pcem
 app-emulation/virt-viewer
-app-misc/anki-bin
+# Disabled until a version is available that doesn't have a yarn/nodejs[corepack] conflict
+#app-misc/anki
 app-misc/gramps
 app-misc/piper
 app-misc/wayland-utils
@@ -80,7 +82,6 @@ x11-terms/ptyxis
 # Games
 games-board/crafty
 games-board/gnuchess
-games-board/sjeng
 games-board/stockfish
 
 # Fonts
