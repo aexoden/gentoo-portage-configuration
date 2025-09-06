@@ -71,6 +71,7 @@ sys-boot/shim
 sys-fs/compsize
 sys-fs/ddrescue
 sys-fs/dd-rescue
+sys-fs/inotify-tools
 sys-fs/quota
 sys-power/cpupower
 sys-power/nut
@@ -124,6 +125,7 @@ dev-util/perf
 dev-util/ruff
 dev-util/rustup
 dev-vcs/git
+dev-vcs/pre-commit
 llvm-core/lldb
 
 # Media and Video
