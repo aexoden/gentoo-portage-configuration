@@ -1,0 +1,25 @@
+From ae7a1cde24ff26a54364e0c24e9f0ced64967f77 Mon Sep 17 00:00:00 2001
+From: James Browning <jamesb.fe80@gmail.com>
+Date: Tue, 14 Jun 2022 10:16:29 -0700
+Subject: [PATCH] Remove check for 'dia' to prevent greedy cycle.syg rebuild.
+
+Signed-off-by: James Browning <jamesb.fe80@gmail.com>
+---
+ SConscript | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/SConscript b/SConscript
+index 1b3d0d62f..5b089c30f 100644
+--- a/SConscript
++++ b/SConscript
+@@ -1464,7 +1464,6 @@ if not cleaning and not helping:
+         have_canplayer = config.CheckProg('canplayer')
+         have_coverage = config.CheckProg('coverage')
+         have_cppcheck = config.CheckProg('cppcheck')
+-        have_dia = config.CheckProg('dia')
+         have_flake8 = config.CheckProg('flake8')
+         have_pycodestyle = config.CheckProg('pycodestyle')
+         have_pylint = config.CheckProg('pylint')
+-- 
+2.32.1 (Apple Git-133)
+

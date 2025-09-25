@@ -63,6 +63,7 @@ sys-apps/pv
 sys-apps/sg3_utils
 sys-apps/usbutils
 sys-apps/usermode-utilities
+sys-auth/ssh-import-id
 sys-block/fio
 sys-block/io-scheduler-udev-rules
 sys-boot/efibootmgr
@@ -121,6 +122,7 @@ dev-python/poetry
 dev-python/uv
 dev-util/act
 dev-util/android-tools
+dev-util/debugedit
 dev-util/perf
 dev-util/ruff
 dev-util/rustup

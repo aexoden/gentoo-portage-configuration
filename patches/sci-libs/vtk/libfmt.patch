@@ -1,0 +1,63 @@
+Index: VTK-9.4.2/ThirdParty/ioss/vtkioss/Ioss_Utils.C
+===================================================================
+--- VTK-9.4.2.orig/ThirdParty/ioss/vtkioss/Ioss_Utils.C
++++ VTK-9.4.2/ThirdParty/ioss/vtkioss/Ioss_Utils.C
+@@ -10,6 +10,7 @@
+ #include <cstdint>
+ #include <cstring>
+ #include <ctime>
++#include <chrono>
+ #include "vtk_fmt.h"
+ #include VTK_FMT(fmt/chrono.h)
+ #include VTK_FMT(fmt/core.h)
+@@ -160,14 +161,18 @@ std::ostream &Ioss::Utils::get_debug_str
+ 
+ void Ioss::Utils::time_and_date(char *time_string, char *date_string, size_t length)
+ {
+-  std::time_t t    = std::time(nullptr);
+-  std::string time = fmt::format("{:%H:%M:%S}", fmt::localtime(t));
++  const auto utc_now = std::chrono::system_clock::now();
++  const auto utc_time_t = std::chrono::system_clock::to_time_t(utc_now);
++  std::tm tm_local = {};
++  localtime_r(&utc_time_t, &tm_local);
++
++  std::string time = fmt::format("{:%H:%M:%S}", tm_local);
+   std::string date;
+   if (length >= 10) {
+-    date = fmt::format("{:%Y/%m/%d}", fmt::localtime(t));
++    date = fmt::format("{:%Y/%m/%d}", tm_local);
+   }
+   else {
+-    date = fmt::format("{:%y/%m/%d}", fmt::localtime(t));
++    date = fmt::format("{:%y/%m/%d}", tm_local);
+   }
+   copy_string(time_string, time, 9);
+   copy_string(date_string, date, length + 1);
+Index: VTK-9.4.2/ThirdParty/ioss/vtkioss/cgns/Iocgns_Utils.C
+===================================================================
+--- VTK-9.4.2.orig/ThirdParty/ioss/vtkioss/cgns/Iocgns_Utils.C
++++ VTK-9.4.2/ThirdParty/ioss/vtkioss/cgns/Iocgns_Utils.C
+@@ -50,6 +50,7 @@
+ #include <cmath>
+ #include <cstring>
+ #include <ctime>
++#include <chrono>
+ #include VTK_FMT(fmt/ostream.h)
+ #include <limits>
+ #include <numeric>
+@@ -1097,9 +1098,12 @@ size_t Iocgns::Utils::common_write_metad
+   CGERR(cg_base_write(file_ptr, "Base", phys_dimension, phys_dimension, &base));
+ 
+   CGERR(cg_goto(file_ptr, base, "end"));
+-  std::time_t t    = std::time(nullptr);
+-  std::string date = fmt::format("{:%Y/%m/%d}", fmt::localtime(t));
+-  std::string time = fmt::format("{:%H:%M:%S}", fmt::localtime(t));
++  const auto utc_now = std::chrono::system_clock::now();
++  const auto utc_time_t = std::chrono::system_clock::to_time_t(utc_now);
++  std::tm tm_local = {};
++  localtime_r(&utc_time_t, &tm_local);
++  std::string date = fmt::format("{:%Y/%m/%d}", tm_local);
++  std::string time = fmt::format("{:%H:%M:%S}", tm_local);
+ 
+   std::string code_version = region.get_optional_property("code_version", "unknown");
+   std::string code_name    = region.get_optional_property("code_name", "unknown");

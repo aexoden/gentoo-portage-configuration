@@ -19,9 +19,6 @@ app-misc/rlwrap
 # app-office/scribus
 app-text/antiword
 
-# app-text/djvu
-app-text/djview
-
 # dev-lang/julia
 sci-visualization/gr
 
@@ -30,9 +27,6 @@ app-vim/rust-vim
 
 # dev-libs/geoip
 net-misc/geoipupdate
-
-# dev-python/fs
-dev-python/paramiko
 
 # dev-python/httpcore
 dev-python/socksio
