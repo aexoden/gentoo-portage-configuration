@@ -91,3 +91,11 @@ If you have any suggestions for flags to enable or disable, please let me know.
 I've generally erred on the side of enabling most things, which almost certainly
 means I've enabled something that is probably not needed. My intention is to
 provide a fully-functional desktop with all potentially useful features enabled.
+
+## Tooling
+
+`tools/use-review/` contains a script for keeping up with USE flags across tree
+bumps. It reports new, removed and changed flags for the packages tracked here,
+finds stale and expired `package.use` entries, and traces what a flag actually
+does through the ebuild and the upstream build system. See
+[tools/use-review/README.md](tools/use-review/README.md).
